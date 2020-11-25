@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56D4ABAB256EE84D005C971D /* PoliplannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABAA256EE84D005C971D /* PoliplannerApp.swift */; };
+		56D4ABAD256EE84D005C971D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABAC256EE84D005C971D /* ContentView.swift */; };
+		56D4ABAF256EE84E005C971D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D4ABAE256EE84E005C971D /* Assets.xcassets */; };
+		56D4ABB2256EE84E005C971D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D4ABB1256EE84E005C971D /* Preview Assets.xcassets */; };
+		56D4ABBD256EE84E005C971D /* PoliplannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABBC256EE84E005C971D /* PoliplannerTests.swift */; };
+		56D4ABC8256EE84E005C971D /* PoliplannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABC7256EE84E005C971D /* PoliplannerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56D4ABB9256EE84E005C971D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56D4AB9F256EE84D005C971D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56D4ABA6256EE84D005C971D;
+			remoteInfo = Poliplanner;
+		};
+		56D4ABC4256EE84E005C971D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56D4AB9F256EE84D005C971D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56D4ABA6256EE84D005C971D;
+			remoteInfo = Poliplanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		56D4ABA7256EE84D005C971D /* Poliplanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poliplanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56D4ABAA256EE84D005C971D /* PoliplannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliplannerApp.swift; sourceTree = "<group>"; };
+		56D4ABAC256EE84D005C971D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		56D4ABAE256EE84E005C971D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56D4ABB1256EE84E005C971D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		56D4ABB3256EE84E005C971D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56D4ABB8256EE84E005C971D /* PoliplannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoliplannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56D4ABBC256EE84E005C971D /* PoliplannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliplannerTests.swift; sourceTree = "<group>"; };
+		56D4ABBE256EE84E005C971D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56D4ABC3256EE84E005C971D /* PoliplannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoliplannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56D4ABC7256EE84E005C971D /* PoliplannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliplannerUITests.swift; sourceTree = "<group>"; };
+		56D4ABC9256EE84E005C971D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56D4ABA4256EE84D005C971D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56D4ABB5256EE84E005C971D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56D4ABC0256EE84E005C971D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56D4AB9E256EE84D005C971D = {
+			isa = PBXGroup;
+			children = (
+				56D4ABA9256EE84D005C971D /* Poliplanner */,
+				56D4ABBB256EE84E005C971D /* PoliplannerTests */,
+				56D4ABC6256EE84E005C971D /* PoliplannerUITests */,
+				56D4ABA8256EE84D005C971D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56D4ABA8256EE84D005C971D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56D4ABA7256EE84D005C971D /* Poliplanner.app */,
+				56D4ABB8256EE84E005C971D /* PoliplannerTests.xctest */,
+				56D4ABC3256EE84E005C971D /* PoliplannerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56D4ABA9256EE84D005C971D /* Poliplanner */ = {
+			isa = PBXGroup;
+			children = (
+				56D4ABAA256EE84D005C971D /* PoliplannerApp.swift */,
+				56D4ABAC256EE84D005C971D /* ContentView.swift */,
+				56D4ABAE256EE84E005C971D /* Assets.xcassets */,
+				56D4ABB3256EE84E005C971D /* Info.plist */,
+				56D4ABB0256EE84E005C971D /* Preview Content */,
+			);
+			path = Poliplanner;
+			sourceTree = "<group>";
+		};
+		56D4ABB0256EE84E005C971D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				56D4ABB1256EE84E005C971D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		56D4ABBB256EE84E005C971D /* PoliplannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				56D4ABBC256EE84E005C971D /* PoliplannerTests.swift */,
+				56D4ABBE256EE84E005C971D /* Info.plist */,
+			);
+			path = PoliplannerTests;
+			sourceTree = "<group>";
+		};
+		56D4ABC6256EE84E005C971D /* PoliplannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				56D4ABC7256EE84E005C971D /* PoliplannerUITests.swift */,
+				56D4ABC9256EE84E005C971D /* Info.plist */,
+			);
+			path = PoliplannerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56D4ABA6256EE84D005C971D /* Poliplanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56D4ABCC256EE84E005C971D /* Build configuration list for PBXNativeTarget "Poliplanner" */;
+			buildPhases = (
+				56D4ABA3256EE84D005C971D /* Sources */,
+				56D4ABA4256EE84D005C971D /* Frameworks */,
+				56D4ABA5256EE84D005C971D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Poliplanner;
+			productName = Poliplanner;
+			productReference = 56D4ABA7256EE84D005C971D /* Poliplanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		56D4ABB7256EE84E005C971D /* PoliplannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56D4ABCF256EE84E005C971D /* Build configuration list for PBXNativeTarget "PoliplannerTests" */;
+			buildPhases = (
+				56D4ABB4256EE84E005C971D /* Sources */,
+				56D4ABB5256EE84E005C971D /* Frameworks */,
+				56D4ABB6256EE84E005C971D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56D4ABBA256EE84E005C971D /* PBXTargetDependency */,
+			);
+			name = PoliplannerTests;
+			productName = PoliplannerTests;
+			productReference = 56D4ABB8256EE84E005C971D /* PoliplannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		56D4ABC2256EE84E005C971D /* PoliplannerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56D4ABD2256EE84E005C971D /* Build configuration list for PBXNativeTarget "PoliplannerUITests" */;
+			buildPhases = (
+				56D4ABBF256EE84E005C971D /* Sources */,
+				56D4ABC0256EE84E005C971D /* Frameworks */,
+				56D4ABC1256EE84E005C971D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56D4ABC5256EE84E005C971D /* PBXTargetDependency */,
+			);
+			name = PoliplannerUITests;
+			productName = PoliplannerUITests;
+			productReference = 56D4ABC3256EE84E005C971D /* PoliplannerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56D4AB9F256EE84D005C971D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					56D4ABA6256EE84D005C971D = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					56D4ABB7256EE84E005C971D = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 56D4ABA6256EE84D005C971D;
+					};
+					56D4ABC2256EE84E005C971D = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 56D4ABA6256EE84D005C971D;
+					};
+				};
+			};
+			buildConfigurationList = 56D4ABA2256EE84D005C971D /* Build configuration list for PBXProject "Poliplanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 56D4AB9E256EE84D005C971D;
+			productRefGroup = 56D4ABA8256EE84D005C971D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56D4ABA6256EE84D005C971D /* Poliplanner */,
+				56D4ABB7256EE84E005C971D /* PoliplannerTests */,
+				56D4ABC2256EE84E005C971D /* PoliplannerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56D4ABA5256EE84D005C971D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56D4ABB2256EE84E005C971D /* Preview Assets.xcassets in Resources */,
+				56D4ABAF256EE84E005C971D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56D4ABB6256EE84E005C971D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56D4ABC1256EE84E005C971D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56D4ABA3256EE84D005C971D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56D4ABAD256EE84D005C971D /* ContentView.swift in Sources */,
+				56D4ABAB256EE84D005C971D /* PoliplannerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56D4ABB4256EE84E005C971D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56D4ABBD256EE84E005C971D /* PoliplannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56D4ABBF256EE84E005C971D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56D4ABC8256EE84E005C971D /* PoliplannerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56D4ABBA256EE84E005C971D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56D4ABA6256EE84D005C971D /* Poliplanner */;
+			targetProxy = 56D4ABB9256EE84E005C971D /* PBXContainerItemProxy */;
+		};
+		56D4ABC5256EE84E005C971D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56D4ABA6256EE84D005C971D /* Poliplanner */;
+			targetProxy = 56D4ABC4256EE84E005C971D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		56D4ABCA256EE84E005C971D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		56D4ABCB256EE84E005C971D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56D4ABCD256EE84E005C971D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Poliplanner/Preview Content\"";
+				DEVELOPMENT_TEAM = DGM32RG83Z;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Poliplanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.Poliplanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		56D4ABCE256EE84E005C971D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Poliplanner/Preview Content\"";
+				DEVELOPMENT_TEAM = DGM32RG83Z;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Poliplanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.Poliplanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		56D4ABD0256EE84E005C971D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DGM32RG83Z;
+				INFOPLIST_FILE = PoliplannerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.PoliplannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poliplanner.app/Poliplanner";
+			};
+			name = Debug;
+		};
+		56D4ABD1256EE84E005C971D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DGM32RG83Z;
+				INFOPLIST_FILE = PoliplannerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.PoliplannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poliplanner.app/Poliplanner";
+			};
+			name = Release;
+		};
+		56D4ABD3256EE84E005C971D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DGM32RG83Z;
+				INFOPLIST_FILE = PoliplannerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.PoliplannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Poliplanner;
+			};
+			name = Debug;
+		};
+		56D4ABD4256EE84E005C971D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DGM32RG83Z;
+				INFOPLIST_FILE = PoliplannerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.PoliplannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Poliplanner;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56D4ABA2256EE84D005C971D /* Build configuration list for PBXProject "Poliplanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56D4ABCA256EE84E005C971D /* Debug */,
+				56D4ABCB256EE84E005C971D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56D4ABCC256EE84E005C971D /* Build configuration list for PBXNativeTarget "Poliplanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56D4ABCD256EE84E005C971D /* Debug */,
+				56D4ABCE256EE84E005C971D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56D4ABCF256EE84E005C971D /* Build configuration list for PBXNativeTarget "PoliplannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56D4ABD0256EE84E005C971D /* Debug */,
+				56D4ABD1256EE84E005C971D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56D4ABD2256EE84E005C971D /* Build configuration list for PBXNativeTarget "PoliplannerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56D4ABD3256EE84E005C971D /* Debug */,
+				56D4ABD4256EE84E005C971D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56D4AB9F256EE84D005C971D /* Project object */;
+}
