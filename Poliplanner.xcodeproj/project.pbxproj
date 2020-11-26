@@ -3,16 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B96E3864831B3DB5BB0A0C /* Pods_PoliplannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA755EFD865DC12D18283B /* Pods_PoliplannerTests.framework */; };
+		17E892547BE8CF2852FBF820 /* Pods_Poliplanner_PoliplannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F658E1F230C421D58827221 /* Pods_Poliplanner_PoliplannerUITests.framework */; };
+		56BE7EE7256F25DB00C65151 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE7EE6256F25DB00C65151 /* R.generated.swift */; };
+		56BE7EE8256F25DB00C65151 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE7EE6256F25DB00C65151 /* R.generated.swift */; };
+		56BE7EE9256F25DB00C65151 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE7EE6256F25DB00C65151 /* R.generated.swift */; };
+		56BE7EF1256F26A500C65151 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 56BE7EF0256F26A500C65151 /* .swiftlint.yml */; };
+		56BE7EF2256F26A500C65151 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 56BE7EF0256F26A500C65151 /* .swiftlint.yml */; };
+		56BE7EF3256F26A500C65151 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 56BE7EF0256F26A500C65151 /* .swiftlint.yml */; };
 		56D4ABAB256EE84D005C971D /* PoliplannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABAA256EE84D005C971D /* PoliplannerApp.swift */; };
 		56D4ABAD256EE84D005C971D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABAC256EE84D005C971D /* ContentView.swift */; };
 		56D4ABAF256EE84E005C971D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D4ABAE256EE84E005C971D /* Assets.xcassets */; };
 		56D4ABB2256EE84E005C971D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D4ABB1256EE84E005C971D /* Preview Assets.xcassets */; };
 		56D4ABBD256EE84E005C971D /* PoliplannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABBC256EE84E005C971D /* PoliplannerTests.swift */; };
 		56D4ABC8256EE84E005C971D /* PoliplannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABC7256EE84E005C971D /* PoliplannerUITests.swift */; };
+		C97E57CA8C004DFDB2472D14 /* Pods_Poliplanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3901A3A402D7F0C26DFF11BE /* Pods_Poliplanner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3901A3A402D7F0C26DFF11BE /* Pods_Poliplanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliplanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40BBE04DA40BA5D2986ECCDC /* Pods-PoliplannerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoliplannerTests.debug.xcconfig"; path = "Target Support Files/Pods-PoliplannerTests/Pods-PoliplannerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F658E1F230C421D58827221 /* Pods_Poliplanner_PoliplannerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliplanner_PoliplannerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55A5015CA529ABB1A5AB0B01 /* Pods-Poliplanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliplanner.debug.xcconfig"; path = "Target Support Files/Pods-Poliplanner/Pods-Poliplanner.debug.xcconfig"; sourceTree = "<group>"; };
+		55AA755EFD865DC12D18283B /* Pods_PoliplannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoliplannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		562271CA256EED60001AB5C2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/iOSSupport/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
+		56BE7EE6256F25DB00C65151 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		56BE7EF0256F26A500C65151 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		56D4ABA7256EE84D005C971D /* Poliplanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poliplanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D4ABAA256EE84D005C971D /* PoliplannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliplannerApp.swift; sourceTree = "<group>"; };
 		56D4ABAC256EE84D005C971D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +62,11 @@
 		56D4ABC3256EE84E005C971D /* PoliplannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoliplannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D4ABC7256EE84E005C971D /* PoliplannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliplannerUITests.swift; sourceTree = "<group>"; };
 		56D4ABC9256EE84E005C971D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56D4ABDE256EE9AA005C971D /* Poliplanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poliplanner.entitlements; sourceTree = "<group>"; };
+		6FA3FEF05D598636C61A8343 /* Pods-Poliplanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliplanner.release.xcconfig"; path = "Target Support Files/Pods-Poliplanner/Pods-Poliplanner.release.xcconfig"; sourceTree = "<group>"; };
+		7E0B99390484AABF2198F051 /* Pods-PoliplannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoliplannerTests.release.xcconfig"; path = "Target Support Files/Pods-PoliplannerTests/Pods-PoliplannerTests.release.xcconfig"; sourceTree = "<group>"; };
+		AAE8A5118E864AC8A64D73F2 /* Pods-Poliplanner-PoliplannerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliplanner-PoliplannerUITests.release.xcconfig"; path = "Target Support Files/Pods-Poliplanner-PoliplannerUITests/Pods-Poliplanner-PoliplannerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DF75BE2E0D6F1F7C1C2ABDEE /* Pods-Poliplanner-PoliplannerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliplanner-PoliplannerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Poliplanner-PoliplannerUITests/Pods-Poliplanner-PoliplannerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97E57CA8C004DFDB2472D14 /* Pods_Poliplanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B96E3864831B3DB5BB0A0C /* Pods_PoliplannerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,19 +90,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E892547BE8CF2852FBF820 /* Pods_Poliplanner_PoliplannerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EE0C7C445E03682BB9DD252 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55A5015CA529ABB1A5AB0B01 /* Pods-Poliplanner.debug.xcconfig */,
+				6FA3FEF05D598636C61A8343 /* Pods-Poliplanner.release.xcconfig */,
+				DF75BE2E0D6F1F7C1C2ABDEE /* Pods-Poliplanner-PoliplannerUITests.debug.xcconfig */,
+				AAE8A5118E864AC8A64D73F2 /* Pods-Poliplanner-PoliplannerUITests.release.xcconfig */,
+				40BBE04DA40BA5D2986ECCDC /* Pods-PoliplannerTests.debug.xcconfig */,
+				7E0B99390484AABF2198F051 /* Pods-PoliplannerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		562271C9256EED5F001AB5C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				562271CA256EED60001AB5C2 /* SwiftUI.framework */,
+				3901A3A402D7F0C26DFF11BE /* Pods_Poliplanner.framework */,
+				4F658E1F230C421D58827221 /* Pods_Poliplanner_PoliplannerUITests.framework */,
+				55AA755EFD865DC12D18283B /* Pods_PoliplannerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		56D4AB9E256EE84D005C971D = {
 			isa = PBXGroup;
 			children = (
+				56BE7EF0256F26A500C65151 /* .swiftlint.yml */,
+				56BE7EE6256F25DB00C65151 /* R.generated.swift */,
 				56D4ABA9256EE84D005C971D /* Poliplanner */,
 				56D4ABBB256EE84E005C971D /* PoliplannerTests */,
 				56D4ABC6256EE84E005C971D /* PoliplannerUITests */,
 				56D4ABA8256EE84D005C971D /* Products */,
+				562271C9256EED5F001AB5C2 /* Frameworks */,
+				1EE0C7C445E03682BB9DD252 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +148,7 @@
 		56D4ABA9256EE84D005C971D /* Poliplanner */ = {
 			isa = PBXGroup;
 			children = (
+				56D4ABDE256EE9AA005C971D /* Poliplanner.entitlements */,
 				56D4ABAA256EE84D005C971D /* PoliplannerApp.swift */,
 				56D4ABAC256EE84D005C971D /* ContentView.swift */,
 				56D4ABAE256EE84E005C971D /* Assets.xcassets */,
@@ -137,9 +191,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56D4ABCC256EE84E005C971D /* Build configuration list for PBXNativeTarget "Poliplanner" */;
 			buildPhases = (
+				FE102031393DCE117C0018E9 /* [CP] Check Pods Manifest.lock */,
+				56BE7EE2256F249500C65151 /* R.swift */,
 				56D4ABA3256EE84D005C971D /* Sources */,
+				566A0379256F1FD600CA34DA /* SwiftLint */,
 				56D4ABA4256EE84D005C971D /* Frameworks */,
 				56D4ABA5256EE84D005C971D /* Resources */,
+				27C952CA916EC95F94F09C91 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56D4ABCF256EE84E005C971D /* Build configuration list for PBXNativeTarget "PoliplannerTests" */;
 			buildPhases = (
+				0BEB8FA2E7AE1227282BD771 /* [CP] Check Pods Manifest.lock */,
 				56D4ABB4256EE84E005C971D /* Sources */,
 				56D4ABB5256EE84E005C971D /* Frameworks */,
 				56D4ABB6256EE84E005C971D /* Resources */,
@@ -172,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56D4ABD2256EE84E005C971D /* Build configuration list for PBXNativeTarget "PoliplannerUITests" */;
 			buildPhases = (
+				AFD6576AD766ACFAFD8E4D69 /* [CP] Check Pods Manifest.lock */,
 				56D4ABBF256EE84E005C971D /* Sources */,
 				56D4ABC0256EE84E005C971D /* Frameworks */,
 				56D4ABC1256EE84E005C971D /* Resources */,
+				CAF22178083BE3C06E2DC2F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,7 +270,7 @@
 				};
 			};
 			buildConfigurationList = 56D4ABA2256EE84D005C971D /* Build configuration list for PBXProject "Poliplanner" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -233,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BE7EF1256F26A500C65151 /* .swiftlint.yml in Resources */,
 				56D4ABB2256EE84E005C971D /* Preview Assets.xcassets in Resources */,
 				56D4ABAF256EE84E005C971D /* Assets.xcassets in Resources */,
 			);
@@ -242,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BE7EF2256F26A500C65151 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +312,153 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BE7EF3256F26A500C65151 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BEB8FA2E7AE1227282BD771 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoliplannerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27C952CA916EC95F94F09C91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Poliplanner/Pods-Poliplanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Poliplanner/Pods-Poliplanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Poliplanner/Pods-Poliplanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		566A0379256F1FD600CA34DA /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		56BE7EE2256F249500C65151 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		AFD6576AD766ACFAFD8E4D69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Poliplanner-PoliplannerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAF22178083BE3C06E2DC2F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Poliplanner-PoliplannerUITests/Pods-Poliplanner-PoliplannerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Poliplanner-PoliplannerUITests/Pods-Poliplanner-PoliplannerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Poliplanner-PoliplannerUITests/Pods-Poliplanner-PoliplannerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE102031393DCE117C0018E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Poliplanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56D4ABA3256EE84D005C971D /* Sources */ = {
@@ -261,6 +467,7 @@
 			files = (
 				56D4ABAD256EE84D005C971D /* ContentView.swift in Sources */,
 				56D4ABAB256EE84D005C971D /* PoliplannerApp.swift in Sources */,
+				56BE7EE7256F25DB00C65151 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D4ABBD256EE84E005C971D /* PoliplannerTests.swift in Sources */,
+				56BE7EE8256F25DB00C65151 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D4ABC8256EE84E005C971D /* PoliplannerUITests.swift in Sources */,
+				56BE7EE9256F25DB00C65151 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,21 +623,27 @@
 		};
 		56D4ABCD256EE84E005C971D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55A5015CA529ABB1A5AB0B01 /* Pods-Poliplanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Poliplanner/Poliplanner.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Poliplanner/Preview Content\"";
 				DEVELOPMENT_TEAM = DGM32RG83Z;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Poliplanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.Poliplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -436,21 +651,27 @@
 		};
 		56D4ABCE256EE84E005C971D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FA3FEF05D598636C61A8343 /* Pods-Poliplanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Poliplanner/Poliplanner.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Poliplanner/Preview Content\"";
 				DEVELOPMENT_TEAM = DGM32RG83Z;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Poliplanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.Poliplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -458,8 +679,9 @@
 		};
 		56D4ABD0256EE84E005C971D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40BBE04DA40BA5D2986ECCDC /* Pods-PoliplannerTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DGM32RG83Z;
@@ -480,8 +702,9 @@
 		};
 		56D4ABD1256EE84E005C971D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E0B99390484AABF2198F051 /* Pods-PoliplannerTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DGM32RG83Z;
@@ -502,8 +725,9 @@
 		};
 		56D4ABD3256EE84E005C971D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF75BE2E0D6F1F7C1C2ABDEE /* Pods-Poliplanner-PoliplannerUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DGM32RG83Z;
 				INFOPLIST_FILE = PoliplannerUITests/Info.plist;
@@ -522,8 +746,9 @@
 		};
 		56D4ABD4256EE84E005C971D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAE8A5118E864AC8A64D73F2 /* Pods-Poliplanner-PoliplannerUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DGM32RG83Z;
 				INFOPLIST_FILE = PoliplannerUITests/Info.plist;
