@@ -10,6 +10,8 @@ target 'Poliplanner' do
   pod 'SwiftLint'
   # Tipeado fuerte de recursos
   pod 'R.swift'
+  # Base de datos
+  pod 'RealmSwift'
 
   target 'PoliplannerTests' do
     inherit! :search_paths
