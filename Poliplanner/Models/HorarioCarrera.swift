@@ -8,12 +8,15 @@
 import Foundation
 import RealmSwift
 
-class HorarioCarrera: Object {
-    @objc dynamic var secciones: [Seccion]
-    @objc dynamic var nombreCarrera: String
+class HorarioCarrera: Object, Identifiable {
+    // swiftlint:disable identifier_name
+    @objc dynamic var id = UUID().uuidString
+    // swiftlint:enable identifier_name
+    @objc dynamic var horarioClase: HorarioClase?
+    @objc dynamic var nombreCarrera: String = ""
+    let secciones = LinkingObjects(fromType: Seccion.self, property: "horarioCarrera")
 
-    init(conSecciones secciones: [Seccion] = [], llamado nombreCarrera: String) {
-        self.secciones = secciones
-        self.nombreCarrera = nombreCarrera
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }

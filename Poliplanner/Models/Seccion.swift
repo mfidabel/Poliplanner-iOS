@@ -8,21 +8,20 @@
 import Foundation
 import RealmSwift
 
-class Seccion: Object {
+class Seccion: Object, Identifiable {
+    // swiftlint:disable identifier_name
+    @objc dynamic var id = UUID().uuidString
+    // swiftlint:enable identifier_name
     @objc dynamic var asignatura: Asignatura?
     @objc dynamic var carrera: Carrera?
-    @objc dynamic var examenes: [Examen]
-    @objc dynamic var clases: [Clase]
-    @objc dynamic var docente: String
-    @objc dynamic var codigo: String
+    @objc dynamic var docente: String = ""
+    @objc dynamic var codigo: String = ""
+    @objc dynamic var elegido: Bool = false
+    @objc dynamic var horarioCarrera: HorarioCarrera?
+    let examenes = LinkingObjects(fromType: Examen.self, property: "seccion")
+    let clases = LinkingObjects(fromType: Clase.self, property: "seccion")
 
-    init(asignatura: Asignatura, carrera: Carrera?, conExamenes examenes: [Examen] = [],
-         conClases clases: [Clase] = [], docente: String = "", codigo: String = "") {
-        self.asignatura = asignatura
-        self.carrera = carrera
-        self.examenes = examenes
-        self.clases = clases
-        self.docente = docente
-        self.codigo = codigo
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }

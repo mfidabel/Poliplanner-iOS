@@ -8,14 +8,15 @@
 import Foundation
 import RealmSwift
 
-class Carrera: Object {
-    @objc dynamic var sigla: String
-    @objc dynamic var enfasis: String
-    @objc dynamic var plan: String
+class Carrera: Object, Identifiable {
+    // swiftlint:disable identifier_name
+    @objc dynamic var id = UUID().uuidString
+    // swiftlint:enable identifier_name
+    @objc dynamic var sigla: String = ""
+    @objc dynamic var enfasis: String = ""
+    @objc dynamic var plan: String = ""
 
-    init(sigla: String = "", enfasis: String = "", plan: String = "") {
-        self.sigla = sigla
-        self.enfasis = enfasis
-        self.plan = plan
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }

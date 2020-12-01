@@ -8,14 +8,16 @@
 import Foundation
 import RealmSwift
 
-class Examen: Object {
-    @objc dynamic var fecha: Date
-    @objc dynamic var aula: String
+class Examen: Object, Identifiable {
+    // swiftlint:disable identifier_name
+    @objc dynamic var id = UUID().uuidString
+    // swiftlint:enable identifier_name
+    @objc dynamic var fecha: Date = Date()
+    @objc dynamic var aula: String = ""
     @objc dynamic var revision: Revision?
+    @objc dynamic var seccion: Seccion?
 
-    init(fecha: Date, aula: String = "", revision: Revision?) {
-        self.fecha = fecha
-        self.aula = aula
-        self.revision = revision
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }

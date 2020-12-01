@@ -8,17 +8,16 @@
 import Foundation
 import RealmSwift
 
-class HorarioClase: Object {
-    @objc dynamic var horariosCarrera: [HorarioCarrera]
-    @objc dynamic var nombre: String
-    @objc dynamic var fechaActualizacion: String
-    @objc dynamic var periodoAcademico: String
+class HorarioClase: Object, Identifiable {
+    // swiftlint:disable identifier_name
+    @objc dynamic var id = UUID().uuidString
+    // swiftlint:enable identifier_name
+    @objc dynamic var nombre: String = ""
+    @objc dynamic var fechaActualizacion: String = ""
+    @objc dynamic var periodoAcademico: String = ""
+    let horariosCarrera = LinkingObjects(fromType: HorarioCarrera.self, property: "horarioClase")
 
-    init(horarios horariosCarrera: [HorarioCarrera] = [], llamado nombre: String,
-         fechaActualizacion: String, delPeriodo periodoAcademico: String) {
-        self.horariosCarrera = horariosCarrera
-        self.nombre = nombre
-        self.fechaActualizacion = fechaActualizacion
-        self.periodoAcademico = periodoAcademico
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }

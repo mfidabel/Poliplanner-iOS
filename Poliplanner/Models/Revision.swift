@@ -8,12 +8,14 @@
 import Foundation
 import RealmSwift
 
-class Revision: Object {
-    @objc dynamic var fecha: Date
-    @objc dynamic var aula: String
+class Revision: Object, Identifiable {
+    // swiftlint:disable identifier_name
+    @objc dynamic var id = UUID().uuidString
+    // swiftlint:enable identifier_name
+    @objc dynamic var fecha: Date = Date()
+    @objc dynamic var aula: String = ""
 
-    init(fecha: Date, aula: String = "") {
-        self.fecha = fecha
-        self.aula = aula
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }
