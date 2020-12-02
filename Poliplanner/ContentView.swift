@@ -8,11 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var poliplannerStore: PoliplannerStore
 
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            HorarioClaseView()
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("Clases")
+                }.tag("0")
+            Text("Tab Content 1")
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("Calendario")
+                }
+                .tag("1")
+            Text("Tab Content 2")
+                .tabItem {
+                    Image(systemName: "rectangle.grid.1x2")
+                    Text("Secciones")
+                }
+                .tag("2")
+            ConfiguracionView()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Configuración")
+                }.tag("3")
+        }
     }
 }
 

@@ -11,6 +11,10 @@
 		17E892547BE8CF2852FBF820 /* Pods_Poliplanner_PoliplannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F658E1F230C421D58827221 /* Pods_Poliplanner_PoliplannerUITests.framework */; };
 		565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152A925712DC30073C3CA /* HorarioCarrera.swift */; };
 		565152AF25712E790073C3CA /* HorarioClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152AE25712E790073C3CA /* HorarioClase.swift */; };
+		565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */; };
+		566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F1D14257810F40057B2B3 /* ConfiguracionView.swift */; };
+		567D7E532576E79100D84902 /* HorarioClaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7E522576E79100D84902 /* HorarioClaseViewModel.swift */; };
+		567D7E632576EAE300D84902 /* MenuArmarHorarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7E622576EAE300D84902 /* MenuArmarHorarioView.swift */; };
 		568DC7762575D3C100CF4106 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568DC7752575D3C100CF4106 /* RealmProvider.swift */; };
 		568E7CDC25759E7E008979C6 /* PoliplannerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568E7CDB25759E7E008979C6 /* PoliplannerStore.swift */; };
 		56A6184025707C0F00346419 /* Asignatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6183F25707C0F00346419 /* Asignatura.swift */; };
@@ -31,6 +35,7 @@
 		56D4ABB2256EE84E005C971D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D4ABB1256EE84E005C971D /* Preview Assets.xcassets */; };
 		56D4ABBD256EE84E005C971D /* PoliplannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABBC256EE84E005C971D /* PoliplannerTests.swift */; };
 		56D4ABC8256EE84E005C971D /* PoliplannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABC7256EE84E005C971D /* PoliplannerUITests.swift */; };
+		56F5F2D325783FB20066CE24 /* UTType+Excel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5F2D225783FB20066CE24 /* UTType+Excel.swift */; };
 		C97E57CA8C004DFDB2472D14 /* Pods_Poliplanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3901A3A402D7F0C26DFF11BE /* Pods_Poliplanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +65,10 @@
 		562271CA256EED60001AB5C2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/iOSSupport/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
 		565152A925712DC30073C3CA /* HorarioCarrera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioCarrera.swift; sourceTree = "<group>"; };
 		565152AE25712E790073C3CA /* HorarioClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClase.swift; sourceTree = "<group>"; };
+		565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseView.swift; sourceTree = "<group>"; };
+		566F1D14257810F40057B2B3 /* ConfiguracionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionView.swift; sourceTree = "<group>"; };
+		567D7E522576E79100D84902 /* HorarioClaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseViewModel.swift; sourceTree = "<group>"; };
+		567D7E622576EAE300D84902 /* MenuArmarHorarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuArmarHorarioView.swift; sourceTree = "<group>"; };
 		568DC7752575D3C100CF4106 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		568E7CDB25759E7E008979C6 /* PoliplannerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliplannerStore.swift; sourceTree = "<group>"; };
 		56A6183F25707C0F00346419 /* Asignatura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asignatura.swift; sourceTree = "<group>"; };
@@ -83,6 +92,7 @@
 		56D4ABC7256EE84E005C971D /* PoliplannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliplannerUITests.swift; sourceTree = "<group>"; };
 		56D4ABC9256EE84E005C971D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56D4ABDE256EE9AA005C971D /* Poliplanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poliplanner.entitlements; sourceTree = "<group>"; };
+		56F5F2D225783FB20066CE24 /* UTType+Excel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UTType+Excel.swift"; sourceTree = "<group>"; };
 		6FA3FEF05D598636C61A8343 /* Pods-Poliplanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliplanner.release.xcconfig"; path = "Target Support Files/Pods-Poliplanner/Pods-Poliplanner.release.xcconfig"; sourceTree = "<group>"; };
 		7E0B99390484AABF2198F051 /* Pods-PoliplannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoliplannerTests.release.xcconfig"; path = "Target Support Files/Pods-PoliplannerTests/Pods-PoliplannerTests.release.xcconfig"; sourceTree = "<group>"; };
 		AAE8A5118E864AC8A64D73F2 /* Pods-Poliplanner-PoliplannerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliplanner-PoliplannerUITests.release.xcconfig"; path = "Target Support Files/Pods-Poliplanner-PoliplannerUITests/Pods-Poliplanner-PoliplannerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +158,7 @@
 		561F15812570340F005C1E5F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				567D7E512576E77D00D84902 /* Clases */,
 				568E7CDB25759E7E008979C6 /* PoliplannerStore.swift */,
 			);
 			path = ViewModels;
@@ -156,6 +167,8 @@
 		561F15822570344E005C1E5F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				566F1D10257810450057B2B3 /* Configuración */,
+				565BDE252576E06B00BE3ABD /* Clases */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,9 +184,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		565BDE252576E06B00BE3ABD /* Clases */ = {
+			isa = PBXGroup;
+			children = (
+				565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */,
+			);
+			path = Clases;
+			sourceTree = "<group>";
+		};
+		566F1D10257810450057B2B3 /* Configuración */ = {
+			isa = PBXGroup;
+			children = (
+				567D7E622576EAE300D84902 /* MenuArmarHorarioView.swift */,
+				566F1D14257810F40057B2B3 /* ConfiguracionView.swift */,
+			);
+			name = "Configuración";
+			path = "Configuración";
+			sourceTree = "<group>";
+		};
+		567D7E512576E77D00D84902 /* Clases */ = {
+			isa = PBXGroup;
+			children = (
+				567D7E522576E79100D84902 /* HorarioClaseViewModel.swift */,
+			);
+			path = Clases;
+			sourceTree = "<group>";
+		};
 		568DC7732575D39E00CF4106 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				56F5F2D225783FB20066CE24 /* UTType+Excel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -539,14 +579,19 @@
 				565152AF25712E790073C3CA /* HorarioClase.swift in Sources */,
 				568E7CDC25759E7E008979C6 /* PoliplannerStore.swift in Sources */,
 				56A61859257081D700346419 /* Seccion.swift in Sources */,
+				567D7E532576E79100D84902 /* HorarioClaseViewModel.swift in Sources */,
 				56D4ABAB256EE84D005C971D /* PoliplannerApp.swift in Sources */,
 				568DC7762575D3C100CF4106 /* RealmProvider.swift in Sources */,
+				565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */,
 				565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */,
 				56A6184025707C0F00346419 /* Asignatura.swift in Sources */,
 				56A6184A25707DBA00346419 /* Examen.swift in Sources */,
 				56A6184F25707E8000346419 /* Revision.swift in Sources */,
+				567D7E632576EAE300D84902 /* MenuArmarHorarioView.swift in Sources */,
 				56BE7EE7256F25DB00C65151 /* R.generated.swift in Sources */,
+				566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */,
 				56A618542570806600346419 /* Clase.swift in Sources */,
+				56F5F2D325783FB20066CE24 /* UTType+Excel.swift in Sources */,
 				56A6184525707CFB00346419 /* Carrera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
