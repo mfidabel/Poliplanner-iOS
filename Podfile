@@ -12,6 +12,8 @@ target 'Poliplanner' do
   pod 'R.swift'
   # Base de datos
   pod 'RealmSwift'
+  # Lector de XLSX
+  pod 'CoreXLSX', '~> 0.13.0'
 
   target 'PoliplannerTests' do
     inherit! :search_paths

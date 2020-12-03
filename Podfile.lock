@@ -1,4 +1,7 @@
 PODS:
+  - CoreXLSX (0.13.0):
+    - XMLCoder (~> 0.11.1)
+    - ZIPFoundation (~> 0.9.11)
   - R.swift (5.3.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
@@ -8,27 +11,36 @@ PODS:
   - RealmSwift (10.1.4):
     - Realm (= 10.1.4)
   - SwiftLint (0.41.0)
+  - XMLCoder (0.11.1)
+  - ZIPFoundation (0.9.11)
 
 DEPENDENCIES:
+  - CoreXLSX (~> 0.13.0)
   - R.swift
   - RealmSwift
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - CoreXLSX
     - R.swift
     - R.swift.Library
     - Realm
     - RealmSwift
     - SwiftLint
+    - XMLCoder
+    - ZIPFoundation
 
 SPEC CHECKSUMS:
+  CoreXLSX: 18e81bf259aa945dceaa0328a788e50140859907
   R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   Realm: 80f4fb2971ccb9adc27a47d0955ae8e533a7030b
   RealmSwift: 0e566ca714edb377bba8ea0811eafcea0b93734e
   SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
+  XMLCoder: c4638336674de7ba279cd23f2005817d69f538e0
+  ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
-PODFILE CHECKSUM: 83f22813280129b980e4412fbe476f9fce930493
+PODFILE CHECKSUM: 031361dedd59d98a20fea76734ee934e26c61b8c
 
 COCOAPODS: 1.10.0

@@ -13,25 +13,21 @@ struct ContentView: View {
         TabView {
             HorarioClaseView()
                 .tabItem {
-                    Image(systemName: "list.bullet")
-                    Text("Clases")
+                    Label("Clases", systemImage: "list.bullet")
                 }.tag("0")
             Text("Tab Content 1")
                 .tabItem {
-                    Image(systemName: "calendar")
-                    Text("Calendario")
+                    Label("Calendario", systemImage: "calendar")
                 }
                 .tag("1")
             Text("Tab Content 2")
                 .tabItem {
-                    Image(systemName: "rectangle.grid.1x2")
-                    Text("Secciones")
+                    Label("Secciones", systemImage: "rectangle.grid.1x2")
                 }
                 .tag("2")
             ConfiguracionView()
                 .tabItem {
-                    Image(systemName: "gear")
-                    Text("Configuración")
+                    Label("Configuración", systemImage: "gear")
                 }.tag("3")
         }
     }

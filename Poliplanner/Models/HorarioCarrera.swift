@@ -15,6 +15,10 @@ class HorarioCarrera: Object, Identifiable {
     @objc dynamic var horarioClase: HorarioClase?
     @objc dynamic var nombreCarrera: String = ""
     let secciones = LinkingObjects(fromType: Seccion.self, property: "horarioCarrera")
+    
+    public var carrera: CarreraSigla {
+        CarreraSigla(rawValue: self.nombreCarrera) ?? .invalido
+    }
 
     override static func primaryKey() -> String? {
         return "id"
