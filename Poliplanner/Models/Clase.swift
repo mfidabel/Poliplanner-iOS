@@ -21,4 +21,14 @@ class Clase: Object, Identifiable {
     override static func primaryKey() -> String? {
         return "id"
     }
+    
+    func setDia(_ dia: DiaClase) {
+        self.dia = dia.rawValue
+    }
+    
+    func setHora(_ hora: String) {
+        // TODO: Parsear correctamente la hora
+        self.horaInicio = hora
+        self.horaFin = hora
+    }
 }

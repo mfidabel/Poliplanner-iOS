@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04B96E3864831B3DB5BB0A0C /* Pods_PoliplannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA755EFD865DC12D18283B /* Pods_PoliplannerTests.framework */; };
 		17E892547BE8CF2852FBF820 /* Pods_Poliplanner_PoliplannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F658E1F230C421D58827221 /* Pods_Poliplanner_PoliplannerUITests.framework */; };
+		5600BC4C25789B160042580F /* Array+CarreraSigla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600BC4B25789B160042580F /* Array+CarreraSigla.swift */; };
 		561127C12578458800F9AA03 /* CarreraSigla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561127C02578458800F9AA03 /* CarreraSigla.swift */; };
 		561127C825785DB200F9AA03 /* XLSXHorarioParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561127C725785DB200F9AA03 /* XLSXHorarioParser.swift */; };
 		561127D125785DEB00F9AA03 /* ArchivoHorarioParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561127D025785DEB00F9AA03 /* ArchivoHorarioParser.swift */; };
@@ -16,6 +17,7 @@
 		565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152A925712DC30073C3CA /* HorarioCarrera.swift */; };
 		565152AF25712E790073C3CA /* HorarioClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152AE25712E790073C3CA /* HorarioClase.swift */; };
 		565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */; };
+		56638CDA257AAD8700FCC9A8 /* DiaClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56638CD9257AAD8700FCC9A8 /* DiaClase.swift */; };
 		566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F1D14257810F40057B2B3 /* ConfiguracionView.swift */; };
 		567D7E532576E79100D84902 /* HorarioClaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7E522576E79100D84902 /* HorarioClaseViewModel.swift */; };
 		567D7E632576EAE300D84902 /* MenuArmarHorarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7E622576EAE300D84902 /* MenuArmarHorarioView.swift */; };
@@ -66,6 +68,7 @@
 		4F658E1F230C421D58827221 /* Pods_Poliplanner_PoliplannerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliplanner_PoliplannerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55A5015CA529ABB1A5AB0B01 /* Pods-Poliplanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliplanner.debug.xcconfig"; path = "Target Support Files/Pods-Poliplanner/Pods-Poliplanner.debug.xcconfig"; sourceTree = "<group>"; };
 		55AA755EFD865DC12D18283B /* Pods_PoliplannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoliplannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5600BC4B25789B160042580F /* Array+CarreraSigla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CarreraSigla.swift"; sourceTree = "<group>"; };
 		561127C02578458800F9AA03 /* CarreraSigla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarreraSigla.swift; sourceTree = "<group>"; };
 		561127C725785DB200F9AA03 /* XLSXHorarioParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLSXHorarioParser.swift; sourceTree = "<group>"; };
 		561127D025785DEB00F9AA03 /* ArchivoHorarioParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivoHorarioParser.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		565152A925712DC30073C3CA /* HorarioCarrera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioCarrera.swift; sourceTree = "<group>"; };
 		565152AE25712E790073C3CA /* HorarioClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClase.swift; sourceTree = "<group>"; };
 		565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseView.swift; sourceTree = "<group>"; };
+		56638CD9257AAD8700FCC9A8 /* DiaClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaClase.swift; sourceTree = "<group>"; };
 		566F1D14257810F40057B2B3 /* ConfiguracionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionView.swift; sourceTree = "<group>"; };
 		567D7E522576E79100D84902 /* HorarioClaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseViewModel.swift; sourceTree = "<group>"; };
 		567D7E622576EAE300D84902 /* MenuArmarHorarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuArmarHorarioView.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			children = (
 				561127C02578458800F9AA03 /* CarreraSigla.swift */,
 				561127D525786B5500F9AA03 /* ArchivoHorarioParserError.swift */,
+				56638CD9257AAD8700FCC9A8 /* DiaClase.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				56F5F2D225783FB20066CE24 /* UTType+Excel.swift */,
+				5600BC4B25789B160042580F /* Array+CarreraSigla.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -629,10 +635,12 @@
 				567D7E632576EAE300D84902 /* MenuArmarHorarioView.swift in Sources */,
 				56BE7EE7256F25DB00C65151 /* R.generated.swift in Sources */,
 				566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */,
+				5600BC4C25789B160042580F /* Array+CarreraSigla.swift in Sources */,
 				56A618542570806600346419 /* Clase.swift in Sources */,
 				56F5F2D325783FB20066CE24 /* UTType+Excel.swift in Sources */,
 				561127C825785DB200F9AA03 /* XLSXHorarioParser.swift in Sources */,
 				56A6184525707CFB00346419 /* Carrera.swift in Sources */,
+				56638CDA257AAD8700FCC9A8 /* DiaClase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

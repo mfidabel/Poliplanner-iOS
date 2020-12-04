@@ -38,24 +38,8 @@ struct MenuArmarHorarioView: View {
             .navigationBarTitle("Modificar horario")
             .navigationBarTitleDisplayMode(.automatic)
             // MARK: - Importación del Archivo
-            .fileImporter(isPresented: $estaImportando, allowedContentTypes: [.xlsx, .xls]) { resultado in
-                // TODO: Hacer algo con el archivo
-                switch resultado {
-                case .success(let archivoURL):
-                    switch UTType(filenameExtension: archivoURL.pathExtension) {
-                    case .some(.xlsx):
-                        print("Es un archivo nuevo")
-                    case .some(.xls):
-                        print("Es un archivo feo")
-                    case .none:
-                        print("No se pudo obtener la extensión")
-                    default:
-                        print("Se desconoce el archivo")
-                    }
-                case .failure(let error):
-                    print("Hubo un error al importar. Error: \(error.localizedDescription)")
-                }
-            }
+            .fileImporter(isPresented: $estaImportando,
+                          allowedContentTypes: [.xlsx, .xls], onCompletion: importarArchivo)
     }
     
     // MARK: - Boton Importar Archivo
@@ -66,6 +50,42 @@ struct MenuArmarHorarioView: View {
                 Text("Importar desde un archivo")
             }
         
+    }
+    
+    func importarArchivo(resultado: Result<URL, Error>) {
+        switch resultado {
+        case .success(let archivoURL):
+            var parser: ArchivoHorarioParser
+            
+            switch UTType(filenameExtension: archivoURL.pathExtension) {
+            case .some(.xlsx):
+                parser = XLSXHorarioParser(archivoURL: archivoURL)
+                print("Es un archivo nuevo")
+            case .some(.xls):
+                print("Es un archivo feo")
+                return
+            case .none:
+                print("No se pudo obtener la extensión")
+                return
+            default:
+                print("Se desconoce el archivo")
+                return
+            }
+            
+            DispatchQueue.global(qos: .userInitiated).async {
+                let start = DispatchTime.now()
+                _ = try? parser.generarHorario()
+                let end = DispatchTime.now()
+                
+                let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds
+                let timeInterval = Double(nanoTime) / 1_000_000_000
+                
+                print("Time to evaluate problem: \(timeInterval) seconds")
+            }
+            
+        case .failure(let error):
+            print("Hubo un error al importar. Error: \(error.localizedDescription)")
+        }
     }
 }
 

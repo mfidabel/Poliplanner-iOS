@@ -7,4 +7,5 @@
 enum ArchivoHorarioParserError: Error {
     case archivoInaccesible
     case archivoInvalido
+    case encabezadoInvalido(descripcion: String)
 }
