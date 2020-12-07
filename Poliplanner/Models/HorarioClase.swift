@@ -15,8 +15,8 @@ class HorarioClase: Object, Identifiable {
     @objc dynamic var nombre: String = ""
     @objc dynamic var fechaActualizacion: String = ""
     @objc dynamic var periodoAcademico: String = ""
-    let horariosCarrera = LinkingObjects(fromType: HorarioCarrera.self, property: "horarioClase")
-
+    let horariosCarrera: List<HorarioCarrera> = List<HorarioCarrera>()
+    
     override static func primaryKey() -> String? {
         return "id"
     }

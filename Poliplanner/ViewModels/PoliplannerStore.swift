@@ -9,9 +9,13 @@ import Foundation
 import RealmSwift
 
 class PoliplannerStore: ObservableObject {
+    // MARK: - Shared
+    static let shared = PoliplannerStore(realm: RealmProvider.realm())
+    
     // MARK: - Variables
     @Published private(set) var seccionesElegidas: RealmSwift.Results<Seccion>
     @Published private(set) var horariosClase: RealmSwift.Results<HorarioClase>
+    @Published var horarioClaseDraft: HorarioClase = HorarioClase()
     
     public var hayHorario: Bool {
         return self.horariosClase.count > 0

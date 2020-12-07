@@ -15,7 +15,6 @@ class Examen: Object, Identifiable {
     @objc dynamic var fecha: Date = Date()
     @objc dynamic var aula: String = ""
     @objc dynamic var revision: Revision?
-    @objc dynamic var seccion: Seccion?
 
     override static func primaryKey() -> String? {
         return "id"

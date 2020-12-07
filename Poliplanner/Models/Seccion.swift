@@ -17,9 +17,9 @@ class Seccion: Object, Identifiable {
     @objc dynamic var docente: String = ""
     @objc dynamic var codigo: String = ""
     @objc dynamic var elegido: Bool = false
-    @objc dynamic var horarioCarrera: HorarioCarrera?
-    let examenes = LinkingObjects(fromType: Examen.self, property: "seccion")
-    let clases = LinkingObjects(fromType: Clase.self, property: "seccion")
+    let horariosCarrera = LinkingObjects(fromType: HorarioCarrera.self, property: "secciones")
+    let examenes = List<Examen>()
+    let clases = List<Clase>()
 
     override static func primaryKey() -> String? {
         return "id"

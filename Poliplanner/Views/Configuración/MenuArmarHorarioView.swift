@@ -7,10 +7,12 @@
 
 import SwiftUI
 import UniformTypeIdentifiers
+import RealmSwift
 
 struct MenuArmarHorarioView: View {
-    @EnvironmentObject var PPStore: PoliplannerStore
+    @ObservedObject var PPStore: PoliplannerStore = PoliplannerStore.shared
     @State private var estaImportando: Bool = false
+    @State private var estaArmando: Bool = false
 
     var body: some View {
             Form {
@@ -40,6 +42,11 @@ struct MenuArmarHorarioView: View {
             // MARK: - Importación del Archivo
             .fileImporter(isPresented: $estaImportando,
                           allowedContentTypes: [.xlsx, .xls], onCompletion: importarArchivo)
+            .sheet(isPresented: $estaArmando) {
+                NavigationView {
+                    ArmarSeleccionarCarrera(estaPresentando: $estaArmando)
+                }
+            }
     }
     
     // MARK: - Boton Importar Archivo
@@ -52,6 +59,7 @@ struct MenuArmarHorarioView: View {
         
     }
     
+    // MARK: - Qué hacer con el archivo importado
     func importarArchivo(resultado: Result<URL, Error>) {
         switch resultado {
         case .success(let archivoURL):
@@ -74,13 +82,35 @@ struct MenuArmarHorarioView: View {
             
             DispatchQueue.global(qos: .userInitiated).async {
                 let start = DispatchTime.now()
-                _ = try? parser.generarHorario()
+                let horarioGenerado = try? parser.generarHorario()
                 let end = DispatchTime.now()
                 
                 let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds
                 let timeInterval = Double(nanoTime) / 1_000_000_000
                 
                 print("Time to evaluate problem: \(timeInterval) seconds")
+                
+                let realm = RealmProvider.realm()
+                
+                if horarioGenerado != nil {
+                    try? realm.write {
+                        realm.add(horarioGenerado!)
+                    }
+                }
+                
+                let horarioRef = ThreadSafeReference(to: horarioGenerado!)
+                
+                DispatchQueue.main.async {
+                    autoreleasepool {
+                        let realm = RealmProvider.realm()
+                        realm.refresh()
+                        guard let horarioDraft = realm.resolve(horarioRef) else {
+                            return
+                        }
+                        self.PPStore.horarioClaseDraft = horarioDraft
+                        self.estaArmando = true
+                    }
+                }
             }
             
         case .failure(let error):

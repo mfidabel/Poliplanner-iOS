@@ -16,7 +16,6 @@ class Clase: Object, Identifiable {
     @objc dynamic var horaInicio: String = ""
     @objc dynamic var horaFin: String = ""
     @objc dynamic var aula: String = ""
-    @objc dynamic var seccion: Seccion?
 
     override static func primaryKey() -> String? {
         return "id"

@@ -12,9 +12,9 @@ class HorarioCarrera: Object, Identifiable {
     // swiftlint:disable identifier_name
     @objc dynamic var id = UUID().uuidString
     // swiftlint:enable identifier_name
-    @objc dynamic var horarioClase: HorarioClase?
     @objc dynamic var nombreCarrera: String = ""
-    let secciones = LinkingObjects(fromType: Seccion.self, property: "horarioCarrera")
+    let secciones: List<Seccion> = List<Seccion>()
+    let horarioClase = LinkingObjects(fromType: HorarioClase.self, property: "horariosCarrera")
     
     public var carrera: CarreraSigla {
         CarreraSigla(rawValue: self.nombreCarrera) ?? .invalido

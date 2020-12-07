@@ -27,11 +27,20 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         // Recopilar las hojas del excel
         try recopilarHojas(paraCarreras: carreras)
         
+        // Recopilar horario de cada carrera
+        let horarioClase: HorarioClase = HorarioClase()
+        var horariosCarrera: [HorarioCarrera] = []
+        
         try carreras.forEach { carrera in
-            _ = try generarHorarioCarrera(paraCarrera: carrera)
+            let horarioGenerado = try generarHorarioCarrera(paraCarrera: carrera)
+            horariosCarrera.append(horarioGenerado)
         }
         
-        return HorarioClase()
+        // TODO: Agregar atributos faltantes
+        horarioClase.horariosCarrera.append(objectsIn: horariosCarrera)
+        horarioClase.nombre = self.archivoURL.deletingPathExtension().lastPathComponent
+        
+        return horarioClase
     }
     
     private func generarHorarioCarrera(paraCarrera carrera: CarreraSigla) throws -> HorarioCarrera {
@@ -43,6 +52,8 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         
         if hojaActualFilas.count == 0 {
             return HorarioCarrera()
+        } else {
+            print("\(carrera.nombreLargo) tiene \(hojaActualFilas.count) filas.")
         }
         
         // Buscar fila del encabezado
@@ -74,6 +85,11 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         for indexFila in (indexFilaEncabezado!+1)..<hojaActualFilas.count {
             let fila: Row = hojaActualFilas[indexFila]
             
+            // Evitamos que siga leyendo filas vacias
+            if fila.cells.count == 0 {
+                break
+            }
+            
             var cabezaValor: [EncabezadoXLSX: String] = [:]
             
             fila.cells.forEach { celda in
@@ -85,16 +101,18 @@ class XLSXHorarioParser: ArchivoHorarioParser {
             
             let seccionGenerada = generarSeccion(paraValores: cabezaValor)
             
-            seccionGenerada.horarioCarrera = horarioCarrera
             seccionesGeneradas.append(seccionGenerada)
         }
         
-        print("Se generó el horario de la carrera: \(carrera.sigla) con indice encabezado \(indexFilaEncabezado!)")
+        horarioCarrera.secciones.append(objectsIn: seccionesGeneradas)
+        
+        // Obtener información básica
+        horarioCarrera.nombreCarrera = carrera.rawValue
+        
         return horarioCarrera
     }
     
     private func generarSeccion(paraValores valores: [EncabezadoXLSX: String]) -> Seccion {
-        // TODO: Cambiar modelos many to many
         let seccion: Seccion = Seccion()
         let asignatura: Asignatura = Asignatura()
         let carrera: Carrera = Carrera()
@@ -117,7 +135,7 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         
         // Atributos de la sección TODO: Revisar las secciones con doble profe
         let docente: String = "\(valores[.titulo] ?? "") \(valores[.nombre] ?? "") \(valores[.apellido] ?? "")"
-        let codigo: String = valores[.item] ?? ""
+        let codigo: String = valores[.seccion] ?? ""
         
         seccion.docente = docente
         seccion.codigo = codigo
@@ -148,12 +166,12 @@ class XLSXHorarioParser: ArchivoHorarioParser {
                 // Seleccionamos la hora de inicio y fin
                 claseDraft.setHora(valor)
                 
-                claseDraft.seccion = seccion
-                
                 // Agregamos la clase a la lista
                 clases.append(claseDraft)
             }
         }
+        
+        seccion.clases.append(objectsIn: clases)
         
         // TODO: Generar examenes
         return seccion
