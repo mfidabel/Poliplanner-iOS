@@ -45,6 +45,7 @@
 		56D4ABB2256EE84E005C971D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D4ABB1256EE84E005C971D /* Preview Assets.xcassets */; };
 		56D4ABBD256EE84E005C971D /* PoliplannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABBC256EE84E005C971D /* PoliplannerTests.swift */; };
 		56D4ABC8256EE84E005C971D /* PoliplannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABC7256EE84E005C971D /* PoliplannerUITests.swift */; };
+		56E2CE04257DC4BA0094333C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56E2CE03257DC4BA0094333C /* Settings.bundle */; };
 		56F5F2D325783FB20066CE24 /* UTType+Excel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5F2D225783FB20066CE24 /* UTType+Excel.swift */; };
 		C97E57CA8C004DFDB2472D14 /* Pods_Poliplanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3901A3A402D7F0C26DFF11BE /* Pods_Poliplanner.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		56D4ABC7256EE84E005C971D /* PoliplannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliplannerUITests.swift; sourceTree = "<group>"; };
 		56D4ABC9256EE84E005C971D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56D4ABDE256EE9AA005C971D /* Poliplanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poliplanner.entitlements; sourceTree = "<group>"; };
+		56E2CE03257DC4BA0094333C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		56F5F2D225783FB20066CE24 /* UTType+Excel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UTType+Excel.swift"; sourceTree = "<group>"; };
 		6FA3FEF05D598636C61A8343 /* Pods-Poliplanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliplanner.release.xcconfig"; path = "Target Support Files/Pods-Poliplanner/Pods-Poliplanner.release.xcconfig"; sourceTree = "<group>"; };
 		7E0B99390484AABF2198F051 /* Pods-PoliplannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoliplannerTests.release.xcconfig"; path = "Target Support Files/Pods-PoliplannerTests/Pods-PoliplannerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		56D4AB9E256EE84D005C971D = {
 			isa = PBXGroup;
 			children = (
+				56E2CE03257DC4BA0094333C /* Settings.bundle */,
 				56BE7EF0256F26A500C65151 /* .swiftlint.yml */,
 				56BE7EE6256F25DB00C65151 /* R.generated.swift */,
 				56D4ABA9256EE84D005C971D /* Poliplanner */,
@@ -474,6 +477,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E2CE04257DC4BA0094333C /* Settings.bundle in Resources */,
 				56BE7EF1256F26A500C65151 /* .swiftlint.yml in Resources */,
 				56D4ABB2256EE84E005C971D /* Preview Assets.xcassets in Resources */,
 				56D4ABAF256EE84E005C971D /* Assets.xcassets in Resources */,
