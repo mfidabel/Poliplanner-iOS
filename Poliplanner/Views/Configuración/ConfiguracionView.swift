@@ -12,7 +12,7 @@ struct ConfiguracionView: View {
         NavigationView {
             Form {
                 Section {
-                    NavigationLink(destination: MenuArmarHorarioView()) {
+                    NavigationLink(destination: MenuModificarHorarioView()) {
                         Text("Modificar horario")
                     }
                 }

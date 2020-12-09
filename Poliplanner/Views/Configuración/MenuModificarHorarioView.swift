@@ -9,7 +9,7 @@ import SwiftUI
 import UniformTypeIdentifiers
 import RealmSwift
 
-struct MenuArmarHorarioView: View {
+struct MenuModificarHorarioView: View {
     @ObservedObject var PPStore: PoliplannerStore = PoliplannerStore.shared
     @State private var estaImportando: Bool = false
     @State private var estaArmando: Bool = false
@@ -113,7 +113,7 @@ struct MenuArmarHorarioView_Previews: PreviewProvider {
     static var previews: some View {
         TabView {
             NavigationView {
-                MenuArmarHorarioView()
+                MenuModificarHorarioView()
                     .environmentObject(PoliplannerStore(realm: RealmProvider.realm()))
             }
         }

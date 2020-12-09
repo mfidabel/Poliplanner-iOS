@@ -26,7 +26,7 @@
 		56638CDA257AAD8700FCC9A8 /* DiaClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56638CD9257AAD8700FCC9A8 /* DiaClase.swift */; };
 		566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F1D14257810F40057B2B3 /* ConfiguracionView.swift */; };
 		567D7E532576E79100D84902 /* HorarioClaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7E522576E79100D84902 /* HorarioClaseViewModel.swift */; };
-		567D7E632576EAE300D84902 /* MenuArmarHorarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7E622576EAE300D84902 /* MenuArmarHorarioView.swift */; };
+		567D7E632576EAE300D84902 /* MenuModificarHorarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7E622576EAE300D84902 /* MenuModificarHorarioView.swift */; };
 		568DC7762575D3C100CF4106 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568DC7752575D3C100CF4106 /* RealmProvider.swift */; };
 		568E7CDC25759E7E008979C6 /* PoliplannerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568E7CDB25759E7E008979C6 /* PoliplannerStore.swift */; };
 		56A6184025707C0F00346419 /* Asignatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6183F25707C0F00346419 /* Asignatura.swift */; };
@@ -93,7 +93,7 @@
 		56638CD9257AAD8700FCC9A8 /* DiaClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaClase.swift; sourceTree = "<group>"; };
 		566F1D14257810F40057B2B3 /* ConfiguracionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionView.swift; sourceTree = "<group>"; };
 		567D7E522576E79100D84902 /* HorarioClaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseViewModel.swift; sourceTree = "<group>"; };
-		567D7E622576EAE300D84902 /* MenuArmarHorarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuArmarHorarioView.swift; sourceTree = "<group>"; };
+		567D7E622576EAE300D84902 /* MenuModificarHorarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModificarHorarioView.swift; sourceTree = "<group>"; };
 		568DC7752575D3C100CF4106 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		568E7CDB25759E7E008979C6 /* PoliplannerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliplannerStore.swift; sourceTree = "<group>"; };
 		56A6183F25707C0F00346419 /* Asignatura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asignatura.swift; sourceTree = "<group>"; };
@@ -240,7 +240,7 @@
 			children = (
 				562B5FFD258017A600F345F5 /* Secciones */,
 				562B5FF7258012CA00F345F5 /* Calendario */,
-				566F1D10257810450057B2B3 /* Configuración */,
+				566F1D10257810450057B2B3 /* Configuracion */,
 				565BDE252576E06B00BE3ABD /* Clases */,
 			);
 			path = Views;
@@ -281,14 +281,14 @@
 			path = Clases;
 			sourceTree = "<group>";
 		};
-		566F1D10257810450057B2B3 /* Configuración */ = {
+		566F1D10257810450057B2B3 /* Configuracion */ = {
 			isa = PBXGroup;
 			children = (
 				561A4B93257B15B000BE9EE3 /* ArmarHorarioPasos */,
-				567D7E622576EAE300D84902 /* MenuArmarHorarioView.swift */,
+				567D7E622576EAE300D84902 /* MenuModificarHorarioView.swift */,
 				566F1D14257810F40057B2B3 /* ConfiguracionView.swift */,
 			);
-			name = "Configuración";
+			name = Configuracion;
 			path = "Configuración";
 			sourceTree = "<group>";
 		};
@@ -693,7 +693,7 @@
 				56A6184025707C0F00346419 /* Asignatura.swift in Sources */,
 				56A6184A25707DBA00346419 /* Examen.swift in Sources */,
 				56A6184F25707E8000346419 /* Revision.swift in Sources */,
-				567D7E632576EAE300D84902 /* MenuArmarHorarioView.swift in Sources */,
+				567D7E632576EAE300D84902 /* MenuModificarHorarioView.swift in Sources */,
 				56BE7EE7256F25DB00C65151 /* R.generated.swift in Sources */,
 				566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */,
 				5600BC4C25789B160042580F /* Array+CarreraSigla.swift in Sources */,
