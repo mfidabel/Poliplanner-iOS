@@ -20,6 +20,7 @@
 		5620D1EC257BE34D0073F555 /* ArmarSeleccionarMaterias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5620D1EB257BE34D0073F555 /* ArmarSeleccionarMaterias.swift */; };
 		562B5FF9258012D800F345F5 /* CalendarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B5FF8258012D800F345F5 /* CalendarioView.swift */; };
 		562B5FFF258017B200F345F5 /* SeccionesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B5FFE258017B200F345F5 /* SeccionesView.swift */; };
+		56361E802580916A001E11F7 /* InfoClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56361E7F2580916A001E11F7 /* InfoClase.swift */; };
 		565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152A925712DC30073C3CA /* HorarioCarrera.swift */; };
 		565152AF25712E790073C3CA /* HorarioClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152AE25712E790073C3CA /* HorarioClase.swift */; };
 		565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */; };
@@ -87,6 +88,7 @@
 		562271CA256EED60001AB5C2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/iOSSupport/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
 		562B5FF8258012D800F345F5 /* CalendarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioView.swift; sourceTree = "<group>"; };
 		562B5FFE258017B200F345F5 /* SeccionesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeccionesView.swift; sourceTree = "<group>"; };
+		56361E7F2580916A001E11F7 /* InfoClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoClase.swift; sourceTree = "<group>"; };
 		565152A925712DC30073C3CA /* HorarioCarrera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioCarrera.swift; sourceTree = "<group>"; };
 		565152AE25712E790073C3CA /* HorarioClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClase.swift; sourceTree = "<group>"; };
 		565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseView.swift; sourceTree = "<group>"; };
@@ -273,6 +275,14 @@
 			path = Secciones;
 			sourceTree = "<group>";
 		};
+		56361E7E25809157001E11F7 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				56361E7F2580916A001E11F7 /* InfoClase.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
 		565BDE252576E06B00BE3ABD /* Clases */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +357,7 @@
 		56D4ABA9256EE84D005C971D /* Poliplanner */ = {
 			isa = PBXGroup;
 			children = (
+				56361E7E25809157001E11F7 /* Structs */,
 				561127CF25785DD700F9AA03 /* Protocols */,
 				568DC7742575D3AB00CF4106 /* Utilities */,
 				568DC7732575D39E00CF4106 /* Extensions */,
@@ -684,6 +695,7 @@
 				567D7E532576E79100D84902 /* HorarioClaseViewModel.swift in Sources */,
 				56D4ABAB256EE84D005C971D /* PoliplannerApp.swift in Sources */,
 				561127D625786B5500F9AA03 /* ArchivoHorarioParserError.swift in Sources */,
+				56361E802580916A001E11F7 /* InfoClase.swift in Sources */,
 				5620D1EC257BE34D0073F555 /* ArmarSeleccionarMaterias.swift in Sources */,
 				561127D125785DEB00F9AA03 /* ArchivoHorarioParser.swift in Sources */,
 				568DC7762575D3C100CF4106 /* RealmProvider.swift in Sources */,

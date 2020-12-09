@@ -11,8 +11,9 @@ Settings.bundle/Acknowledgements.plist
 *.perspective
 *.perspectivev3
 *.pbxuser
-*.xcworkspace
+#.xcworkspace
 xcuserdata
+*xcworkspace/xcuserdata/*
 
 # Build products
 build/

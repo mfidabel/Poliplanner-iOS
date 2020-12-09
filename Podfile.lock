@@ -5,12 +5,13 @@ PODS:
   - R.swift (5.3.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
-  - Realm (10.1.4):
-    - Realm/Headers (= 10.1.4)
-  - Realm/Headers (10.1.4)
-  - RealmSwift (10.1.4):
-    - Realm (= 10.1.4)
+  - Realm (10.3.0):
+    - Realm/Headers (= 10.3.0)
+  - Realm/Headers (10.3.0)
+  - RealmSwift (10.3.0):
+    - Realm (= 10.3.0)
   - SwiftLint (0.41.0)
+  - SwiftUIPager (1.14.0)
   - XMLCoder (0.11.1)
   - ZIPFoundation (0.9.11)
 
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - R.swift
   - RealmSwift
   - SwiftLint
+  - SwiftUIPager
 
 SPEC REPOS:
   trunk:
@@ -28,6 +30,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - SwiftLint
+    - SwiftUIPager
     - XMLCoder
     - ZIPFoundation
 
@@ -35,12 +38,13 @@ SPEC CHECKSUMS:
   CoreXLSX: 18e81bf259aa945dceaa0328a788e50140859907
   R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
-  Realm: 80f4fb2971ccb9adc27a47d0955ae8e533a7030b
-  RealmSwift: 0e566ca714edb377bba8ea0811eafcea0b93734e
+  Realm: 7957567daedece88d04866cdea419a5975f78e1b
+  RealmSwift: 8cc707e87a4ed4f36e76312ae4f53cc1265d9bad
   SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
+  SwiftUIPager: 3a524f166aecc695e5c724799c4b1ad5507ae55f
   XMLCoder: c4638336674de7ba279cd23f2005817d69f538e0
   ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
-PODFILE CHECKSUM: c0be94e9914019e7f5b8f830fcf2d5302a10726e
+PODFILE CHECKSUM: 182062597bb5bbf4a36e019f39a64265c94260d3
 
 COCOAPODS: 1.10.0

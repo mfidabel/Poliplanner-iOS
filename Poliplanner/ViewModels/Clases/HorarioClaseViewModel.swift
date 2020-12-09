@@ -10,7 +10,25 @@ import RealmSwift
 
 class HorarioClaseViewModel: ObservableObject {
     // MARK: - Variables
-    @Published private(set) var seccionesElegidas: RealmSwift.Results<Seccion>
+    @Published private(set) var seccionesElegidasActivas: [Seccion] = []
+    var clasesPorDia: [ (key: DiaClase, value: [InfoClase]) ] {
+        // Juntamos todas las clases
+        let clases: [InfoClase] = seccionesElegidasActivas.flatMap { seccion in
+            seccion.clases.map { clase in
+                InfoClase(dia: DiaClase(rawValue: clase.dia)!,
+                          asignatura: seccion.asignatura!.nombre,
+                          hora: clase.horaInicio)
+            }
+        }.sorted { (claseIzquierda, claseDerecha) -> Bool in
+            claseIzquierda.hora < claseDerecha.hora
+        }
+        // Retornamos un vector ordenado con las tuplas agrupadas por el dia
+        return Dictionary(grouping: clases) { clase in
+            clase.dia
+        }.sorted { (diaIzquierdo, diaDerecho) in
+            diaIzquierdo.key < diaDerecho.key
+        }
+    }
     
     // MARK: - Results
     private var seccionesElegidasResults: RealmSwift.Results<Seccion>
@@ -26,7 +44,7 @@ class HorarioClaseViewModel: ObservableObject {
         // Seleccionamos las secciones elegidas por el usuario
         seccionesElegidasResults = realm.objects(Seccion.self)
             .filter("elegido = true")
-        seccionesElegidas = seccionesElegidasResults.freeze()
+        seleccionarSeccionesActivasElegidas()
         inicializarTokens()
     }
     
@@ -35,7 +53,15 @@ class HorarioClaseViewModel: ObservableObject {
         // Observamos cambios sobre los resultados
         seccionesElegidasToken = seccionesElegidasResults.observe { _ in
             // Cargar todas las secciones elegidas
-            self.seccionesElegidas = self.seccionesElegidasResults.freeze()
+            self.seleccionarSeccionesActivasElegidas()
+        }
+    }
+    
+    private func seleccionarSeccionesActivasElegidas() {
+        seccionesElegidasActivas = seccionesElegidasResults.freeze().filter { seccion in
+            let horarioCarrera = seccion.horariosCarrera.first as HorarioCarrera?
+            let horarioClase = horarioCarrera?.horarioClase.first as HorarioClase?
+            return horarioClase?.estado == EstadoHorario.ACTIVO.rawValue
         }
     }
     

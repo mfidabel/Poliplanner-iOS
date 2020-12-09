@@ -11,14 +11,16 @@ struct HorarioClaseView: View {
     @ObservedObject private var HCViewModel = HorarioClaseViewModel()
 
     var body: some View {
-        List(HCViewModel.seccionesElegidas) { seccion in
-            Text("\(seccion.asignatura?.nombre ?? "Sin nombre")")
+        Group {
+            List {
+                ForEach(HCViewModel.clasesPorDia, id: \.key) { dia in
+                    Section(header: Text(dia.key.rawValue)) {
+                        ForEach(dia.value, id: \.self) { clase in
+                            Text("\(clase.asignatura) \(clase.hora)")
+                        }
+                    }
+                }
+            }
         }
-    }
-}
-
-struct HorarioClaseView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
