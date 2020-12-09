@@ -18,6 +18,8 @@
 		561127D625786B5500F9AA03 /* ArchivoHorarioParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561127D525786B5500F9AA03 /* ArchivoHorarioParserError.swift */; };
 		561A4B98257B1E8F00BE9EE3 /* ArmarSeleccionarCarrera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A4B97257B1E8F00BE9EE3 /* ArmarSeleccionarCarrera.swift */; };
 		5620D1EC257BE34D0073F555 /* ArmarSeleccionarMaterias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5620D1EB257BE34D0073F555 /* ArmarSeleccionarMaterias.swift */; };
+		562B5FF9258012D800F345F5 /* CalendarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B5FF8258012D800F345F5 /* CalendarioView.swift */; };
+		562B5FFF258017B200F345F5 /* SeccionesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B5FFE258017B200F345F5 /* SeccionesView.swift */; };
 		565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152A925712DC30073C3CA /* HorarioCarrera.swift */; };
 		565152AF25712E790073C3CA /* HorarioClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152AE25712E790073C3CA /* HorarioClase.swift */; };
 		565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */; };
@@ -83,6 +85,8 @@
 		561A4B97257B1E8F00BE9EE3 /* ArmarSeleccionarCarrera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmarSeleccionarCarrera.swift; sourceTree = "<group>"; };
 		5620D1EB257BE34D0073F555 /* ArmarSeleccionarMaterias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmarSeleccionarMaterias.swift; sourceTree = "<group>"; };
 		562271CA256EED60001AB5C2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/iOSSupport/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
+		562B5FF8258012D800F345F5 /* CalendarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioView.swift; sourceTree = "<group>"; };
+		562B5FFE258017B200F345F5 /* SeccionesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeccionesView.swift; sourceTree = "<group>"; };
 		565152A925712DC30073C3CA /* HorarioCarrera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioCarrera.swift; sourceTree = "<group>"; };
 		565152AE25712E790073C3CA /* HorarioClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClase.swift; sourceTree = "<group>"; };
 		565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseView.swift; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 		561F15822570344E005C1E5F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				562B5FFD258017A600F345F5 /* Secciones */,
+				562B5FF7258012CA00F345F5 /* Calendario */,
 				566F1D10257810450057B2B3 /* Configuración */,
 				565BDE252576E06B00BE3ABD /* Clases */,
 			);
@@ -249,6 +255,22 @@
 				55AA755EFD865DC12D18283B /* Pods_PoliplannerTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		562B5FF7258012CA00F345F5 /* Calendario */ = {
+			isa = PBXGroup;
+			children = (
+				562B5FF8258012D800F345F5 /* CalendarioView.swift */,
+			);
+			path = Calendario;
+			sourceTree = "<group>";
+		};
+		562B5FFD258017A600F345F5 /* Secciones */ = {
+			isa = PBXGroup;
+			children = (
+				562B5FFE258017B200F345F5 /* SeccionesView.swift */,
+			);
+			path = Secciones;
 			sourceTree = "<group>";
 		};
 		565BDE252576E06B00BE3ABD /* Clases */ = {
@@ -387,6 +409,8 @@
 			dependencies = (
 			);
 			name = Poliplanner;
+			packageProductDependencies = (
+			);
 			productName = Poliplanner;
 			productReference = 56D4ABA7256EE84D005C971D /* Poliplanner.app */;
 			productType = "com.apple.product-type.application";
@@ -461,6 +485,8 @@
 				Base,
 			);
 			mainGroup = 56D4AB9E256EE84D005C971D;
+			packageReferences = (
+			);
 			productRefGroup = 56D4ABA8256EE84D005C971D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -652,6 +678,7 @@
 				56D4ABAD256EE84D005C971D /* ContentView.swift in Sources */,
 				561127C12578458800F9AA03 /* CarreraSigla.swift in Sources */,
 				565152AF25712E790073C3CA /* HorarioClase.swift in Sources */,
+				562B5FFF258017B200F345F5 /* SeccionesView.swift in Sources */,
 				568E7CDC25759E7E008979C6 /* PoliplannerStore.swift in Sources */,
 				56A61859257081D700346419 /* Seccion.swift in Sources */,
 				567D7E532576E79100D84902 /* HorarioClaseViewModel.swift in Sources */,
@@ -672,6 +699,7 @@
 				5600BC4C25789B160042580F /* Array+CarreraSigla.swift in Sources */,
 				56A618542570806600346419 /* Clase.swift in Sources */,
 				56F5F2D325783FB20066CE24 /* UTType+Excel.swift in Sources */,
+				562B5FF9258012D800F345F5 /* CalendarioView.swift in Sources */,
 				561127C825785DB200F9AA03 /* XLSXHorarioParser.swift in Sources */,
 				56A6184525707CFB00346419 /* Carrera.swift in Sources */,
 				560D6A30257BF8EC007DD904 /* EstadoHorario.swift in Sources */,
@@ -844,7 +872,6 @@
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Poliplanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -852,7 +879,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.Poliplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -873,7 +900,6 @@
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Poliplanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -881,7 +907,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.Poliplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -27,12 +27,14 @@ class HorarioClaseViewModel: ObservableObject {
         seccionesElegidasResults = realm.objects(Seccion.self)
             .filter("elegido = true")
         seccionesElegidas = seccionesElegidasResults.freeze()
+        inicializarTokens()
     }
     
     // MARK: Inicializar Tokens
     private func inicializarTokens() {
         // Observamos cambios sobre los resultados
         seccionesElegidasToken = seccionesElegidasResults.observe { _ in
+            // Cargar todas las secciones elegidas
             self.seccionesElegidas = self.seccionesElegidasResults.freeze()
         }
     }

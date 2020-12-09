@@ -25,7 +25,7 @@ struct ArmarSeleccionarCarrera: View {
             }
             Spacer()
             
-        }.navigationTitle("Seleccione su carrera")
+        }.navigationTitle(Text("Seleccione su carrera"))
         .navigationBarItems(leading: botonCancelar)
     }
     

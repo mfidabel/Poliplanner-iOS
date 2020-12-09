@@ -15,6 +15,7 @@ class HorarioClase: Object, Identifiable {
     @objc dynamic var nombre: String = ""
     @objc dynamic var fechaActualizacion: String = ""
     @objc dynamic var periodoAcademico: String = ""
+    @objc dynamic var estado: String = EstadoHorario.DRAFT.rawValue
     let horariosCarrera: List<HorarioCarrera> = List<HorarioCarrera>()
     
     override static func primaryKey() -> String? {

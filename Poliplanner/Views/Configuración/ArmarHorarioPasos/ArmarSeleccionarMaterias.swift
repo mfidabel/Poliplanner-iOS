@@ -25,13 +25,8 @@ struct ArmarSeleccionarMaterias: View {
                     ForEach(materia.value, id: \.id) { seccion in
                         let seleccionado = viewModel.seccionSeleccionada(seccion)
                         HStack {
-                            if seleccionado {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .foregroundColor(.blue)
-                            } else {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .foregroundColor(.gray)
-                            }
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundColor(seleccionado ? .blue : .gray)
                             Text("\(seccion.codigo) - \(seccion.docente)")
                         }
                         .onTapGesture {
@@ -46,7 +41,7 @@ struct ArmarSeleccionarMaterias: View {
             }
         }
         .listStyle(InsetGroupedListStyle())
-        .navigationBarTitle("Seleccione las materias")
+        .navigationBarTitle(Text("Seleccione las materias"))
         .navigationBarItems(trailing: botonConstruir)
     }
     

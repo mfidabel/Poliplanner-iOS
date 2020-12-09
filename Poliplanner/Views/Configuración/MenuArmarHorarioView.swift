@@ -88,29 +88,18 @@ struct MenuArmarHorarioView: View {
                 let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds
                 let timeInterval = Double(nanoTime) / 1_000_000_000
                 
-                print("Time to evaluate problem: \(timeInterval) seconds")
-                
-                let realm = RealmProvider.realm()
+                print("Tiempo de importación: \(timeInterval) seconds")
                 
                 if horarioGenerado != nil {
-                    try? realm.write {
-                        realm.add(horarioGenerado!)
+                    DispatchQueue.main.sync {
+                        // Pasamos al PPStore el draft del horario de clase en el hilo principal
+                        // provocando una actualización en la interfaz gráfica
+                        // Como no esta manejado por realm todavía, es seguro pasar entre hilos el objeto
+                        PPStore.horarioClaseDraft = horarioGenerado!
+                        estaArmando = true
                     }
                 }
                 
-                let horarioRef = ThreadSafeReference(to: horarioGenerado!)
-                
-                DispatchQueue.main.async {
-                    autoreleasepool {
-                        let realm = RealmProvider.realm()
-                        realm.refresh()
-                        guard let horarioDraft = realm.resolve(horarioRef) else {
-                            return
-                        }
-                        self.PPStore.horarioClaseDraft = horarioDraft
-                        self.estaArmando = true
-                    }
-                }
             }
             
         case .failure(let error):

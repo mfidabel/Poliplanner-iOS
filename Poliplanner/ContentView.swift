@@ -15,12 +15,12 @@ struct ContentView: View {
                 .tabItem {
                     Label("Clases", systemImage: "list.bullet")
                 }.tag("0")
-            Text("Tab Content 1")
+            CalendarioView()
                 .tabItem {
                     Label("Calendario", systemImage: "calendar")
                 }
                 .tag("1")
-            Text("Tab Content 2")
+            SeccionesView()
                 .tabItem {
                     Label("Secciones", systemImage: "rectangle.grid.1x2")
                 }

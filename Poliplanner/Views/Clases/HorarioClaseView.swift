@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HorarioClaseView: View {
-    @StateObject private var HCViewModel = HorarioClaseViewModel()
+    @ObservedObject private var HCViewModel = HorarioClaseViewModel()
 
     var body: some View {
         List(HCViewModel.seccionesElegidas) { seccion in

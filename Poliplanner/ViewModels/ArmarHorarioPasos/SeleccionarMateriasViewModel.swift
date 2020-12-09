@@ -9,18 +9,16 @@ import Foundation
 import RealmSwift
 
 class SeleccionarMateriasViewModel: ObservableObject {
-    @Published private(set) var materias: [(key: String, value: [Seccion])]!
+    private(set) var materias: [(key: String, value: [Seccion])] = []
+    @Published private(set) var seccionesSeleccionadas: Set<Seccion> = []
 
     private var horarioClase: HorarioClase
     private var carrera: CarreraSigla
-    
-    @Published private(set) var seccionesSeleccionadas: Set<Seccion> = []
     
     init(horarioClase: HorarioClase, paraCarrera carrera: CarreraSigla) {
         self.horarioClase = horarioClase
         self.carrera = carrera
         agruparMaterias()
-        // TODO: Observar cambios sobre el horario de clases
     }
     
     private func agruparMaterias() {
@@ -77,12 +75,19 @@ class SeleccionarMateriasViewModel: ObservableObject {
     
     /// Carga las secciones como secciones elegidas
     func cargarSecciones() {
+        // Marcamos todas las secciones como elegidas
+        seccionesSeleccionadas.forEach { seccion in
+            seccion.elegido = true
+        }
+        
+        // Marcamos el horario como activo TODO: Desmarcar otros horarios como activos
+        horarioClase.estado = EstadoHorario.ACTIVO.rawValue
+        
+        // Escribimos los cambios
         let realm = RealmProvider.realm()
         
         try? realm.write {
-            seccionesSeleccionadas.forEach { seccion in
-                seccion.elegido = true
-            }
+            realm.add(horarioClase)
         }
     }
 }
