@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DiaClase: String, Comparable {
+enum DiaClase: String, Comparable, CaseIterable {
     case LUNES = "Lunes"
     case MARTES = "Martes"
     case MIERCOLES = "Miércoles"

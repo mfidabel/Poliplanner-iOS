@@ -11,23 +11,29 @@ import RealmSwift
 class HorarioClaseViewModel: ObservableObject {
     // MARK: - Variables
     @Published private(set) var seccionesElegidasActivas: [Seccion] = []
-    var clasesPorDia: [ (key: DiaClase, value: [InfoClase]) ] {
+    var clasesPorDia: [InfoPaginaDia] {
+        // Generamos un diccionario de paginas
+        var paginas: [DiaClase: InfoPaginaDia] = [:]
+        
+        DiaClase.allCases.forEach { dia in
+            paginas[dia] = InfoPaginaDia(dia: dia, clases: [])
+        }
+        
         // Juntamos todas las clases
-        let clases: [InfoClase] = seccionesElegidasActivas.flatMap { seccion in
-            seccion.clases.map { clase in
-                InfoClase(dia: DiaClase(rawValue: clase.dia)!,
+        seccionesElegidasActivas.forEach { seccion in
+            seccion.clases.forEach { clase in
+                let infoGenerada = InfoClase(dia: DiaClase(rawValue: clase.dia)!,
                           asignatura: seccion.asignatura!.nombre,
                           hora: clase.horaInicio)
+                paginas[infoGenerada.dia]!.clases.append(infoGenerada)
             }
-        }.sorted { (claseIzquierda, claseDerecha) -> Bool in
-            claseIzquierda.hora < claseDerecha.hora
         }
-        // Retornamos un vector ordenado con las tuplas agrupadas por el dia
-        return Dictionary(grouping: clases) { clase in
-            clase.dia
-        }.sorted { (diaIzquierdo, diaDerecho) in
-            diaIzquierdo.key < diaDerecho.key
-        }
+        
+        // Ordenamos las clases
+        return DiaClase.allCases.map { dia -> InfoPaginaDia in
+            paginas[dia]!.clases.sort(by: <)
+            return paginas[dia]!
+        }.sorted()
     }
     
     // MARK: - Results

@@ -11,16 +11,8 @@ struct HorarioClaseView: View {
     @ObservedObject private var HCViewModel = HorarioClaseViewModel()
 
     var body: some View {
-        Group {
-            List {
-                ForEach(HCViewModel.clasesPorDia, id: \.key) { dia in
-                    Section(header: Text(dia.key.rawValue)) {
-                        ForEach(dia.value, id: \.self) { clase in
-                            Text("\(clase.asignatura) \(clase.hora)")
-                        }
-                    }
-                }
-            }
-        }
+        VStack {
+            PaginacionMateriaView(paginas: HCViewModel.clasesPorDia)
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

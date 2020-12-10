@@ -7,7 +7,15 @@
 
 import Foundation
 
-struct InfoClase: Hashable {
+struct InfoClase: Hashable, Comparable {
+    static func < (lhs: InfoClase, rhs: InfoClase) -> Bool {
+        if lhs.dia == rhs.dia {
+            return lhs.hora < rhs.hora
+        }
+        
+        return lhs.dia < rhs.dia
+    }
+    
     var dia: DiaClase
     var asignatura: String
     var hora: String

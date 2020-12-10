@@ -30,12 +30,15 @@
 		567D7E632576EAE300D84902 /* MenuModificarHorarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7E622576EAE300D84902 /* MenuModificarHorarioView.swift */; };
 		568DC7762575D3C100CF4106 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568DC7752575D3C100CF4106 /* RealmProvider.swift */; };
 		568E7CDC25759E7E008979C6 /* PoliplannerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568E7CDB25759E7E008979C6 /* PoliplannerStore.swift */; };
+		569E1F6D2581CE6700D64898 /* PagingOptions+HorarioClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569E1F6C2581CE6700D64898 /* PagingOptions+HorarioClase.swift */; };
 		56A6184025707C0F00346419 /* Asignatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6183F25707C0F00346419 /* Asignatura.swift */; };
 		56A6184525707CFB00346419 /* Carrera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6184425707CFB00346419 /* Carrera.swift */; };
 		56A6184A25707DBA00346419 /* Examen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6184925707DBA00346419 /* Examen.swift */; };
 		56A6184F25707E8000346419 /* Revision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6184E25707E8000346419 /* Revision.swift */; };
 		56A618542570806600346419 /* Clase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A618532570806600346419 /* Clase.swift */; };
 		56A61859257081D700346419 /* Seccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A61858257081D700346419 /* Seccion.swift */; };
+		56B90A1F25817BC00051872A /* PaginacionMateriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B90A1E25817BC00051872A /* PaginacionMateriaView.swift */; };
+		56B90A27258181800051872A /* PaginaClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B90A26258181800051872A /* PaginaClase.swift */; };
 		56BE7EE7256F25DB00C65151 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE7EE6256F25DB00C65151 /* R.generated.swift */; };
 		56BE7EE8256F25DB00C65151 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE7EE6256F25DB00C65151 /* R.generated.swift */; };
 		56BE7EE9256F25DB00C65151 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE7EE6256F25DB00C65151 /* R.generated.swift */; };
@@ -49,6 +52,7 @@
 		56D4ABBD256EE84E005C971D /* PoliplannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABBC256EE84E005C971D /* PoliplannerTests.swift */; };
 		56D4ABC8256EE84E005C971D /* PoliplannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABC7256EE84E005C971D /* PoliplannerUITests.swift */; };
 		56E2CE04257DC4BA0094333C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56E2CE03257DC4BA0094333C /* Settings.bundle */; };
+		56EF6DC425814BC1005EA4FC /* InfoPaginaDia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF6DC325814BC1005EA4FC /* InfoPaginaDia.swift */; };
 		56F5F2D325783FB20066CE24 /* UTType+Excel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5F2D225783FB20066CE24 /* UTType+Excel.swift */; };
 		C97E57CA8C004DFDB2472D14 /* Pods_Poliplanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3901A3A402D7F0C26DFF11BE /* Pods_Poliplanner.framework */; };
 /* End PBXBuildFile section */
@@ -98,12 +102,15 @@
 		567D7E622576EAE300D84902 /* MenuModificarHorarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModificarHorarioView.swift; sourceTree = "<group>"; };
 		568DC7752575D3C100CF4106 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		568E7CDB25759E7E008979C6 /* PoliplannerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliplannerStore.swift; sourceTree = "<group>"; };
+		569E1F6C2581CE6700D64898 /* PagingOptions+HorarioClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PagingOptions+HorarioClase.swift"; sourceTree = "<group>"; };
 		56A6183F25707C0F00346419 /* Asignatura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asignatura.swift; sourceTree = "<group>"; };
 		56A6184425707CFB00346419 /* Carrera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrera.swift; sourceTree = "<group>"; };
 		56A6184925707DBA00346419 /* Examen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examen.swift; sourceTree = "<group>"; };
 		56A6184E25707E8000346419 /* Revision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Revision.swift; sourceTree = "<group>"; };
 		56A618532570806600346419 /* Clase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clase.swift; sourceTree = "<group>"; };
 		56A61858257081D700346419 /* Seccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seccion.swift; sourceTree = "<group>"; };
+		56B90A1E25817BC00051872A /* PaginacionMateriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginacionMateriaView.swift; sourceTree = "<group>"; };
+		56B90A26258181800051872A /* PaginaClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaClase.swift; sourceTree = "<group>"; };
 		56BE7EE6256F25DB00C65151 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		56BE7EF0256F26A500C65151 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		56D4ABA7256EE84D005C971D /* Poliplanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poliplanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +127,7 @@
 		56D4ABC9256EE84E005C971D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56D4ABDE256EE9AA005C971D /* Poliplanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poliplanner.entitlements; sourceTree = "<group>"; };
 		56E2CE03257DC4BA0094333C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		56EF6DC325814BC1005EA4FC /* InfoPaginaDia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPaginaDia.swift; sourceTree = "<group>"; };
 		56F5F2D225783FB20066CE24 /* UTType+Excel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UTType+Excel.swift"; sourceTree = "<group>"; };
 		6FA3FEF05D598636C61A8343 /* Pods-Poliplanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliplanner.release.xcconfig"; path = "Target Support Files/Pods-Poliplanner/Pods-Poliplanner.release.xcconfig"; sourceTree = "<group>"; };
 		7E0B99390484AABF2198F051 /* Pods-PoliplannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoliplannerTests.release.xcconfig"; path = "Target Support Files/Pods-PoliplannerTests/Pods-PoliplannerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -279,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				56361E7F2580916A001E11F7 /* InfoClase.swift */,
+				56EF6DC325814BC1005EA4FC /* InfoPaginaDia.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -286,6 +295,7 @@
 		565BDE252576E06B00BE3ABD /* Clases */ = {
 			isa = PBXGroup;
 			children = (
+				56B90A1D2581797F0051872A /* Paginacion */,
 				565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */,
 			);
 			path = Clases;
@@ -315,6 +325,7 @@
 			children = (
 				56F5F2D225783FB20066CE24 /* UTType+Excel.swift */,
 				5600BC4B25789B160042580F /* Array+CarreraSigla.swift */,
+				569E1F6C2581CE6700D64898 /* PagingOptions+HorarioClase.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -327,6 +338,15 @@
 				568DC7752575D3C100CF4106 /* RealmProvider.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		56B90A1D2581797F0051872A /* Paginacion */ = {
+			isa = PBXGroup;
+			children = (
+				56B90A1E25817BC00051872A /* PaginacionMateriaView.swift */,
+				56B90A26258181800051872A /* PaginaClase.swift */,
+			);
+			path = Paginacion;
 			sourceTree = "<group>";
 		};
 		56D4AB9E256EE84D005C971D = {
@@ -702,14 +722,18 @@
 				560D6A36257BFA49007DD904 /* SeleccionarMateriasViewModel.swift in Sources */,
 				565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */,
 				565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */,
+				569E1F6D2581CE6700D64898 /* PagingOptions+HorarioClase.swift in Sources */,
 				56A6184025707C0F00346419 /* Asignatura.swift in Sources */,
 				56A6184A25707DBA00346419 /* Examen.swift in Sources */,
 				56A6184F25707E8000346419 /* Revision.swift in Sources */,
+				56B90A1F25817BC00051872A /* PaginacionMateriaView.swift in Sources */,
 				567D7E632576EAE300D84902 /* MenuModificarHorarioView.swift in Sources */,
 				56BE7EE7256F25DB00C65151 /* R.generated.swift in Sources */,
 				566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */,
 				5600BC4C25789B160042580F /* Array+CarreraSigla.swift in Sources */,
+				56B90A27258181800051872A /* PaginaClase.swift in Sources */,
 				56A618542570806600346419 /* Clase.swift in Sources */,
+				56EF6DC425814BC1005EA4FC /* InfoPaginaDia.swift in Sources */,
 				56F5F2D325783FB20066CE24 /* UTType+Excel.swift in Sources */,
 				562B5FF9258012D800F345F5 /* CalendarioView.swift in Sources */,
 				561127C825785DB200F9AA03 /* XLSXHorarioParser.swift in Sources */,
@@ -888,7 +912,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.Poliplanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.poliplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
@@ -916,7 +940,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.Poliplanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfidabel.poliplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;

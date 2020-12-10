@@ -15,7 +15,7 @@ target 'Poliplanner' do
   # Lector de XLSX
   pod 'CoreXLSX', '~> 0.13.0'
   # Paging de las clases
-  pod 'SwiftUIPager'
+  pod 'Parchment', '~> 3.0'
 
   target 'PoliplannerTests' do
     inherit! :search_paths
