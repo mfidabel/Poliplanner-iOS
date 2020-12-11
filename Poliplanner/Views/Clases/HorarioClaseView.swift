@@ -11,8 +11,7 @@ struct HorarioClaseView: View {
     @ObservedObject private var HCViewModel = HorarioClaseViewModel()
 
     var body: some View {
-        VStack {
-            PaginacionMateriaView(paginas: HCViewModel.clasesPorDia)
-        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+        PaginacionMateriaView(paginas: HCViewModel.clasesPorDia)
+            .navigationBarTitle("Horario de clases", displayMode: .automatic)
     }
 }

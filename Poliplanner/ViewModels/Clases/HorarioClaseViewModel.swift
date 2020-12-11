@@ -22,9 +22,7 @@ class HorarioClaseViewModel: ObservableObject {
         // Juntamos todas las clases
         seccionesElegidasActivas.forEach { seccion in
             seccion.clases.forEach { clase in
-                let infoGenerada = InfoClase(dia: DiaClase(rawValue: clase.dia)!,
-                          asignatura: seccion.asignatura!.nombre,
-                          hora: clase.horaInicio)
+                let infoGenerada = InfoClase(asignatura: seccion.asignatura!.nombre, clase: clase)
                 paginas[infoGenerada.dia]!.clases.append(infoGenerada)
             }
         }
@@ -50,7 +48,7 @@ class HorarioClaseViewModel: ObservableObject {
         // Seleccionamos las secciones elegidas por el usuario
         seccionesElegidasResults = realm.objects(Seccion.self)
             .filter("elegido = true")
-        seleccionarSeccionesActivasElegidas()
+        seccionesElegidasActivas = seccionesElegidasResults.seccionesActivas()
         inicializarTokens()
     }
     
@@ -59,15 +57,7 @@ class HorarioClaseViewModel: ObservableObject {
         // Observamos cambios sobre los resultados
         seccionesElegidasToken = seccionesElegidasResults.observe { _ in
             // Cargar todas las secciones elegidas
-            self.seleccionarSeccionesActivasElegidas()
-        }
-    }
-    
-    private func seleccionarSeccionesActivasElegidas() {
-        seccionesElegidasActivas = seccionesElegidasResults.freeze().filter { seccion in
-            let horarioCarrera = seccion.horariosCarrera.first as HorarioCarrera?
-            let horarioClase = horarioCarrera?.horarioClase.first as HorarioClase?
-            return horarioClase?.estado == EstadoHorario.ACTIVO.rawValue
+            self.seccionesElegidasActivas = self.seccionesElegidasResults.seccionesActivas()
         }
     }
     

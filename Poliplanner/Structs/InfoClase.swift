@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Representa la estructura de datos de una clase en el horario de clases que se mostrará.
+/// Es una entrada en la lista de clases de un cierto dia.
 struct InfoClase: Hashable, Comparable {
     static func < (lhs: InfoClase, rhs: InfoClase) -> Bool {
         if lhs.dia == rhs.dia {
@@ -16,7 +18,21 @@ struct InfoClase: Hashable, Comparable {
         return lhs.dia < rhs.dia
     }
     
-    var dia: DiaClase
+    init(asignatura: String, clase: Clase) {
+        self.asignatura = asignatura
+        self.clase = clase
+    }
+    
+    private var clase: Clase
+    
     var asignatura: String
-    var hora: String
+    var dia: DiaClase {
+        return DiaClase(rawValue: clase.dia)!
+    }
+    var hora: String {
+        return clase.horaInicio
+    }
+    var aula: String {
+        return clase.aula
+    }
 }

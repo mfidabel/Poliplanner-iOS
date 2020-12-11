@@ -52,6 +52,8 @@
 		56D4ABBD256EE84E005C971D /* PoliplannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABBC256EE84E005C971D /* PoliplannerTests.swift */; };
 		56D4ABC8256EE84E005C971D /* PoliplannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABC7256EE84E005C971D /* PoliplannerUITests.swift */; };
 		56E2CE04257DC4BA0094333C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56E2CE03257DC4BA0094333C /* Settings.bundle */; };
+		56EB465F2583F98D0024DFB0 /* SeccionesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EB465E2583F98D0024DFB0 /* SeccionesViewModel.swift */; };
+		56EB46732583FB1B0024DFB0 /* Results+SeccionesActivas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EB46722583FB1B0024DFB0 /* Results+SeccionesActivas.swift */; };
 		56EF6DC425814BC1005EA4FC /* InfoPaginaDia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF6DC325814BC1005EA4FC /* InfoPaginaDia.swift */; };
 		56F5F2D325783FB20066CE24 /* UTType+Excel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5F2D225783FB20066CE24 /* UTType+Excel.swift */; };
 		C97E57CA8C004DFDB2472D14 /* Pods_Poliplanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3901A3A402D7F0C26DFF11BE /* Pods_Poliplanner.framework */; };
@@ -127,6 +129,8 @@
 		56D4ABC9256EE84E005C971D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56D4ABDE256EE9AA005C971D /* Poliplanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poliplanner.entitlements; sourceTree = "<group>"; };
 		56E2CE03257DC4BA0094333C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		56EB465E2583F98D0024DFB0 /* SeccionesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeccionesViewModel.swift; sourceTree = "<group>"; };
+		56EB46722583FB1B0024DFB0 /* Results+SeccionesActivas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+SeccionesActivas.swift"; sourceTree = "<group>"; };
 		56EF6DC325814BC1005EA4FC /* InfoPaginaDia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPaginaDia.swift; sourceTree = "<group>"; };
 		56F5F2D225783FB20066CE24 /* UTType+Excel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UTType+Excel.swift"; sourceTree = "<group>"; };
 		6FA3FEF05D598636C61A8343 /* Pods-Poliplanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliplanner.release.xcconfig"; path = "Target Support Files/Pods-Poliplanner/Pods-Poliplanner.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 		561F15812570340F005C1E5F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				56EB465D2583F9740024DFB0 /* Secciones */,
 				560D6A34257BFA1D007DD904 /* ArmarHorarioPasos */,
 				567D7E512576E77D00D84902 /* Clases */,
 				568E7CDB25759E7E008979C6 /* PoliplannerStore.swift */,
@@ -326,6 +331,7 @@
 				56F5F2D225783FB20066CE24 /* UTType+Excel.swift */,
 				5600BC4B25789B160042580F /* Array+CarreraSigla.swift */,
 				569E1F6C2581CE6700D64898 /* PagingOptions+HorarioClase.swift */,
+				56EB46722583FB1B0024DFB0 /* Results+SeccionesActivas.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -418,6 +424,14 @@
 				56D4ABC9256EE84E005C971D /* Info.plist */,
 			);
 			path = PoliplannerUITests;
+			sourceTree = "<group>";
+		};
+		56EB465D2583F9740024DFB0 /* Secciones */ = {
+			isa = PBXGroup;
+			children = (
+				56EB465E2583F98D0024DFB0 /* SeccionesViewModel.swift */,
+			);
+			path = Secciones;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -713,6 +727,7 @@
 				568E7CDC25759E7E008979C6 /* PoliplannerStore.swift in Sources */,
 				56A61859257081D700346419 /* Seccion.swift in Sources */,
 				567D7E532576E79100D84902 /* HorarioClaseViewModel.swift in Sources */,
+				56EB465F2583F98D0024DFB0 /* SeccionesViewModel.swift in Sources */,
 				56D4ABAB256EE84D005C971D /* PoliplannerApp.swift in Sources */,
 				561127D625786B5500F9AA03 /* ArchivoHorarioParserError.swift in Sources */,
 				56361E802580916A001E11F7 /* InfoClase.swift in Sources */,
@@ -732,6 +747,7 @@
 				566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */,
 				5600BC4C25789B160042580F /* Array+CarreraSigla.swift in Sources */,
 				56B90A27258181800051872A /* PaginaClase.swift in Sources */,
+				56EB46732583FB1B0024DFB0 /* Results+SeccionesActivas.swift in Sources */,
 				56A618542570806600346419 /* Clase.swift in Sources */,
 				56EF6DC425814BC1005EA4FC /* InfoPaginaDia.swift in Sources */,
 				56F5F2D325783FB20066CE24 /* UTType+Excel.swift in Sources */,

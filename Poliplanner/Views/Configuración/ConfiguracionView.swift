@@ -9,15 +9,13 @@ import SwiftUI
 
 struct ConfiguracionView: View {
     var body: some View {
-        NavigationView {
-            Form {
-                Section {
-                    NavigationLink(destination: MenuModificarHorarioView()) {
-                        Text("Modificar horario")
-                    }
+        Form {
+            Section {
+                NavigationLink(destination: MenuModificarHorarioView()) {
+                    Text("Modificar horario")
                 }
-            }.navigationTitle("Configuración")
-        }
+            }
+        }.navigationTitle("Configuración")
     }
 }
 
