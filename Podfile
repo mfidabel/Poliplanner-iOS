@@ -31,6 +31,26 @@ target 'Poliplanner' do
   post_install do | installer |
     require 'fileutils'
     FileUtils.cp_r('Pods/Target Support Files/Pods-Poliplanner/Pods-Poliplanner-acknowledgements.plist', 'Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+    fix_deployment_target(installer)
   end
   
+end
+
+
+def fix_deployment_target(installer)
+  return if !installer
+  project = installer.pods_project
+  project_deployment_target = project.build_configurations.first.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+
+  puts "Cambiando el deployment target de los pods #{project_deployment_target.green}"
+  project.targets.each do |target|
+    puts "  #{target.name}".blue
+    target.build_configurations.each do |config|
+      old_target = config.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+      new_target = project_deployment_target
+      next if old_target == new_target
+      puts "    #{config.name}: #{old_target.yellow} -> #{new_target.green}"
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = new_target
+    end
+  end
 end

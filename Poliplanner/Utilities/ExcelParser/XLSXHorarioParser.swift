@@ -43,6 +43,7 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         return horarioClase
     }
     
+    // swiftlint:disable function_body_length cyclomatic_complexity
     private func generarHorarioCarrera(paraCarrera carrera: CarreraSigla) throws -> HorarioCarrera {
         // Horario a ser creado
         let horarioCarrera: HorarioCarrera = HorarioCarrera()
@@ -73,10 +74,35 @@ class XLSXHorarioParser: ArchivoHorarioParser {
             }
         }
         
-        // Obtener las posiciones de las cabezas sin agrupar
-        hojaActualFilas[indexFilaEncabezado!].cells.forEach { celda in
+        // Obtener las posiciones de las cabezas sin agrupar TODO: Corrección de aulas usando enumerated
+        for (index, celda) in hojaActualFilas[indexFilaEncabezado!].cells.enumerated() {
             if let texto = celda.stringValue(sharedStrings), let cabeza = EncabezadoXLSX(rawValue: texto) {
                 columnasEncabezados[celda.reference.column.value] = cabeza
+                
+                // Agregar cabecera de aula de clase
+                if  cabeza == .aula,
+                    hojaActualFilas[indexFilaEncabezado!].cells.count > index + 1,
+                    let siguienteTexto = hojaActualFilas[indexFilaEncabezado!].cells[index + 1]
+                        .stringValue(sharedStrings),
+                    let siguienteCabeza = EncabezadoXLSX(rawValue: siguienteTexto) {
+                
+                    switch siguienteCabeza {
+                    case .lunes:
+                        columnasEncabezados[celda.reference.column.value] = .lunesAula
+                    case .martes:
+                        columnasEncabezados[celda.reference.column.value] = .martesAula
+                    case .miercoles:
+                        columnasEncabezados[celda.reference.column.value] = .miercolesAula
+                    case .jueves:
+                        columnasEncabezados[celda.reference.column.value] = .juevesAula
+                    case .viernes:
+                        columnasEncabezados[celda.reference.column.value] = .viernesAula
+                    case .sabado:
+                        columnasEncabezados[celda.reference.column.value] = .sabadoAula
+                    default:
+                        break
+                    }
+                }
             }
         }
         
@@ -149,16 +175,22 @@ class XLSXHorarioParser: ArchivoHorarioParser {
                 switch dia {
                 case .lunes:
                     claseDraft.setDia(.LUNES)
+                    claseDraft.aula = valores[.lunesAula] ?? ""
                 case .martes:
                     claseDraft.setDia(.MARTES)
+                    claseDraft.aula = valores[.martesAula] ?? ""
                 case .miercoles:
                     claseDraft.setDia(.MIERCOLES)
+                    claseDraft.aula = valores[.miercolesAula] ?? ""
                 case .jueves:
                     claseDraft.setDia(.JUEVES)
+                    claseDraft.aula = valores[.juevesAula] ?? ""
                 case .viernes:
                     claseDraft.setDia(.VIERNES)
+                    claseDraft.aula = valores[.viernesAula] ?? ""
                 case .sabado:
                     claseDraft.setDia(.SABADO)
+                    claseDraft.aula = valores[.sabadoAula] ?? ""
                 default:
                     break // No puede ser otro caso
                 }
@@ -176,6 +208,7 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         // TODO: Generar examenes
         return seccion
     }
+    // swiftlint:enable function_body_length cyclomatic_complexity
     
     private func recopilarHojas(paraCarreras carreras: [CarreraSigla]) throws {
         do {
@@ -233,8 +266,15 @@ private enum EncabezadoXLSX: String {
     case viernes = "Viernes"
     case sabado = "Sábado"
     case sabadoTurnoNoche = "Fechas de clases de sábados (Turno Noche)"
-    
-    static var diasClases: [EncabezadoXLSX] = [.lunes, .martes, .miercoles, .jueves, .viernes, .sabado]
+    case aula = "AULA"
+    case lunesAula
+    case martesAula
+    case miercolesAula
+    case juevesAula
+    case viernesAula
+    case sabadoAula
+        
+    static let diasClases: [EncabezadoXLSX] = [.lunes, .martes, .miercoles, .jueves, .viernes, .sabado]
     
 }
 

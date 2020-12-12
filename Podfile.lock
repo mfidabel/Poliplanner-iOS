@@ -6,11 +6,11 @@ PODS:
   - R.swift (5.3.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
-  - Realm (10.3.0):
-    - Realm/Headers (= 10.3.0)
-  - Realm/Headers (10.3.0)
-  - RealmSwift (10.3.0):
-    - Realm (= 10.3.0)
+  - Realm (10.4.0):
+    - Realm/Headers (= 10.4.0)
+  - Realm/Headers (10.4.0)
+  - RealmSwift (10.4.0):
+    - Realm (= 10.4.0)
   - SwiftLint (0.41.0)
   - XMLCoder (0.11.1)
   - ZIPFoundation (0.9.11)
@@ -39,12 +39,12 @@ SPEC CHECKSUMS:
   Parchment: 5b54e4b271719a0e94e02898ab7c3c0a00525cfa
   R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
-  Realm: 7957567daedece88d04866cdea419a5975f78e1b
-  RealmSwift: 8cc707e87a4ed4f36e76312ae4f53cc1265d9bad
+  Realm: d8466b2238f034a5ff7a031aed63b7dacdf0dd10
+  RealmSwift: 37a93ae742667948cc094a3c6ae3d006db32b66f
   SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
   XMLCoder: c4638336674de7ba279cd23f2005817d69f538e0
   ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
-PODFILE CHECKSUM: b4757c7d8b001d4887fb8ef4569190cbe56f68d8
+PODFILE CHECKSUM: fd41af53788cd0761bfa5c5d77dfad22c911e1b9
 
 COCOAPODS: 1.10.0
