@@ -16,6 +16,9 @@ class RealmProvider {
                 realm = try Realm(configuration: Realm.Configuration(inMemoryIdentifier: "MyInMemoryRealm"))
             } else {
                 realm = try Realm()
+                #if DEBUG
+                print("Realm database: \(String(describing: Realm.Configuration.defaultConfiguration.fileURL))")
+                #endif
             }
         } catch let error as NSError {
             fatalError("Error al abrir el realm. Error: \(error.localizedDescription)")

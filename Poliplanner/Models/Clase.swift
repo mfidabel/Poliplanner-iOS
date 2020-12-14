@@ -12,17 +12,23 @@ class Clase: Object, Identifiable {
     // swiftlint:disable identifier_name
     @objc dynamic var id = UUID().uuidString
     // swiftlint:enable identifier_name
-    @objc dynamic var dia: String = ""
+    @objc dynamic var dia: String = DiaClase.LUNES.rawValue
     @objc dynamic var horaInicio: String = ""
     @objc dynamic var horaFin: String = ""
     @objc dynamic var aula: String = ""
+    
+    var diaEnum: DiaClase {
+        get {
+            return DiaClase(rawValue: dia)!
+        }
+        
+        set {
+            dia = newValue.rawValue
+        }
+    }
 
     override static func primaryKey() -> String? {
         return "id"
-    }
-    
-    func setDia(_ dia: DiaClase) {
-        self.dia = dia.rawValue
     }
     
     func setHora(_ hora: String) {

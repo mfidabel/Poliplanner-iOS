@@ -8,6 +8,7 @@
 import Foundation
 import CoreXLSX
 
+// TODO: Separar lógica
 class XLSXHorarioParser: ArchivoHorarioParser {
     private var archivoURL: URL
     private var archivoXLSX: XLSXFile!
@@ -68,17 +69,30 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         
         // Obtener las posiciones de las cabezas agrupadas
         var columnasEncabezados: [String: EncabezadoXLSX] = [:]
-        hojaActualFilas[indexFilaEncabezado!-1].cells.forEach { celda in
-            if let texto = celda.stringValue(sharedStrings), let cabeza = EncabezadoXLSX(rawValue: texto) {
-                columnasEncabezados[celda.reference.column.value] = cabeza
-            }
-        }
         
-        // Obtener las posiciones de las cabezas sin agrupar TODO: Corrección de aulas usando enumerated
-        for (index, celda) in hojaActualFilas[indexFilaEncabezado!].cells.enumerated() {
+        for (index, celda) in hojaActualFilas[indexFilaEncabezado!-1].cells.enumerated() {
             if let texto = celda.stringValue(sharedStrings), let cabeza = EncabezadoXLSX(rawValue: texto) {
                 columnasEncabezados[celda.reference.column.value] = cabeza
                 
+                // En caso de que sea un examen, fijarse si hay hora
+                if cabeza.esExamen(),
+                   hojaActualFilas[indexFilaEncabezado!].cells.count > index + 1,
+                   let siguienteTexto = hojaActualFilas[indexFilaEncabezado!].cells[index + 1]
+                       .stringValue(sharedStrings),
+                   EncabezadoXLSX(rawValue: siguienteTexto) == .some(.hora) {
+                    
+                    // Abajo a la derecha es una hora de examen, procedemos a registrar
+                    // dependiendo de que examen sea lo guardamos
+                    let celdaHora = hojaActualFilas[indexFilaEncabezado!].cells[index + 1]
+                    
+                    columnasEncabezados[celdaHora.reference.column.value] = cabeza.examenHora()
+                }
+            }
+        }
+        
+        // Obtener las posiciones de las cabezas sin agrupar
+        for (index, celda) in hojaActualFilas[indexFilaEncabezado!].cells.enumerated() {
+            if let texto = celda.stringValue(sharedStrings), let cabeza = EncabezadoXLSX(rawValue: texto) {
                 // Agregar cabecera de aula de clase
                 if  cabeza == .aula,
                     hojaActualFilas[indexFilaEncabezado!].cells.count > index + 1,
@@ -86,22 +100,13 @@ class XLSXHorarioParser: ArchivoHorarioParser {
                         .stringValue(sharedStrings),
                     let siguienteCabeza = EncabezadoXLSX(rawValue: siguienteTexto) {
                 
-                    switch siguienteCabeza {
-                    case .lunes:
-                        columnasEncabezados[celda.reference.column.value] = .lunesAula
-                    case .martes:
-                        columnasEncabezados[celda.reference.column.value] = .martesAula
-                    case .miercoles:
-                        columnasEncabezados[celda.reference.column.value] = .miercolesAula
-                    case .jueves:
-                        columnasEncabezados[celda.reference.column.value] = .juevesAula
-                    case .viernes:
-                        columnasEncabezados[celda.reference.column.value] = .viernesAula
-                    case .sabado:
-                        columnasEncabezados[celda.reference.column.value] = .sabadoAula
-                    default:
-                        break
-                    }
+                    columnasEncabezados[celda.reference.column.value] = siguienteCabeza.claseAula()
+                }
+                // Agregar hora de examen
+                else if cabeza == .hora {
+                    // Por ahora nada
+                } else {
+                    columnasEncabezados[celda.reference.column.value] = cabeza
                 }
             }
         }
@@ -143,6 +148,7 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         let asignatura: Asignatura = Asignatura()
         let carrera: Carrera = Carrera()
         var clases: [Clase] = []
+        var examenes: [Examen] = []
         
         // Obtener asignatura
         asignatura.departamento = valores[.departamento] ?? ""
@@ -166,34 +172,67 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         seccion.docente = docente
         seccion.codigo = codigo
         
+        // Generar examenes TODO: Detener un mal parseo
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "es_PY")
+        dateFormatter.dateFormat = "dd/MM/yy"
+        
+        EncabezadoXLSX.examenes.forEach { examen in
+            if  let valor = valores[examen],
+                let indiceEspacio = valor.firstIndex(of: " ") {
+                // TODO: Agregar regex a la fecha
+                // Convertir fecha a date
+                let fechaString = String(valor[valor.index(after: indiceEspacio)..<valor.endIndex])
+                    .split(separator: "/")
+                
+                var fechaExamenComponents: DateComponents = .componentesReferencia
+                
+                // Agarramos la fecha sin la hora
+                fechaExamenComponents.day = Int(fechaString[0])
+                fechaExamenComponents.month = Int(fechaString[1])
+                fechaExamenComponents.year = Int(fechaString[2]) != nil ? Int(fechaString[2])! + 2000 : nil
+                
+                // Intentamos agarrar la hora
+                let horaExamenString = valores[examen.examenHora()] ?? ""
+                
+                if NSRegularExpression.horaComun.matches(horaExamenString) {
+                    // Tiene formato HH:mm
+                    fechaExamenComponents.hour = Int(horaExamenString.split(separator: ":").first!)
+                    fechaExamenComponents.minute = Int(horaExamenString.split(separator: ":").last!)
+                } else if let horaDouble = Double(horaExamenString), horaDouble < 1, horaDouble > 0 {
+                    // Tiene formato OLE
+                    let tiempoDouble = horaDouble * 24.0
+                    fechaExamenComponents.hour = Int(tiempoDouble)
+                    fechaExamenComponents.minute = Int( (tiempoDouble - Double(fechaExamenComponents.hour!) ) * 60 )
+                } else {
+                    #if DEBUG
+                    print(horaExamenString) // Caso no esperado
+                    #endif
+                }
+                
+                
+                if let fechaSeparada = Calendar.current.date(from: fechaExamenComponents) {
+                    let examenDraft: Examen = Examen()
+                    // Pasamos la fecha
+                    examenDraft.fecha = fechaSeparada
+                    // Pasamos el tipo de examen
+                    examenDraft.tipoEnum = examen.examenTipo()
+                    // Agregamos el examen
+                    examenes.append(examenDraft)
+                }
+            }
+        }
+        
+        seccion.examenes.append(objectsIn: examenes)
+        
         // Generar clases
         EncabezadoXLSX.diasClases.forEach { dia in
             if let valor = valores[dia] {
                 let claseDraft: Clase = Clase()
                 
                 // Seleccionamos el día
-                switch dia {
-                case .lunes:
-                    claseDraft.setDia(.LUNES)
-                    claseDraft.aula = valores[.lunesAula] ?? ""
-                case .martes:
-                    claseDraft.setDia(.MARTES)
-                    claseDraft.aula = valores[.martesAula] ?? ""
-                case .miercoles:
-                    claseDraft.setDia(.MIERCOLES)
-                    claseDraft.aula = valores[.miercolesAula] ?? ""
-                case .jueves:
-                    claseDraft.setDia(.JUEVES)
-                    claseDraft.aula = valores[.juevesAula] ?? ""
-                case .viernes:
-                    claseDraft.setDia(.VIERNES)
-                    claseDraft.aula = valores[.viernesAula] ?? ""
-                case .sabado:
-                    claseDraft.setDia(.SABADO)
-                    claseDraft.aula = valores[.sabadoAula] ?? ""
-                default:
-                    break // No puede ser otro caso
-                }
+                claseDraft.diaEnum = dia.claseDia()
+                claseDraft.aula = valores[dia.claseAula()] ?? ""
                 
                 // Seleccionamos la hora de inicio y fin
                 claseDraft.setHora(valor)
@@ -205,11 +244,10 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         
         seccion.clases.append(objectsIn: clases)
         
-        // TODO: Generar examenes
         return seccion
     }
-    // swiftlint:enable function_body_length cyclomatic_complexity
     
+    // swiftlint:enable function_body_length cyclomatic_complexity
     private func recopilarHojas(paraCarreras carreras: [CarreraSigla]) throws {
         do {
             //archivoXLSX = try XLSXFile(data: Data(contentsOf: archivoURL)) Tarda 0,5 segundos más
@@ -267,15 +305,108 @@ private enum EncabezadoXLSX: String {
     case sabado = "Sábado"
     case sabadoTurnoNoche = "Fechas de clases de sábados (Turno Noche)"
     case aula = "AULA"
+    case hora = "Hora"
     case lunesAula
     case martesAula
     case miercolesAula
     case juevesAula
     case viernesAula
     case sabadoAula
+    case primeraParcialHora
+    case segundaParcialHora
+    case primeraFinalHora
+    case segundaFinalHora
         
     static let diasClases: [EncabezadoXLSX] = [.lunes, .martes, .miercoles, .jueves, .viernes, .sabado]
+    static let examenes: [EncabezadoXLSX] = [.primeraParcial, .segundaParcial, .primeraFinal, .segundaFinal]
     
+    func esDiaClase() -> Bool {
+        return Self.diasClases.contains(self)
+    }
+    
+    func esExamen() -> Bool {
+        return Self.examenes.contains(self)
+    }
+    
+    func esHora() -> Bool {
+        switch self {
+        case .primeraParcialHora,
+             .segundaParcialHora,
+             .primeraFinalHora,
+             .segundaFinalHora:
+            return true
+        default:
+            return false
+        }
+    }
+    
+    func examenHora() -> EncabezadoXLSX {
+        switch self {
+        case .primeraParcial:
+            return .primeraParcialHora
+        case .segundaParcial:
+            return .segundaParcialHora
+        case .primeraFinal:
+            return .primeraFinalHora
+        case .segundaFinal:
+            return .segundaFinalHora
+        default:
+            return .hora
+        }
+    }
+    
+    func claseAula() -> EncabezadoXLSX {
+        switch self {
+        case .lunes:
+            return .lunesAula
+        case .martes:
+            return .martesAula
+        case .miercoles:
+            return .miercolesAula
+        case .jueves:
+            return .juevesAula
+        case .viernes:
+            return .viernesAula
+        case .sabado:
+            return .sabadoAula
+        default:
+            return .aula
+        }
+    }
+    
+    func claseDia() -> DiaClase {
+        switch self {
+        case .lunes:
+            return .LUNES
+        case .martes:
+            return .MARTES
+        case .miercoles:
+            return .MIERCOLES
+        case .jueves:
+            return .JUEVES
+        case .viernes:
+            return .VIERNES
+        case .sabado:
+            return .SABADO
+        default:
+            return .LUNES
+        }
+    }
+    
+    func examenTipo() -> TipoExamen {
+        switch self {
+        case .primeraParcial:
+            return .primerParcial
+        case .segundaParcial:
+            return .segundoParcial
+        case .primeraFinal:
+            return .primerFinal
+        case .segundaFinal:
+            return .segundoFinal
+        default:
+            return .evaluacion
+        }
+    }
 }
 
 private typealias ColumnaXLSX = String
