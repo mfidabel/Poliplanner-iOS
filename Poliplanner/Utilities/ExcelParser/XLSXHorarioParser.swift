@@ -209,8 +209,7 @@ class XLSXHorarioParser: ArchivoHorarioParser {
                     print(horaExamenString) // Caso no esperado
                     #endif
                 }
-                
-                
+                                
                 if let fechaSeparada = Calendar.current.date(from: fechaExamenComponents) {
                     let examenDraft: Examen = Examen()
                     // Pasamos la fecha

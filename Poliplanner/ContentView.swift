@@ -29,7 +29,9 @@ struct ContentView: View {
                     Label("Clases", systemImage: "list.bullet")
                 }.tag(ViewSeleccionada.horario)
             // Calendario de examenes
-            CalendarioView()
+            NavigationView {
+                CalendarioView()
+            }
                 .tabItem {
                     Label("Calendario", systemImage: "calendar")
                 }

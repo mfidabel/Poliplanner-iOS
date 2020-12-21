@@ -10,6 +10,8 @@
 		04B96E3864831B3DB5BB0A0C /* Pods_PoliplannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA755EFD865DC12D18283B /* Pods_PoliplannerTests.framework */; };
 		17E892547BE8CF2852FBF820 /* Pods_Poliplanner_PoliplannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F658E1F230C421D58827221 /* Pods_Poliplanner_PoliplannerUITests.framework */; };
 		5600BC4C25789B160042580F /* Array+CarreraSigla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600BC4B25789B160042580F /* Array+CarreraSigla.swift */; };
+		5600CA9325895D53002F12B5 /* CalendarioMes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600CA9225895D53002F12B5 /* CalendarioMes.swift */; };
+		560950B0258967B700A155E7 /* CalendarioMesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560950AF258967B700A155E7 /* CalendarioMesView.swift */; };
 		560D6A30257BF8EC007DD904 /* EstadoHorario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D6A2F257BF8EC007DD904 /* EstadoHorario.swift */; };
 		560D6A36257BFA49007DD904 /* SeleccionarMateriasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D6A35257BFA49007DD904 /* SeleccionarMateriasViewModel.swift */; };
 		561127C12578458800F9AA03 /* CarreraSigla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561127C02578458800F9AA03 /* CarreraSigla.swift */; };
@@ -22,6 +24,7 @@
 		562B5FF9258012D800F345F5 /* CalendarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B5FF8258012D800F345F5 /* CalendarioView.swift */; };
 		562B5FFF258017B200F345F5 /* SeccionesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B5FFE258017B200F345F5 /* SeccionesView.swift */; };
 		56361E802580916A001E11F7 /* InfoClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56361E7F2580916A001E11F7 /* InfoClase.swift */; };
+		564F77CF258BF2C6002A03CB /* ListaEventosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564F77CE258BF2C6002A03CB /* ListaEventosView.swift */; };
 		565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152A925712DC30073C3CA /* HorarioCarrera.swift */; };
 		565152AF25712E790073C3CA /* HorarioClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152AE25712E790073C3CA /* HorarioClase.swift */; };
 		565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */; };
@@ -29,6 +32,7 @@
 		566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F1D14257810F40057B2B3 /* ConfiguracionView.swift */; };
 		567D7E532576E79100D84902 /* HorarioClaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7E522576E79100D84902 /* HorarioClaseViewModel.swift */; };
 		567D7E632576EAE300D84902 /* MenuModificarHorarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7E622576EAE300D84902 /* MenuModificarHorarioView.swift */; };
+		568CE7C5258BF942001B654D /* EventoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568CE7C4258BF942001B654D /* EventoView.swift */; };
 		568DC7762575D3C100CF4106 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568DC7752575D3C100CF4106 /* RealmProvider.swift */; };
 		568E7CDC25759E7E008979C6 /* PoliplannerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568E7CDB25759E7E008979C6 /* PoliplannerStore.swift */; };
 		569E1F6D2581CE6700D64898 /* PagingOptions+HorarioClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569E1F6C2581CE6700D64898 /* PagingOptions+HorarioClase.swift */; };
@@ -38,6 +42,9 @@
 		56A6184F25707E8000346419 /* Revision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6184E25707E8000346419 /* Revision.swift */; };
 		56A618542570806600346419 /* Clase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A618532570806600346419 /* Clase.swift */; };
 		56A61859257081D700346419 /* Seccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A61858257081D700346419 /* Seccion.swift */; };
+		56B23C6F2587F91200C4E506 /* InfoEventoCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B23C6E2587F91200C4E506 /* InfoEventoCalendario.swift */; };
+		56B23C742587FB7A00C4E506 /* Calendarizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B23C732587FB7A00C4E506 /* Calendarizable.swift */; };
+		56B23C7A2587FE3E00C4E506 /* CalendarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B23C792587FE3E00C4E506 /* CalendarioViewModel.swift */; };
 		56B90A1F25817BC00051872A /* PaginacionMateriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B90A1E25817BC00051872A /* PaginacionMateriaView.swift */; };
 		56B90A27258181800051872A /* PaginaClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B90A26258181800051872A /* PaginaClase.swift */; };
 		56BE7EE7256F25DB00C65151 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE7EE6256F25DB00C65151 /* R.generated.swift */; };
@@ -46,6 +53,8 @@
 		56BE7EF1256F26A500C65151 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 56BE7EF0256F26A500C65151 /* .swiftlint.yml */; };
 		56BE7EF2256F26A500C65151 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 56BE7EF0256F26A500C65151 /* .swiftlint.yml */; };
 		56BE7EF3256F26A500C65151 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 56BE7EF0256F26A500C65151 /* .swiftlint.yml */; };
+		56C01FE4258ACCDC0021739D /* CalendarioMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C01FE3258ACCDC0021739D /* CalendarioMenuView.swift */; };
+		56C01FF1258AF3B60021739D /* CVCalendar+Redraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C01FF0258AF3B60021739D /* CVCalendar+Redraw.swift */; };
 		56C1BD472587AAD1000C4D1E /* NSRegularExpression+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BD462587AAD1000C4D1E /* NSRegularExpression+Regex.swift */; };
 		56C1BD4C2587C458000C4D1E /* DateComponents+Referencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BD4B2587C458000C4D1E /* DateComponents+Referencia.swift */; };
 		56D4ABAB256EE84D005C971D /* PoliplannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABAA256EE84D005C971D /* PoliplannerApp.swift */; };
@@ -57,6 +66,7 @@
 		56E2CE04257DC4BA0094333C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56E2CE03257DC4BA0094333C /* Settings.bundle */; };
 		56EB465F2583F98D0024DFB0 /* SeccionesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EB465E2583F98D0024DFB0 /* SeccionesViewModel.swift */; };
 		56EB46732583FB1B0024DFB0 /* Results+SeccionesActivas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EB46722583FB1B0024DFB0 /* Results+SeccionesActivas.swift */; };
+		56EF205C258EEC80000050FA /* HeaderEventoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF205B258EEC80000050FA /* HeaderEventoView.swift */; };
 		56EF6DC425814BC1005EA4FC /* InfoPaginaDia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF6DC325814BC1005EA4FC /* InfoPaginaDia.swift */; };
 		56F5F2D325783FB20066CE24 /* UTType+Excel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5F2D225783FB20066CE24 /* UTType+Excel.swift */; };
 		C97E57CA8C004DFDB2472D14 /* Pods_Poliplanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3901A3A402D7F0C26DFF11BE /* Pods_Poliplanner.framework */; };
@@ -86,6 +96,8 @@
 		55A5015CA529ABB1A5AB0B01 /* Pods-Poliplanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliplanner.debug.xcconfig"; path = "Target Support Files/Pods-Poliplanner/Pods-Poliplanner.debug.xcconfig"; sourceTree = "<group>"; };
 		55AA755EFD865DC12D18283B /* Pods_PoliplannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoliplannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5600BC4B25789B160042580F /* Array+CarreraSigla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CarreraSigla.swift"; sourceTree = "<group>"; };
+		5600CA9225895D53002F12B5 /* CalendarioMes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioMes.swift; sourceTree = "<group>"; };
+		560950AF258967B700A155E7 /* CalendarioMesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioMesView.swift; sourceTree = "<group>"; };
 		560D6A2F257BF8EC007DD904 /* EstadoHorario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadoHorario.swift; sourceTree = "<group>"; };
 		560D6A35257BFA49007DD904 /* SeleccionarMateriasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionarMateriasViewModel.swift; sourceTree = "<group>"; };
 		561127C02578458800F9AA03 /* CarreraSigla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarreraSigla.swift; sourceTree = "<group>"; };
@@ -99,6 +111,7 @@
 		562B5FF8258012D800F345F5 /* CalendarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioView.swift; sourceTree = "<group>"; };
 		562B5FFE258017B200F345F5 /* SeccionesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeccionesView.swift; sourceTree = "<group>"; };
 		56361E7F2580916A001E11F7 /* InfoClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoClase.swift; sourceTree = "<group>"; };
+		564F77CE258BF2C6002A03CB /* ListaEventosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaEventosView.swift; sourceTree = "<group>"; };
 		565152A925712DC30073C3CA /* HorarioCarrera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioCarrera.swift; sourceTree = "<group>"; };
 		565152AE25712E790073C3CA /* HorarioClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClase.swift; sourceTree = "<group>"; };
 		565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseView.swift; sourceTree = "<group>"; };
@@ -106,6 +119,7 @@
 		566F1D14257810F40057B2B3 /* ConfiguracionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionView.swift; sourceTree = "<group>"; };
 		567D7E522576E79100D84902 /* HorarioClaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseViewModel.swift; sourceTree = "<group>"; };
 		567D7E622576EAE300D84902 /* MenuModificarHorarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModificarHorarioView.swift; sourceTree = "<group>"; };
+		568CE7C4258BF942001B654D /* EventoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoView.swift; sourceTree = "<group>"; };
 		568DC7752575D3C100CF4106 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		568E7CDB25759E7E008979C6 /* PoliplannerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliplannerStore.swift; sourceTree = "<group>"; };
 		569E1F6C2581CE6700D64898 /* PagingOptions+HorarioClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PagingOptions+HorarioClase.swift"; sourceTree = "<group>"; };
@@ -115,10 +129,15 @@
 		56A6184E25707E8000346419 /* Revision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Revision.swift; sourceTree = "<group>"; };
 		56A618532570806600346419 /* Clase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clase.swift; sourceTree = "<group>"; };
 		56A61858257081D700346419 /* Seccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seccion.swift; sourceTree = "<group>"; };
+		56B23C6E2587F91200C4E506 /* InfoEventoCalendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEventoCalendario.swift; sourceTree = "<group>"; };
+		56B23C732587FB7A00C4E506 /* Calendarizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendarizable.swift; sourceTree = "<group>"; };
+		56B23C792587FE3E00C4E506 /* CalendarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioViewModel.swift; sourceTree = "<group>"; };
 		56B90A1E25817BC00051872A /* PaginacionMateriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginacionMateriaView.swift; sourceTree = "<group>"; };
 		56B90A26258181800051872A /* PaginaClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaClase.swift; sourceTree = "<group>"; };
 		56BE7EE6256F25DB00C65151 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		56BE7EF0256F26A500C65151 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		56C01FE3258ACCDC0021739D /* CalendarioMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioMenuView.swift; sourceTree = "<group>"; };
+		56C01FF0258AF3B60021739D /* CVCalendar+Redraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVCalendar+Redraw.swift"; sourceTree = "<group>"; };
 		56C1BD462587AAD1000C4D1E /* NSRegularExpression+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Regex.swift"; sourceTree = "<group>"; };
 		56C1BD4B2587C458000C4D1E /* DateComponents+Referencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponents+Referencia.swift"; sourceTree = "<group>"; };
 		56D4ABA7256EE84D005C971D /* Poliplanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poliplanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +156,7 @@
 		56E2CE03257DC4BA0094333C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		56EB465E2583F98D0024DFB0 /* SeccionesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeccionesViewModel.swift; sourceTree = "<group>"; };
 		56EB46722583FB1B0024DFB0 /* Results+SeccionesActivas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+SeccionesActivas.swift"; sourceTree = "<group>"; };
+		56EF205B258EEC80000050FA /* HeaderEventoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderEventoView.swift; sourceTree = "<group>"; };
 		56EF6DC325814BC1005EA4FC /* InfoPaginaDia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPaginaDia.swift; sourceTree = "<group>"; };
 		56F5F2D225783FB20066CE24 /* UTType+Excel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UTType+Excel.swift"; sourceTree = "<group>"; };
 		6FA3FEF05D598636C61A8343 /* Pods-Poliplanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliplanner.release.xcconfig"; path = "Target Support Files/Pods-Poliplanner/Pods-Poliplanner.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				561127D025785DEB00F9AA03 /* ArchivoHorarioParser.swift */,
+				56B23C732587FB7A00C4E506 /* Calendarizable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -249,6 +270,7 @@
 		561F15812570340F005C1E5F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				56B23C782587FE2C00C4E506 /* Calendario */,
 				56EB465D2583F9740024DFB0 /* Secciones */,
 				560D6A34257BFA1D007DD904 /* ArmarHorarioPasos */,
 				567D7E512576E77D00D84902 /* Clases */,
@@ -282,6 +304,8 @@
 		562B5FF7258012CA00F345F5 /* Calendario */ = {
 			isa = PBXGroup;
 			children = (
+				564F77CD258BF2AF002A03CB /* ListaEventos */,
+				56900B8725895440004DAA02 /* CalendarioVistaMes */,
 				562B5FF8258012D800F345F5 /* CalendarioView.swift */,
 			);
 			path = Calendario;
@@ -300,8 +324,19 @@
 			children = (
 				56361E7F2580916A001E11F7 /* InfoClase.swift */,
 				56EF6DC325814BC1005EA4FC /* InfoPaginaDia.swift */,
+				56B23C6E2587F91200C4E506 /* InfoEventoCalendario.swift */,
 			);
 			path = Structs;
+			sourceTree = "<group>";
+		};
+		564F77CD258BF2AF002A03CB /* ListaEventos */ = {
+			isa = PBXGroup;
+			children = (
+				564F77CE258BF2C6002A03CB /* ListaEventosView.swift */,
+				568CE7C4258BF942001B654D /* EventoView.swift */,
+				56EF205B258EEC80000050FA /* HeaderEventoView.swift */,
+			);
+			path = ListaEventos;
 			sourceTree = "<group>";
 		};
 		565BDE252576E06B00BE3ABD /* Clases */ = {
@@ -341,6 +376,7 @@
 				56EB46722583FB1B0024DFB0 /* Results+SeccionesActivas.swift */,
 				56C1BD462587AAD1000C4D1E /* NSRegularExpression+Regex.swift */,
 				56C1BD4B2587C458000C4D1E /* DateComponents+Referencia.swift */,
+				56C01FF0258AF3B60021739D /* CVCalendar+Redraw.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -353,6 +389,24 @@
 				568DC7752575D3C100CF4106 /* RealmProvider.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		56900B8725895440004DAA02 /* CalendarioVistaMes */ = {
+			isa = PBXGroup;
+			children = (
+				5600CA9225895D53002F12B5 /* CalendarioMes.swift */,
+				560950AF258967B700A155E7 /* CalendarioMesView.swift */,
+				56C01FE3258ACCDC0021739D /* CalendarioMenuView.swift */,
+			);
+			path = CalendarioVistaMes;
+			sourceTree = "<group>";
+		};
+		56B23C782587FE2C00C4E506 /* Calendario */ = {
+			isa = PBXGroup;
+			children = (
+				56B23C792587FE3E00C4E506 /* CalendarioViewModel.swift */,
+			);
+			path = Calendario;
 			sourceTree = "<group>";
 		};
 		56B90A1D2581797F0051872A /* Paginacion */ = {
@@ -732,23 +786,32 @@
 				56D4ABAD256EE84D005C971D /* ContentView.swift in Sources */,
 				561EB81025869FEE00507D67 /* TipoExamen.swift in Sources */,
 				561127C12578458800F9AA03 /* CarreraSigla.swift in Sources */,
+				568CE7C5258BF942001B654D /* EventoView.swift in Sources */,
 				565152AF25712E790073C3CA /* HorarioClase.swift in Sources */,
 				562B5FFF258017B200F345F5 /* SeccionesView.swift in Sources */,
 				56C1BD4C2587C458000C4D1E /* DateComponents+Referencia.swift in Sources */,
 				568E7CDC25759E7E008979C6 /* PoliplannerStore.swift in Sources */,
 				56A61859257081D700346419 /* Seccion.swift in Sources */,
+				56B23C742587FB7A00C4E506 /* Calendarizable.swift in Sources */,
 				567D7E532576E79100D84902 /* HorarioClaseViewModel.swift in Sources */,
+				56C01FE4258ACCDC0021739D /* CalendarioMenuView.swift in Sources */,
 				56EB465F2583F98D0024DFB0 /* SeccionesViewModel.swift in Sources */,
 				56D4ABAB256EE84D005C971D /* PoliplannerApp.swift in Sources */,
+				564F77CF258BF2C6002A03CB /* ListaEventosView.swift in Sources */,
 				561127D625786B5500F9AA03 /* ArchivoHorarioParserError.swift in Sources */,
 				56361E802580916A001E11F7 /* InfoClase.swift in Sources */,
+				560950B0258967B700A155E7 /* CalendarioMesView.swift in Sources */,
 				5620D1EC257BE34D0073F555 /* ArmarSeleccionarMaterias.swift in Sources */,
 				561127D125785DEB00F9AA03 /* ArchivoHorarioParser.swift in Sources */,
 				568DC7762575D3C100CF4106 /* RealmProvider.swift in Sources */,
 				560D6A36257BFA49007DD904 /* SeleccionarMateriasViewModel.swift in Sources */,
+				56C01FF1258AF3B60021739D /* CVCalendar+Redraw.swift in Sources */,
+				56B23C6F2587F91200C4E506 /* InfoEventoCalendario.swift in Sources */,
+				56EF205C258EEC80000050FA /* HeaderEventoView.swift in Sources */,
 				565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */,
 				565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */,
 				569E1F6D2581CE6700D64898 /* PagingOptions+HorarioClase.swift in Sources */,
+				56B23C7A2587FE3E00C4E506 /* CalendarioViewModel.swift in Sources */,
 				56A6184025707C0F00346419 /* Asignatura.swift in Sources */,
 				56A6184A25707DBA00346419 /* Examen.swift in Sources */,
 				56A6184F25707E8000346419 /* Revision.swift in Sources */,
@@ -763,6 +826,7 @@
 				56A618542570806600346419 /* Clase.swift in Sources */,
 				56EF6DC425814BC1005EA4FC /* InfoPaginaDia.swift in Sources */,
 				56F5F2D325783FB20066CE24 /* UTType+Excel.swift in Sources */,
+				5600CA9325895D53002F12B5 /* CalendarioMes.swift in Sources */,
 				562B5FF9258012D800F345F5 /* CalendarioView.swift in Sources */,
 				561127C825785DB200F9AA03 /* XLSXHorarioParser.swift in Sources */,
 				56A6184525707CFB00346419 /* Carrera.swift in Sources */,

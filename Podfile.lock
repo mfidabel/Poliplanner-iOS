@@ -2,6 +2,7 @@ PODS:
   - CoreXLSX (0.13.0):
     - XMLCoder (~> 0.11.1)
     - ZIPFoundation (~> 0.9.11)
+  - CVCalendar (1.7.0)
   - Parchment (3.0.0)
   - R.swift (5.3.0):
     - R.swift.Library (~> 5.3.0)
@@ -17,6 +18,7 @@ PODS:
 
 DEPENDENCIES:
   - CoreXLSX (~> 0.13.0)
+  - CVCalendar (from `https://github.com/CVCalendar/CVCalendar.git`, commit `aa2b366`)
   - Parchment (~> 3.0)
   - R.swift
   - RealmSwift
@@ -34,8 +36,19 @@ SPEC REPOS:
     - XMLCoder
     - ZIPFoundation
 
+EXTERNAL SOURCES:
+  CVCalendar:
+    :commit: aa2b366
+    :git: https://github.com/CVCalendar/CVCalendar.git
+
+CHECKOUT OPTIONS:
+  CVCalendar:
+    :commit: aa2b366
+    :git: https://github.com/CVCalendar/CVCalendar.git
+
 SPEC CHECKSUMS:
   CoreXLSX: 18e81bf259aa945dceaa0328a788e50140859907
+  CVCalendar: 1174c1b43c1a258970e14c1e8b19ef4106c5900b
   Parchment: 5b54e4b271719a0e94e02898ab7c3c0a00525cfa
   R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
@@ -45,6 +58,6 @@ SPEC CHECKSUMS:
   XMLCoder: c4638336674de7ba279cd23f2005817d69f538e0
   ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
-PODFILE CHECKSUM: 1ffd70a965ff183fbe2dd21737a5e92144da480b
+PODFILE CHECKSUM: 55186545cf0d6c6071d32ad1268a41ef2801129a
 
 COCOAPODS: 1.10.0

@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class Examen: Object, Identifiable {
+class Examen: Object, Identifiable, Calendarizable {
     // swiftlint:disable identifier_name
     @objc dynamic var id = UUID().uuidString
     // swiftlint:enable identifier_name
@@ -16,6 +16,11 @@ class Examen: Object, Identifiable {
     @objc dynamic var fecha: Date = Date()
     @objc dynamic var aula: String = ""
     @objc dynamic var revision: Revision?
+    let secciones = LinkingObjects(fromType: Seccion.self, property: "examenes")
+    
+    var seccion: Seccion {
+        secciones.first!
+    }
     
     // Puente entre enumerador de tipo de examen a atributo
     var tipoEnum: TipoExamen {
@@ -27,7 +32,7 @@ class Examen: Object, Identifiable {
         }
     }
     
-    // Valores de la fecha
+    // MARK: - Valores de la fecha
     private var dateComponents: DateComponents {
         Calendar.autoupdatingCurrent.dateComponents(
             [.calendar, .timeZone, .day, .month, .year, .hour, .minute],
@@ -49,6 +54,13 @@ class Examen: Object, Identifiable {
     }
     // swiftlint:enable large_tuple
 
+    // MARK: - Calendario
+    var eventoCalendario: InfoEventoCalendario {
+        InfoEventoCalendario(fecha: fecha,
+                             titulo: tipoEnum.nombreLindo(),
+                             descripcion: seccion.asignatura!.nombre)
+    }
+    
     override static func primaryKey() -> String? {
         return "id"
     }

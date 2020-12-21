@@ -15,10 +15,10 @@ class RealmProvider {
             if NSClassFromString("XCTest") != nil {
                 realm = try Realm(configuration: Realm.Configuration(inMemoryIdentifier: "MyInMemoryRealm"))
             } else {
-                realm = try Realm()
                 #if DEBUG
                 print("Realm database: \(String(describing: Realm.Configuration.defaultConfiguration.fileURL))")
                 #endif
+                realm = try Realm()
             }
         } catch let error as NSError {
             fatalError("Error al abrir el realm. Error: \(error.localizedDescription)")
