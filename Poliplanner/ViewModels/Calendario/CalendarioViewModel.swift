@@ -20,6 +20,10 @@ class CalendarioViewModel: ObservableObject {
         }
     }
     
+    var tituloMes: String {
+        "\(fecha.mesNombre) \(fecha.añoNombre)"
+    }
+    
     // MARK: - Resultados
     private var examenesResult: RealmSwift.Results<Examen>
     
@@ -55,6 +59,7 @@ class CalendarioViewModel: ObservableObject {
 
 // MARK: - CVCalendarViewDelegate
 extension CalendarioViewModel: CVCalendarViewDelegate {
+    // MARK: Configuraciones del calendario
     func presentationMode() -> CalendarMode {
         .monthView
     }
@@ -72,16 +77,69 @@ extension CalendarioViewModel: CVCalendarViewDelegate {
     }
     
     func shouldScrollOnOutDayViewSelection() -> Bool {
-        true
+        false
     }
     
     func shouldSelectDayView(_ dayView: DayView) -> Bool {
-        true
+        false
+    }
+    
+    func shouldAutoSelectDayOnMonthChange() -> Bool {
+        false
     }
     
     func presentedDateUpdated(_ date: CVDate) {
         if let fechaConvertida = date.convertedDate() {
             self.fecha = fechaConvertida
         }
+    }
+    
+    // MARK: Dia actual
+    /// Retorna el view que corresponde a cierto día
+    func preliminaryView(viewOnDayView dayView: DayView) -> UIView {
+        let view: CVAuxiliaryView
+        
+        // Verificamos que tipo de día es
+        if dayView.isCurrentDay {
+            view = .diaActual(dayView: dayView)
+        } else if dayView.isOut {
+            view = .diaFuera(dayView: dayView)
+        } else {
+            view = .diaNormal(dayView: dayView)
+        }
+        
+        // Retornamos
+        return view
+    }
+    
+    func preliminaryView(shouldDisplayOnDayView dayView: DayView) -> Bool { true }
+    
+    // MARK: Eventos
+    /// Verifica si se deberia de mostrar el puntito debajo de un día (es decir, verifica si hay un evento)
+    func dotMarker(shouldShowOnDayView dayView: DayView) -> Bool {
+        if dayView.isOut || eventos.isEmpty {
+            return false
+        }
+        
+        if let fechaActual = dayView.date.convertedDate()?.base {
+            return eventos.contains { $0.coincideCon(fecha: fechaActual) }
+        }
+        
+        return false
+    }
+    
+    /// Color del puntito debajo de un día con eventos
+    func dotMarker(colorOnDayView dayView: DayView) -> [UIColor] {
+        [.systemBlue]
+    }
+    
+    /// Offset del puntito debajo de un día con eventos
+    func dotMarker(moveOffsetOnDayView dayView: DayView) -> CGFloat {
+        CGFloat(18)
+    }
+    
+    /// Tamaño del puntito debajo de un día con eventos
+    func dotMarker(sizeOnDayView dayView: DayView) -> CGFloat {
+        CGFloat(16)
     }
 }

@@ -18,7 +18,7 @@ struct CalendarioView: View {
                 Divider()
                 generarLista(proxy)
             }
-        }.navigationBarTitle("\(viewModel.fecha.mesNombre) \(viewModel.fecha.añoNombre)")
+        }.navigationBarTitle(viewModel.tituloMes)
     }
     
     func generarCalendario(_ proxy: GeometryProxy) -> some View {

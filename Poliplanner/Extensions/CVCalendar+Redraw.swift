@@ -56,3 +56,47 @@ extension CVCalendarView {
         contentController.updateFrames(selfSize != contentViewSize ? bounds : CGRect.zero)
     }
 }
+
+// MARK: - CVAuxiliaryView + Casos
+extension CVAuxiliaryView {
+    // Aparencia del dia actual
+    static let fontDiaActual: UIFont? = .boldSystemFont(ofSize: 18.0)
+    static let colorDiaActual: UIColor = .red
+    
+    // Aparencia de cualquier otro dia
+    static let fontDiaNormal: UIFont? = UIFont(name: "Avenir", size: 18.0)
+    static let colorDiaNormal: UIColor = .label
+    
+    // Aparencia de un dia de otro mes (day out)
+    static let fontDiaFuera: UIFont? = UIFont(name: "Avenir", size: 18.0)
+    static let colorDiaFuera: UIColor = .systemGray
+    
+    // MARK: VISTAS AUXILIARES
+    static func diaActual(dayView: DayView) -> CVAuxiliaryView {
+        let circleView = CVAuxiliaryView(dayView: dayView, rect: dayView.frame, shape: .circle)
+        circleView.fillColor = .clear
+        dayView.dayLabel.textColor = colorDiaActual
+        dayView.dayLabel.font = fontDiaActual
+        return circleView
+    }
+    
+    static func diaNormal(dayView: DayView) -> CVAuxiliaryView {
+        let circleView = CVAuxiliaryView(dayView: dayView, rect: dayView.frame, shape: .circle)
+        circleView.fillColor = .clear
+        if dayView.dayLabel != nil {
+            dayView.dayLabel.textColor = colorDiaNormal
+            dayView.dayLabel.font = fontDiaNormal
+        }
+        return circleView
+    }
+    
+    static func diaFuera(dayView: DayView) -> CVAuxiliaryView {
+        let circleView = CVAuxiliaryView(dayView: dayView, rect: dayView.frame, shape: .circle)
+        circleView.fillColor = .clear
+        if dayView.dayLabel != nil {
+            dayView.dayLabel.textColor = colorDiaFuera
+            dayView.dayLabel.font = fontDiaFuera
+        }
+        return circleView
+    }
+}

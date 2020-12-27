@@ -8,12 +8,12 @@
 import Foundation
 
 extension DateComponents {
-    static var componentesReferencia: DateComponents = {
+    static var componentesReferencia: DateComponents {
         var componente = DateComponents()
         componente.calendar = Calendar(identifier: .gregorian)
         componente.timeZone = TimeZone(identifier: "America/Asuncion") ?? .current
         return componente
-    }()
+    }
 }
 
 extension Date {
@@ -53,5 +53,13 @@ extension Date {
     
     var base: Date {
         return Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: self)!
+    }
+}
+
+extension Calendar {
+    static var calendarioReferencia: Calendar {
+        var calendario = Calendar(identifier: .gregorian)
+        calendario.locale = Locale(identifier: "es-PY")
+        return calendario
     }
 }

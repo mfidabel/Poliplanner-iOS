@@ -21,6 +21,7 @@ struct CalendarioMenuView: UIViewRepresentable {
         let view = CVCalendarMenuView(frame: self.frame)
         view.commitMenuViewUpdate()
         view.setContentHuggingPriority(.required, for: .horizontal)
+        view.calendar = .calendarioReferencia
         view.delegate = context.coordinator
         return view
     }

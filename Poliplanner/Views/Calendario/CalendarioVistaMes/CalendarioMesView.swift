@@ -32,7 +32,7 @@ struct CalendarioMesView: View {
         }
     }
     
-    let alturaMenu: CGFloat = 45
+    let alturaMenu: CGFloat = 30
     let espacioMenuMes: CGFloat = 0
 }
 
