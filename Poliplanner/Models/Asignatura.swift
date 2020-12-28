@@ -17,6 +17,10 @@ class Asignatura: Object, Identifiable {
     @objc dynamic var nivel: String = ""
     @objc dynamic var semGrupo: String = ""
 
+    var esDEF: Bool {
+        NSRegularExpression.DEF.matches(nombre)
+    }
+    
     override static func primaryKey() -> String? {
         return "id"
     }

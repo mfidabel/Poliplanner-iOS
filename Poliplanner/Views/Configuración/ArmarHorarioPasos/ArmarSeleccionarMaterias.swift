@@ -27,7 +27,9 @@ struct ArmarSeleccionarMaterias: View {
                         HStack {
                             Image(systemName: "checkmark.circle.fill")
                                 .foregroundColor(seleccionado ? .blue : .gray)
-                            Text("\(seccion.codigo) - \(seccion.docente)")
+                            Text("\(seccion.codigo)")
+                            Image(systemName: "arrow.right")
+                            Text(seccion.docente)
                         }
                         .onTapGesture {
                             if seleccionado {

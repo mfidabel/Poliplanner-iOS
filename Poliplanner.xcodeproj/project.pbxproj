@@ -27,6 +27,7 @@
 		564F77CF258BF2C6002A03CB /* ListaEventosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564F77CE258BF2C6002A03CB /* ListaEventosView.swift */; };
 		565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152A925712DC30073C3CA /* HorarioCarrera.swift */; };
 		565152AF25712E790073C3CA /* HorarioClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152AE25712E790073C3CA /* HorarioClase.swift */; };
+		56542E2D2599010D009CD07A /* TurnoSeccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56542E2C2599010D009CD07A /* TurnoSeccion.swift */; };
 		565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */; };
 		56638CDA257AAD8700FCC9A8 /* DiaClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56638CD9257AAD8700FCC9A8 /* DiaClase.swift */; };
 		566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F1D14257810F40057B2B3 /* ConfiguracionView.swift */; };
@@ -114,6 +115,7 @@
 		564F77CE258BF2C6002A03CB /* ListaEventosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaEventosView.swift; sourceTree = "<group>"; };
 		565152A925712DC30073C3CA /* HorarioCarrera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioCarrera.swift; sourceTree = "<group>"; };
 		565152AE25712E790073C3CA /* HorarioClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClase.swift; sourceTree = "<group>"; };
+		56542E2C2599010D009CD07A /* TurnoSeccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnoSeccion.swift; sourceTree = "<group>"; };
 		565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseView.swift; sourceTree = "<group>"; };
 		56638CD9257AAD8700FCC9A8 /* DiaClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaClase.swift; sourceTree = "<group>"; };
 		566F1D14257810F40057B2B3 /* ConfiguracionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionView.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				56638CD9257AAD8700FCC9A8 /* DiaClase.swift */,
 				560D6A2F257BF8EC007DD904 /* EstadoHorario.swift */,
 				561EB80F25869FEE00507D67 /* TipoExamen.swift */,
+				56542E2C2599010D009CD07A /* TurnoSeccion.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -810,6 +813,7 @@
 				56EF205C258EEC80000050FA /* HeaderEventoView.swift in Sources */,
 				565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */,
 				565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */,
+				56542E2D2599010D009CD07A /* TurnoSeccion.swift in Sources */,
 				569E1F6D2581CE6700D64898 /* PagingOptions+HorarioClase.swift in Sources */,
 				56B23C7A2587FE3E00C4E506 /* CalendarioViewModel.swift in Sources */,
 				56A6184025707C0F00346419 /* Asignatura.swift in Sources */,

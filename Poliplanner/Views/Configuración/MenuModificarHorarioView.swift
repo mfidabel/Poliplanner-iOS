@@ -20,22 +20,6 @@ struct MenuModificarHorarioView: View {
                 Section(header: Text("Crear horario")) {
                     botonImportarArchivo
                 }
-                
-                // MARK: - Armar horario desde un horario preexistente
-                
-                Section(header: Text("Armar horario")) {
-                    if PPStore.hayHorario {
-                        // TODO: Hacer el view de armar horario desde el horario actual
-                        Text("Armar desde el horario de clases actual")
-                        // TODO: Hacer el view de armar desde un horario ya importado
-                        Text("Armar desde otro horario de clases")
-                    } else {
-                        Text("Armar desde el horario de clases actual")
-                            .foregroundColor(.gray)
-                        Text("Armar desde otro horario de clases")
-                            .foregroundColor(.gray)
-                    }
-                }
             }
             .navigationBarTitle("Modificar horario")
             .navigationBarTitleDisplayMode(.automatic)

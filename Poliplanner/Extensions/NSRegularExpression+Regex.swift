@@ -25,4 +25,8 @@ extension NSRegularExpression {
     /// Representa la hora en el formato HH:mm
     /// Ejemplo: 08:00, 18:00, 23:50
     static let horaComun = NSRegularExpression("^([0-1][0-9]|[2][0-3]):([0-5][0-9])$")
+    
+    static let DEF = NSRegularExpression("\\(\\*\\)")
+    
+    static let turno = NSRegularExpression("^[MTN]")
 }

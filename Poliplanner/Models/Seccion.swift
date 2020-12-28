@@ -20,6 +20,10 @@ class Seccion: Object, Identifiable {
     let horariosCarrera = LinkingObjects(fromType: HorarioCarrera.self, property: "secciones")
     let examenes = List<Examen>()
     let clases = List<Clase>()
+    
+    var turno: TurnoSeccion {
+        .obtenerTurno(para: codigo)
+    }
 
     override static func primaryKey() -> String? {
         return "id"

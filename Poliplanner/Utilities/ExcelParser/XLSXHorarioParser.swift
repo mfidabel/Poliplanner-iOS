@@ -87,6 +87,16 @@ class XLSXHorarioParser: ArchivoHorarioParser {
                     
                     columnasEncabezados[celdaHora.reference.column.value] = cabeza.examenHora()
                 }
+                
+                if cabeza.esExamen(),
+                   hojaActualFilas[indexFilaEncabezado!].cells.count > index + 2,
+                   let siguienteTexto = hojaActualFilas[indexFilaEncabezado!].cells[index + 2]
+                    .stringValue(sharedStrings),
+                   EncabezadoXLSX(rawValue: siguienteTexto) == .some(.aula) {
+                    let celdaAula = hojaActualFilas[indexFilaEncabezado!].cells[index + 2]
+                    
+                    columnasEncabezados[celdaAula.reference.column.value] = cabeza.examenAula()
+                }
             }
         }
         
@@ -105,7 +115,11 @@ class XLSXHorarioParser: ArchivoHorarioParser {
                 // Agregar hora de examen
                 else if cabeza == .hora {
                     // Por ahora nada
-                } else {
+                }
+                else if cabeza == .aula {
+                    // Por ahora nada
+                }
+                else {
                     columnasEncabezados[celda.reference.column.value] = cabeza
                 }
             }
@@ -165,8 +179,27 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         
         seccion.carrera = carrera
         
-        // Atributos de la sección TODO: Revisar las secciones con doble profe
-        let docente: String = "\(valores[.titulo] ?? "") \(valores[.nombre] ?? "") \(valores[.apellido] ?? "")"
+        // Atributos de la sección
+        let docente: String = {
+            // Datos del docente
+            let titulos = (valores[.titulo] ?? "").split(separator: "\n")
+            let nombres = (valores[.nombre] ?? "").split(separator: "\n")
+            let apellidos = (valores[.apellido] ?? "").split(separator: "\n")
+            
+            // Recogemos la cantidad minima de docentes encontrados (Mejor Esfuerzo)
+            let cantidad: Int = min(titulos.count, min(nombres.count, apellidos.count) )
+            
+            var docente: String = ""
+            
+            for index in 0..<cantidad {
+                docente.append("\(titulos[index]) \(nombres[index]) \(apellidos[index])")
+                if index < cantidad - 1 {
+                    docente.append("\n")
+                }
+            }
+            
+            return docente
+        }()
         let codigo: String = valores[.seccion] ?? ""
         
         seccion.docente = docente
@@ -216,6 +249,9 @@ class XLSXHorarioParser: ArchivoHorarioParser {
                     examenDraft.fecha = fechaSeparada
                     // Pasamos el tipo de examen
                     examenDraft.tipoEnum = examen.examenTipo()
+                    // Pasamos e aula
+                    examenDraft.aula = valores[examen.examenAula()] ?? ""
+                    print(examenDraft.aula)
                     // Agregamos el examen
                     examenes.append(examenDraft)
                 }
@@ -315,6 +351,10 @@ private enum EncabezadoXLSX: String {
     case segundaParcialHora
     case primeraFinalHora
     case segundaFinalHora
+    case primeraParcialAula
+    case segundaParcialAula
+    case primerFinalAula
+    case segundoFinalAula
         
     static let diasClases: [EncabezadoXLSX] = [.lunes, .martes, .miercoles, .jueves, .viernes, .sabado]
     static let examenes: [EncabezadoXLSX] = [.primeraParcial, .segundaParcial, .primeraFinal, .segundaFinal]
@@ -404,6 +444,21 @@ private enum EncabezadoXLSX: String {
             return .segundoFinal
         default:
             return .evaluacion
+        }
+    }
+    
+    func examenAula() -> EncabezadoXLSX {
+        switch self {
+        case .primeraParcial:
+            return .primeraParcialAula
+        case .segundaParcial:
+            return .segundaParcialAula
+        case .primeraFinal:
+            return .primerFinalAula
+        case .segundaFinal:
+            return .segundoFinalAula
+        default:
+            return .aula
         }
     }
 }

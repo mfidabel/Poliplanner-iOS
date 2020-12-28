@@ -58,7 +58,8 @@ class Examen: Object, Identifiable, Calendarizable {
     var eventoCalendario: InfoEventoCalendario {
         InfoEventoCalendario(fecha: fecha,
                              titulo: tipoEnum.nombreLindo(),
-                             descripcion: seccion.asignatura!.nombre)
+                             descripcion: seccion.asignatura!.nombre,
+                             aula: aula)
     }
     
     override static func primaryKey() -> String? {
