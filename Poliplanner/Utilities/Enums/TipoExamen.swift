@@ -28,4 +28,13 @@ enum TipoExamen: String {
             return "Evaluación"
         }
     }
+    
+    func nombreRevision() -> String {
+        switch self {
+        case .evaluacion:
+            return "Revisión"
+        default:
+            return "Revisión \(self.nombreLindo())"
+        }
+    }
 }

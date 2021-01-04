@@ -35,7 +35,11 @@ class CalendarioViewModel: ObservableObject {
     
     // MARK: - Funciones
     private func generarEventos() {
-        eventos = examenesResult.map { $0.eventoCalendario }
+        eventos = examenesResult.flatMap { examen in
+            return examen.revision == nil
+                ? [examen.eventoCalendario]
+                : [examen.eventoCalendario, examen.revision!.eventoCalendario]
+        }
     }
     
     // MARK: - Inicializador

@@ -14,8 +14,22 @@ class Revision: Object, Identifiable {
     // swiftlint:enable identifier_name
     @objc dynamic var fecha: Date = Date()
     @objc dynamic var aula: String = ""
+    let examenes = LinkingObjects(fromType: Examen.self, property: "revision")
+    
+    var examen: Examen {
+        examenes.first!
+    }
 
     override static func primaryKey() -> String? {
         return "id"
+    }
+}
+
+extension Revision: Calendarizable {
+    var eventoCalendario: InfoEventoCalendario {
+        InfoEventoCalendario(fecha: fecha,
+                             titulo: examen.tipoEnum.nombreRevision(),
+                             descripcion: examen.seccion.asignatura!.nombre,
+                             aula: aula)
     }
 }

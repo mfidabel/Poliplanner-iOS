@@ -31,28 +31,6 @@ class Examen: Object, Identifiable, Calendarizable {
             tipo = newValue.rawValue
         }
     }
-    
-    // MARK: - Valores de la fecha
-    private var dateComponents: DateComponents {
-        Calendar.autoupdatingCurrent.dateComponents(
-            [.calendar, .timeZone, .day, .month, .year, .hour, .minute],
-            from: fecha)
-    }
-    
-    // swiftlint:disable large_tuple
-    var fechaComponentes: (dia: Int, mes: Int, anho: Int) {
-        let componentes = self.dateComponents
-        return (dia: componentes.day!, mes: componentes.month!, anho: componentes.year!)
-    }
-    
-    var horaComponentes: (hora: Int, minuto: Int)? {
-        let componentes = self.dateComponents
-        if componentes.hour != nil, componentes.minute != nil {
-            return (hora: componentes.hour!, minuto: componentes.minute!)
-        }
-        return nil
-    }
-    // swiftlint:enable large_tuple
 
     // MARK: - Calendario
     var eventoCalendario: InfoEventoCalendario {
