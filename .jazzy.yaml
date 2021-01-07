@@ -1,0 +1,16 @@
+# Argumentos para la compilación
+xcodebuild_arguments:
+  - "-workspace"
+  - "Poliplanner.xcworkspace"
+  - "-scheme"
+  - "Poliplanner"
+
+# Nivel de acceso
+min_acl: private
+
+# Información de la autodocumentación
+author: Mateo Fidabel
+author_url: https://github.com/mfidabel/Poliplanner-iOS
+github_url: https://github.com/mfidabel/Poliplanner-iOS
+module: Poliplanner
+theme: fullwidth
