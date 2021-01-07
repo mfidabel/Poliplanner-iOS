@@ -7,18 +7,31 @@
 
 import Foundation
 
+/// Enumerador de días de la semana
 enum DiaClase: String, Comparable, CaseIterable {
+    // MARK: - Días
+    
+    /// Lunes
     case LUNES = "Lunes"
+    
+    /// Martes
     case MARTES = "Martes"
+    
+    /// Miércoles
     case MIERCOLES = "Miércoles"
+    
+    /// Jueves
     case JUEVES = "Jueves"
+    
+    /// Viernes
     case VIERNES = "Viernes"
+    
+    /// Sábado
     case SABADO = "Sábado"
     
-    static func < (lhs: DiaClase, rhs: DiaClase) -> Bool {
-        return lhs.numero < rhs.numero
-    }
+    // MARK: - Propiedades
     
+    /// Representación en número de día en la semana
     var numero: Int {
         switch self {
         case .LUNES:
@@ -36,4 +49,14 @@ enum DiaClase: String, Comparable, CaseIterable {
         }
     }
     
+    // MARK: - Protocolo Comparable
+    
+    /// Permite comparar dos `DiaClase`. Se define como menor el que tenga el menor número
+    /// - Parameters:
+    ///   - lhs: Lado izquierdo de la operación binaria <.
+    ///   - rhs: Lado derecho de la operación binaria <.
+    /// - Returns: Verdadero si el lado izquierdo es menor al derecho, Falso caso contrario
+    static func < (lhs: DiaClase, rhs: DiaClase) -> Bool {
+        return lhs.numero < rhs.numero
+    }
 }

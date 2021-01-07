@@ -7,12 +7,27 @@
 
 import Foundation
 
+/// Describe un turno de una sección
 enum TurnoSeccion: String {
+    // MARK: - Turnos
+    
+    /// Turno Mañana
     case mañana = "M"
+    
+    /// Turno Tarde
     case tarde = "T"
+    
+    /// Turno Noche
     case noche = "N"
+    
+    /// Turno desconocido
     case sinTurno = "ST"
     
+    // MARK: - Métodos
+    
+    /// Genera un `TurnoSeccion` para cierto código de sección
+    /// - Parameter codigoSeccion: Cadena que contiene el código de donde vamos a obtener el turno
+    /// - Returns: El turno al que pertenece el código, si no pertenece a ninguno retorna `TurnoSeccion.sinTurno`
     static func obtenerTurno(para codigoSeccion: String) -> TurnoSeccion {
         if NSRegularExpression.turno.matches(codigoSeccion) {
             return TurnoSeccion(rawValue: "\(codigoSeccion.first!)") ?? .sinTurno
@@ -21,6 +36,9 @@ enum TurnoSeccion: String {
         }
     }
     
+    // MARK: - Propiedades
+    
+    /// Nombre del turno
     var nombre: String {
         switch self {
         case .mañana:
@@ -34,6 +52,7 @@ enum TurnoSeccion: String {
         }
     }
     
+    /// Nombre largo del turno
     var nombreLargo: String {
         switch self {
         case .mañana:

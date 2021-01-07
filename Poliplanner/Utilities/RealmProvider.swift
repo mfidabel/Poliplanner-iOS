@@ -8,7 +8,12 @@
 import Foundation
 import RealmSwift
 
+/// Proveedor de la base de datos de Realm
 class RealmProvider {
+    // MARK: - Métodos
+    
+    /// Retorna una instancia de `Realm` para el hilo.
+    /// - Returns: Realm
     class func realm() -> Realm {
         var realm: Realm
         do {

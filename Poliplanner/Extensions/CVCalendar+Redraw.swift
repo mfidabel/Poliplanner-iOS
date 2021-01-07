@@ -8,10 +8,11 @@
 import Foundation
 import CVCalendar
 
-// Permite que se redibuje cuando cambia el tamaño de la ventana
-// https://github.com/CVCalendar/CVCalendar/issues/576#issuecomment-526569090
 extension CVCalendarView {
-
+    // MARK: - Redraw
+    
+    /// Permite que se redibuje cuando cambia el tamaño de la ventana
+    /// https://github.com/CVCalendar/CVCalendar/issues/576#issuecomment-526569090
     public func redrawViewIfNecessary() {
         let contentViewSize = contentController.bounds.size
         let selfSize = bounds.size
@@ -59,19 +60,37 @@ extension CVCalendarView {
 
 // MARK: - CVAuxiliaryView + Casos
 extension CVAuxiliaryView {
+    // MARK: - Constantes de fuentes y colores
+    
     // Aparencia del dia actual
+    
+    /// Fuente del día actual en el calendario
     static let fontDiaActual: UIFont? = .boldSystemFont(ofSize: 18.0)
+    
+    /// Color del día actual en el calendario
     static let colorDiaActual: UIColor = .red
     
     // Aparencia de cualquier otro dia
+    
+    /// Fuente de cualquier día en el calendario
     static let fontDiaNormal: UIFont? = UIFont(name: "Avenir", size: 18.0)
+    
+    /// Color de cualquier día en el calendario
     static let colorDiaNormal: UIColor = .label
     
     // Aparencia de un dia de otro mes (day out)
+    
+    /// Fuente de un día de otro mes
     static let fontDiaFuera: UIFont? = UIFont(name: "Avenir", size: 18.0)
+    
+    /// Color de un día de otro mes
     static let colorDiaFuera: UIColor = .systemGray
     
     // MARK: VISTAS AUXILIARES
+    
+    /// Genera un view basado en el día actual
+    /// - Parameter dayView: `DayView` para la cual estamos construyendo el View
+    /// - Returns: El View que se mostrará en el calendario
     static func diaActual(dayView: DayView) -> CVAuxiliaryView {
         let circleView = CVAuxiliaryView(dayView: dayView, rect: dayView.frame, shape: .circle)
         circleView.fillColor = .clear
@@ -80,6 +99,9 @@ extension CVAuxiliaryView {
         return circleView
     }
     
+    /// Genera un view basado en un día normal
+    /// - Parameter dayView: `DayView` para la cual estamos construyendo el View
+    /// - Returns: El View que se mostrará en el calendario
     static func diaNormal(dayView: DayView) -> CVAuxiliaryView {
         let circleView = CVAuxiliaryView(dayView: dayView, rect: dayView.frame, shape: .circle)
         circleView.fillColor = .clear
@@ -90,6 +112,9 @@ extension CVAuxiliaryView {
         return circleView
     }
     
+    /// Genera un view basado en un día de otro mes
+    /// - Parameter dayView: `DayView` para la cual estamos construyendo el View
+    /// - Returns: El View que se mostrará en el calendario
     static func diaFuera(dayView: DayView) -> CVAuxiliaryView {
         let circleView = CVAuxiliaryView(dayView: dayView, rect: dayView.frame, shape: .circle)
         circleView.fillColor = .clear

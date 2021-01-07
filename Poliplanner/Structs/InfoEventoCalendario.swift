@@ -7,16 +7,26 @@
 
 import Foundation
 
-/// Estructura que representa una entrada en el calendario
+/// Estructura que representa una entrada en el calendario de la sección Calendario
 struct InfoEventoCalendario: Hashable {
+    // MARK: - Propiedades
+    
+    /// Fecha del evento
     var fecha: Date
+    
+    /// Título a mostrar del evento
     var titulo: String
+    
+    /// Descripción a mostrar del evento
     var descripcion: String
+    
+    /// En que aula se desarrollará el evento
     var aula: String = ""
 }
 
-// MARK: - API
 extension InfoEventoCalendario {
+    // MARK: - API
+    
     /// Verifica si este evento se da en la fecha actual
     /// - Returns: Verdadero si es que coincide con la fecha actual, falso caso contrario
     var esHoy: Bool {

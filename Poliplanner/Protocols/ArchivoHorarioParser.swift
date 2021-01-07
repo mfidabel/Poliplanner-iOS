@@ -7,7 +7,10 @@
 
 import Foundation
 
+/// Puede parsear un archivo habiendo pasado una URL del archivo que se desea parsear
 protocol ArchivoHorarioParser {
+    // MARK: - Métodos
+    
     /// Inicializa el parseador con un archivo representado por su URL
     /// - Parameter url: URL del archivo
     init(archivoURL url: URL)
@@ -17,9 +20,12 @@ protocol ArchivoHorarioParser {
     /// - Throws: Error de parseo del archivo
     /// - Returns: Horario de clases y examenes generado por el archivo
     func generarHorario(paraCarreras carreras: [CarreraSigla]) throws -> HorarioClase
+    
 }
 
 extension ArchivoHorarioParser {
+    // MARK: - Extra API
+    
     /// Genera el horario de todas las carreras disponibles en el enumerador
     /// - Throws: Error de parseo del archivo
     /// - Returns: Horario de clases y examenes generado por el archivo

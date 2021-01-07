@@ -10,16 +10,26 @@ import RealmSwift
 import SwiftUI
 import CVCalendar
 
+/// View Model de la sección de Calendario.
+/// Se encarga de administrar que eventos se muestran y manipular el mes seleccionado.
 class CalendarioViewModel: ObservableObject {
-    // MARK: - Variables
+    // MARK: - Propiedades
+    
+    /// Eventos que se mostraran en el calendario
     @Published private(set) var eventos: [InfoEventoCalendario] = []
+    
+    /// Fecha actual del calendario, es igual a una fecha con el mes que se esta visualizando actualmente
     @Published private(set) var fecha: Date = Date()
+    
+    /// Eventos que se mostraran en el calendario en base al mes que indica la fecha.
+    /// Ejemplo: Si el mes es Abril, se muestran los eventos que suceden en abril.
     var eventosMes: [InfoEventoCalendario] {
         eventos.filter { evento in
             return Calendar.current.isDate(fecha, equalTo: evento.fecha, toGranularity: .month)
         }
     }
     
+    /// Título del mes que se mostrará al usuario
     var tituloMes: String {
         "\(fecha.mesNombre) \(fecha.añoNombre)"
     }
