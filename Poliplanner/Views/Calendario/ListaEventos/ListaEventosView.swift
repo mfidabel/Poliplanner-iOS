@@ -7,12 +7,25 @@
 
 import SwiftUI
 
+// MARK: - Lista de Eventos
+
+/// View de una lista de eventos ordenados y agrupados por la fecha del evento
 struct ListaEventosView: View {
+    // MARK: Propiedades
+    
+    /// Eventos agrupados por la fecha
     let eventosAgrupados: [ (key: Date, value: [InfoEventoCalendario]) ]
     
+    // MARK: Constructor
+    
+    /// Constructor que toma los eventos pasados como argumentos, los agrupa y los ordena según la fecha
+    /// del evento.
+    /// - Parameter eventos: Eventos que se desean mostrar en la lista
     init(eventos: [InfoEventoCalendario]) {
         eventosAgrupados = Self.agruparEventos(eventos)
     }
+    
+    // MARK: Body
     
     var body: some View {
         ScrollView {
@@ -34,6 +47,11 @@ struct ListaEventosView: View {
         .padding(.bottom, 20)
     }
     
+    // MARK: Métodos
+    
+    /// Agrupa los eventos y los ordena según la fecha
+    /// - Parameter eventos: Eventos que deseamos agrupar y ordenar
+    /// - Returns: Un Vector de eventos agrupados por su fecha
     private static func agruparEventos(_ eventos: [InfoEventoCalendario]) ->
         [(key: Date, value: [InfoEventoCalendario])] {
         // Agrupamos los eventos por su fecha seteado en 0
@@ -47,6 +65,9 @@ struct ListaEventosView: View {
     }
 }
 
+// MARK: - Preview
+#if DEBUG
+/// :nodoc:
 struct ListaEventosView_Previews: PreviewProvider {
     static let eventos: [InfoEventoCalendario] = [
         InfoEventoCalendario(fecha: Date(), titulo: "1er. Examen Parcial",
@@ -60,3 +81,4 @@ struct ListaEventosView_Previews: PreviewProvider {
             .previewLayout(.fixed(width: 400, height: 600))
     }
 }
+#endif

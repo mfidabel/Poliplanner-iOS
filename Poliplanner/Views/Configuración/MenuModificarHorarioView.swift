@@ -9,21 +9,34 @@ import SwiftUI
 import UniformTypeIdentifiers
 import RealmSwift
 
+// MARK: - Menu de Modificar Horarios
+
+/// Interfaz del menu para modificar horarios.
+/// Permite al usuario importar horarios.
 struct MenuModificarHorarioView: View {
+    // MARK: Propiedades
+    
+    /// Store de Poliplanner, se utiliza para cargar los borradores de los horarios de clase
     @ObservedObject var PPStore: PoliplannerStore = PoliplannerStore.shared
+    
+    /// Indica si es que esta en proceso de selección de archivos
     @State private var estaImportando: Bool = false
+    
+    /// Indica si es que esta en armando un horario de clases
     @State private var estaArmando: Bool = false
 
+    // MARK: Body
+    
     var body: some View {
             Form {
-                // MARK: - Crear horario
+                // MARK: Crear horario
                 Section(header: Text("Crear horario")) {
                     botonImportarArchivo
                 }
             }
             .navigationBarTitle("Modificar horario")
             .navigationBarTitleDisplayMode(.automatic)
-            // MARK: - Importación del Archivo
+            // MARK: Importación del Archivo
             .fileImporter(isPresented: $estaImportando,
                           allowedContentTypes: [.xlsx, .xls], onCompletion: importarArchivo)
             .sheet(isPresented: $estaArmando) {
@@ -33,7 +46,7 @@ struct MenuModificarHorarioView: View {
             }
     }
     
-    // MARK: - Boton Importar Archivo
+    /// View de la opción para importar un archivo
     var botonImportarArchivo: some View {
             Button {
                 self.estaImportando = true
@@ -43,7 +56,10 @@ struct MenuModificarHorarioView: View {
         
     }
     
-    // MARK: - Qué hacer con el archivo importado
+    // MARK: Métodos
+    
+    /// Importa el archivo dado el resultado de una selección de archivo
+    /// - Parameter resultado: Resultado que contiene la URL de un archivo o un error
     func importarArchivo(resultado: Result<URL, Error>) {
         switch resultado {
         case .success(let archivoURL):
@@ -92,8 +108,11 @@ struct MenuModificarHorarioView: View {
     }
 }
 
+// MARK: - Preview
+#if DEBUG
+/// :nodoc:
 struct MenuArmarHorarioView_Previews: PreviewProvider {
-    
+
     static var previews: some View {
         TabView {
             NavigationView {
@@ -103,3 +122,4 @@ struct MenuArmarHorarioView_Previews: PreviewProvider {
         }
     }
 }
+#endif

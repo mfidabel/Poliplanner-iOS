@@ -8,9 +8,16 @@
 import Foundation
 import RealmSwift
 
+// MARK: - View Model que controla los horarios
+
+/// View Model encargado de controlar `HorarioClaseView`
 class HorarioClaseViewModel: ObservableObject {
-    // MARK: - Variables
+    // MARK: Propiedades
+    
+    /// Secciones elegidas por el usuario previamente. Son estas secciones las que se usaran para mostrar las clases
     @Published private(set) var seccionesElegidasActivas: [Seccion] = []
+    
+    /// Agrupa las clases por día en páginas que se utilizarán luego para mostrar en listas
     var clasesPorDia: [InfoPaginaDia] {
         // Generamos un diccionario de paginas
         var paginas: [DiaClase: InfoPaginaDia] = [:]
@@ -34,16 +41,22 @@ class HorarioClaseViewModel: ObservableObject {
         }.sorted()
     }
     
-    // MARK: - Results
-    private var seccionesElegidasResults: RealmSwift.Results<Seccion>
-
-    // MARK: - Tokens
-    private var seccionesElegidasToken: NotificationToken?
-    
-    // MARK: - Realm
+    /// Instancia de `Realm` para acceder a la base de datos
     private var realm: Realm = RealmProvider.realm()
     
-    // MARK: Inicializador
+    // MARK: Resultados
+    
+    /// Resultados de las secciones elegidas
+    private var seccionesElegidasResults: RealmSwift.Results<Seccion>
+
+    // MARK: Tokens
+    
+    /// Token que se obtiene al subscribir a `HorarioClaseViewModel.seccionesElegidasResults`
+    private var seccionesElegidasToken: NotificationToken?
+    
+    // MARK: Constructor
+    
+    /// Se encarga de inicializar los resultados y cargar las secciones
     init() {
         // Seleccionamos las secciones elegidas por el usuario
         seccionesElegidasResults = realm.objects(Seccion.self)
@@ -52,7 +65,9 @@ class HorarioClaseViewModel: ObservableObject {
         inicializarTokens()
     }
     
-    // MARK: Inicializar Tokens
+    // MARK: Métodos
+    
+    /// Se encarga de subscribirse a los resultados y generar los tokens de estos
     private func inicializarTokens() {
         // Observamos cambios sobre los resultados
         seccionesElegidasToken = seccionesElegidasResults.observe { _ in
@@ -61,7 +76,9 @@ class HorarioClaseViewModel: ObservableObject {
         }
     }
     
-    // MARK: Cleanup
+    // MARK: Deconstructor
+    
+    /// Se encarga de cancelar las subscripciones a los resultados
     deinit {
         seccionesElegidasToken?.invalidate()
     }

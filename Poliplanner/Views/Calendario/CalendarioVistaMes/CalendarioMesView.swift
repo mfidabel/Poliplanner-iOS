@@ -7,8 +7,16 @@
 
 import SwiftUI
 
+// MARK: - Calendario Mes
+
+/// View que muestra el calendario por mes
 struct CalendarioMesView: View {
+    // MARK: Propiedades
+    
+    /// View Model que controlará este view
     @ObservedObject var viewModel: CalendarioViewModel
+    
+    // MARK: Body
     
     var body: some View {
         GeometryReader { proxy in
@@ -16,6 +24,11 @@ struct CalendarioMesView: View {
         }
     }
     
+    // MARK: Métodos
+    
+    /// Genera los views del mes y los días en base al espacio proporcionado
+    /// - Parameter proxy: Geometria del View
+    /// - Returns: La vistas con los tamaños correctos
     func generarViews(_ proxy: GeometryProxy) -> some View {
         let frameProxy = proxy.frame(in: .local)
         let frameMenu = CGRect(x: 0, y: 0,
@@ -32,13 +45,23 @@ struct CalendarioMesView: View {
         }
     }
     
+    // MARK: Constantes de estilo
+    
+    /// Altura de la sección de los días (La parte de arriba del calendario)
     let alturaMenu: CGFloat = 30
+    
+    /// Espacio entre la parte de arriba del calendario y el mes
     let espacioMenuMes: CGFloat = 0
 }
 
+// MARK: - Preview
+
+#if DEBUG
+/// :nodoc:
 struct CalendarioMesView_Previews: PreviewProvider {
     static var previews: some View {
         CalendarioMesView(viewModel: CalendarioViewModel())
             .previewLayout(.fixed(width: 400, height: 400))
     }
 }
+#endif

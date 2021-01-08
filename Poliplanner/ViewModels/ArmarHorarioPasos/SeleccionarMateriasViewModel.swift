@@ -8,19 +8,39 @@
 import Foundation
 import RealmSwift
 
+// MARK: - View Model para el seleccionador de materias y secciones
+
+/// View Model que controla `ArmarSeleccionarMaterias`
 class SeleccionarMateriasViewModel: ObservableObject {
+    // MARK: Propiedades
+    
+    /// Secciones agrupadas por el nombre de su asignatura
     private(set) var materias: [(key: String, value: [Seccion])] = []
+    
+    /// Conjunto de secciones que el usuario ya seleccionó
     @Published private(set) var seccionesSeleccionadas: Set<Seccion> = []
 
+    /// Horario de clases que se esta usando para mostrar las secciones
     private var horarioClase: HorarioClase
+    
+    /// Carrera que se usa para saber que secciones mostrar
     private var carrera: CarreraSigla
     
+    // MARK: Constructor
+    
+    /// Constructor del View Model
+    /// - Parameters:
+    ///   - horarioClase: Horario de clases de donde se van a sacar las materias
+    ///   - carrera: La carrera que que indica que asignaturas mostrar
     init(horarioClase: HorarioClase, paraCarrera carrera: CarreraSigla) {
         self.horarioClase = horarioClase
         self.carrera = carrera
         agruparMaterias()
     }
     
+    // MARK: Métodos
+    
+    /// Se encarga de agrupar las secciones por el nombre de la asignatura
     private func agruparMaterias() {
         // Obtener el horario de carreras
         let horarioCarrera = self.horarioClase

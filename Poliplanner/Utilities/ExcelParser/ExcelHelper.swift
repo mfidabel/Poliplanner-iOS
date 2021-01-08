@@ -7,8 +7,12 @@
 
 import Foundation
 
+/// Conjunto de utilidades para parsear los horarios de clases
 final class ExcelHelper {
     
+    /// Dado una cadena con una posible fecha, trata de parsear y convertirlo en componentes de fecha
+    /// - Parameter valor: Cadena que contiene la fecha sin parsear
+    /// - Returns: Componentes de la fecha.
     static func obtenerFechaComponentes(para valor: String) -> DateComponents? {
         guard let indiceEspacio = valor.firstIndex(of: " ") else {
             return nil
@@ -28,6 +32,9 @@ final class ExcelHelper {
         return fechaComponentes
     }
     
+    /// Dada una cadena con una posible hora, trata de paresear y convertirlo en una hora
+    /// - Parameter valor: Cadena que contiene la hora sin parsear
+    /// - Returns: La hora y el minuto que se obtuvo
     static func obtenerHora(para valor: String) -> (hora: Int, minuto: Int)? {
         if NSRegularExpression.horaComun.matches(valor) {
             // Tiene formato HH:mm

@@ -10,10 +10,12 @@ import RealmSwift
 import SwiftUI
 import CVCalendar
 
+// MARK: - View Model del Calendario
+
 /// View Model de la sección de Calendario.
 /// Se encarga de administrar que eventos se muestran y manipular el mes seleccionado.
 class CalendarioViewModel: ObservableObject {
-    // MARK: - Propiedades
+    // MARK: Propiedades
     
     /// Eventos que se mostraran en el calendario
     @Published private(set) var eventos: [InfoEventoCalendario] = []
@@ -34,16 +36,22 @@ class CalendarioViewModel: ObservableObject {
         "\(fecha.mesNombre) \(fecha.añoNombre)"
     }
     
-    // MARK: - Resultados
-    private var examenesResult: RealmSwift.Results<Examen>
-    
-    // MARK: - Tokens
-    private var examenesToken: NotificationToken?
-    
-    // MARK: - Realm
+    /// Instancia de `Realm` para acceder a la base de datos
     private var realm: Realm = RealmProvider.realm()
     
-    // MARK: - Funciones
+    // MARK: Resultados
+    
+    /// Resultados con los exámenes de las materias elegidas
+    private var examenesResult: RealmSwift.Results<Examen>
+    
+    // MARK: Tokens
+    
+    /// Token que se obtiene al subscribir a los resultados de los exámenes `CalendarioViewModel.examenesResult`
+    private var examenesToken: NotificationToken?
+    
+    // MARK: Métodos
+    
+    /// Genera los eventos que se cargarán al calendario a partir de los exámenes y sus revisiones correspondientes.
     private func generarEventos() {
         eventos = examenesResult.flatMap { examen in
             return examen.revision == nil
@@ -52,7 +60,10 @@ class CalendarioViewModel: ObservableObject {
         }
     }
     
-    // MARK: - Inicializador
+    // MARK: Constructor
+    
+    /// Constructor del View Model
+    /// Se encarga de inicializar los resultados y generar los eventos iniciales.
     init() {
         // Inicializamos las variables
         examenesResult = realm.objects(Examen.self)
@@ -64,7 +75,9 @@ class CalendarioViewModel: ObservableObject {
         }
     }
     
-    // MARK: - Desinicializador
+    // MARK: Deconstructor
+    
+    /// Limpieza de los tokens de notificación
     deinit {
         // Invalidamos el token
         examenesToken?.invalidate()
@@ -74,41 +87,51 @@ class CalendarioViewModel: ObservableObject {
 // MARK: - CVCalendarViewDelegate
 extension CalendarioViewModel: CVCalendarViewDelegate {
     // MARK: Configuraciones del calendario
+    
+    /// Modo de presentación del calendario
     func presentationMode() -> CalendarMode {
         .monthView
     }
     
+    /// Primer día de la semana
     func firstWeekday() -> Weekday {
         .sunday
     }
     
+    /// Si se debería de mostrar los días de otro mes distinto al que se esta mostrando
     func shouldShowWeekdaysOut() -> Bool {
         true
     }
     
+    /// Si se debería autoseleccionar el día cuando cambie de semana
     func shouldAutoSelectDayOnWeekChange() -> Bool {
         false
     }
     
+    /// Si se debería de cambiar de mes cuando se selecciona un día de otro mes distinto al que se esta mostrando
     func shouldScrollOnOutDayViewSelection() -> Bool {
         false
     }
     
+    /// Si se debería de seleccionar algún día
     func shouldSelectDayView(_ dayView: DayView) -> Bool {
         false
     }
     
+    /// Si se debería de auto seleccionar un día cuando se cambie de mes
     func shouldAutoSelectDayOnMonthChange() -> Bool {
         false
     }
     
+    /// Qué hacer cuando se cambia de fecha. En este caso procedemos a guardar la fecha nueva
     func presentedDateUpdated(_ date: CVDate) {
         if let fechaConvertida = date.convertedDate() {
             self.fecha = fechaConvertida
         }
     }
     
-    // MARK: Dia actual
+    // MARK: Día actual
+    
     /// Retorna el view que corresponde a cierto día
     func preliminaryView(viewOnDayView dayView: DayView) -> UIView {
         let view: CVAuxiliaryView
@@ -126,9 +149,11 @@ extension CalendarioViewModel: CVCalendarViewDelegate {
         return view
     }
     
+    /// Si es que se debería de mostrar el view preliminar en los días
     func preliminaryView(shouldDisplayOnDayView dayView: DayView) -> Bool { true }
     
     // MARK: Eventos
+    
     /// Verifica si se deberia de mostrar el puntito debajo de un día (es decir, verifica si hay un evento)
     func dotMarker(shouldShowOnDayView dayView: DayView) -> Bool {
         if dayView.isOut || eventos.isEmpty {

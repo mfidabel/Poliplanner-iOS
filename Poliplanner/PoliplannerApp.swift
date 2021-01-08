@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Aplicación principal
 @main
 struct PoliplannerApp: App {
     var body: some Scene {

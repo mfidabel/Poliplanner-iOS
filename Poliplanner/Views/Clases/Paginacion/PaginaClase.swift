@@ -7,8 +7,16 @@
 
 import SwiftUI
 
+// MARK: - Página de clases
+
+/// View de una página con la listas de clases de cierto día
 struct PaginaClase: View {
+    // MARK: Propiedades
+    
+    /// Información de la página
     let pagina: InfoPaginaDia
+    
+    // MARK: Body
     
     var body: some View {
         List {
@@ -19,8 +27,16 @@ struct PaginaClase: View {
     }
 }
 
+// MARK: - Celda de clase
+
+/// View que representa una clase dentro de la lista de clases de una página
 struct ClaseCelda: View {
+    // MARK: Propiedades
+    
+    /// Información sobre la clase a mostrar en el View
     let clase: InfoClase
+    
+    // MARK: Body
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -35,7 +51,10 @@ struct ClaseCelda: View {
     }
 }
 
+// MARK: - Preview
+
 #if DEBUG
+/// :nodoc:
 struct ClaseCeldaPreviews: PreviewProvider {
     static let infoClase: InfoClase = {
         let clase = Clase()

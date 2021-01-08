@@ -7,7 +7,12 @@
 
 import SwiftUI
 
+// MARK: Menú de configuración
+
+/// View principal del menú de configuración
 struct ConfiguracionView: View {
+    // MARK: Body
+    
     var body: some View {
         Form {
             Section {
@@ -19,6 +24,10 @@ struct ConfiguracionView: View {
     }
 }
 
+// MARK: - Preview
+
+#if DEBUG
+/// :nodoc:
 struct ConfiguracionView_Previews: PreviewProvider {
     static var previews: some View {
         TabView {
@@ -29,3 +38,4 @@ struct ConfiguracionView_Previews: PreviewProvider {
         }
     }
 }
+#endif

@@ -7,10 +7,15 @@
 
 import SwiftUI
 
+/// Content view principal
 struct ContentView: View {
-    // Setear el sidebar para que muestre primero el horario
+    // MARK: Propiedades
+    
+    /// Indica que view esta seleccionada
     @State private var viewSeleccionada: ViewSeleccionada? = .horario
 
+    // MARK: Body
+    
     var body: some View {
         if UIDevice.current.userInterfaceIdiom == .phone {
             // iPhone
@@ -21,6 +26,7 @@ struct ContentView: View {
         }
     }
     
+    /// Vista desde celulares
     var tabViewPhone: some View {
         TabView {
             // Horario de clases
@@ -54,6 +60,7 @@ struct ContentView: View {
         }
     }
     
+    /// Vista desde tabletas
     var sidebar: some View {
         NavigationView {
             Form {
@@ -92,16 +99,32 @@ struct ContentView: View {
     }
 }
 
+// MARK: - Preview
+
+#if DEBUG
+/// :nodoc:
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+#endif
 
-/// Enumerador que representa un view elegido en el TabView/Sidebar del contenido
+// MARK: - Adicional
+
+/// Enumerador que representa un view elegido en el TabView/Sidebar del contenido en el `ContentView`
 private enum ViewSeleccionada {
+    // MARK: Casos
+    
+    /// Vista del horario de clases
     case horario
+    
+    /// Vista del calendario de exámenes y revisiones
     case calendario
+    
+    /// Vista de las secciones elegidas con sus profesores
     case secciones
+    
+    /// Vista del menú de configuración
     case configuracion
 }

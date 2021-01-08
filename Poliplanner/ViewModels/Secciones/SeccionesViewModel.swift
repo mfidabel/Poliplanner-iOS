@@ -8,19 +8,32 @@
 import Foundation
 import RealmSwift
 
+// MARK: - View Model de Secciones
+
+/// View Model de las secciones, se encarga de manejar que secciones son las que se van a mostrar
 class SeccionesViewModel: ObservableObject {
-    // MARK: - Variables
+    // MARK: Propiedades
+    
+    /// Una lista de las secciones elegidas que se va a mostrar al usuario
     @Published private(set) var seccionesActivas: [Seccion] = []
     
-    // MARK: - Resultados
-    private var seccionesElegidas: RealmSwift.Results<Seccion>
-    
-    // MARK: - Tokens
-    private var seccionesToken: RealmSwift.NotificationToken?
-    
-    // MARK: - Realm
+    /// Instancia de `Realm` para acceder a la base de datos
     private var realm: Realm = RealmProvider.realm()
     
+    // MARK: Resultados
+    
+    /// Resultado de las secciones elegidas por el usuario
+    private var seccionesElegidas: RealmSwift.Results<Seccion>
+    
+    // MARK: Tokens
+    
+    /// Token que se obtiene al subscribir a los resultados de las secciones `SeccionesViewModel.seccionesElegidas`
+    private var seccionesToken: RealmSwift.NotificationToken?
+    
+    // MARK: Constructor
+    
+    /// Constructor del view model.
+    /// Se encarga de inicializar los resultados y subscribirse a sus cambios.
     init() {
         // Hacemos el query a secciones elegidas
         seccionesElegidas = realm.objects(Seccion.self)
@@ -33,6 +46,10 @@ class SeccionesViewModel: ObservableObject {
         }
     }
     
+    // MARK: Deconstructor
+    
+    /// Deconstructor del view model.
+    /// Se encarga de cancelar las subscripciones a cambios de los resultados.
     deinit {
         // Cancelamos el token
         seccionesToken?.invalidate()
