@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreXLSX
+import Regex
 
 // TODO: Separar lógica
 class XLSXHorarioParser: ArchivoHorarioParser {
@@ -15,6 +16,18 @@ class XLSXHorarioParser: ArchivoHorarioParser {
     private var sharedStrings: SharedStrings!
     private var hojas: [CarreraSigla: Worksheet] = [:]
     
+    private let hojaCodigosNombre: String = "Códigos"
+    private let filaPeriodoAcademico: Int = 4
+    private let columnaPeriodoAcademico: String = "B"
+    private var hojaCodigos: Worksheet?
+    
+    private let regexFechaActualizacion = Regex(
+        "(0?[1-9]|[12][0-9]|3[01])[-/](0?[1-9]|1[012])[-/]([0-9]{4}|[0-9]{2})",
+        groupNames: ["dia", "mes", "año"]
+    )
+    
+    private var fechaActualizacion: String = ""
+        
     required init(archivoURL url: URL) {
         // Copiamos la url a la instancia
         self.archivoURL = url
@@ -39,7 +52,24 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         
         // TODO: Agregar atributos faltantes
         horarioClase.horariosCarrera.append(objectsIn: horariosCarrera)
+        
         horarioClase.nombre = self.archivoURL.deletingPathExtension().lastPathComponent
+        
+        // Cargar periodo academico
+        if hojaCodigos != nil,
+           hojaCodigos!.data != nil,
+           hojaCodigos!.data!.rows.count > filaPeriodoAcademico {
+            
+            for celda in hojaCodigos!.data!.rows[filaPeriodoAcademico].cells {
+                if celda.reference.column == ColumnReference(columnaPeriodoAcademico) {
+                    horarioClase.periodoAcademico = celda.stringValue(sharedStrings) ?? "N/A"
+                }
+            }
+            
+        }
+        
+        // Cargar fecha de actualización
+        horarioClase.fechaActualizacion = fechaActualizacion
         
         return horarioClase
     }
@@ -60,6 +90,44 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         
         // Buscar fila del encabezado
         let indexFilaEncabezado: Int? = hojaActualFilas.firstIndex { fila in
+            // Buscamos fecha de actualización
+            for celda in fila.cells {
+                
+                guard let cadena = celda.stringValue(sharedStrings),
+                      let fechaMatch = regexFechaActualizacion.findFirst(in: cadena) else {
+                    continue
+                }
+                
+                print("Fecha de actualización \(fechaMatch.matched)")
+                
+                if !regexFechaActualizacion.matches(fechaActualizacion) {
+                    fechaActualizacion = fechaMatch.matched
+                } else {
+                    let antiguoMatch = regexFechaActualizacion.findFirst(in: fechaActualizacion)!
+                    
+                    let diaNuevo = fechaMatch.group(named: "dia")!
+                    let mesNuevo = fechaMatch.group(named: "mes")!
+                    let anoNuevo = fechaMatch.group(named: "año")!
+                    
+                    let diaViejo = antiguoMatch.group(named: "dia")!
+                    let mesViejo = antiguoMatch.group(named: "mes")!
+                    let anoViejo = antiguoMatch.group(named: "año")!
+                    
+                    if anoNuevo > anoViejo {
+                        fechaActualizacion = fechaMatch.matched
+                        break
+                    } else if anoNuevo == anoViejo && mesNuevo > mesViejo {
+                        fechaActualizacion = fechaMatch.matched
+                        break
+                    } else if anoNuevo == anoViejo && mesNuevo == mesViejo && diaNuevo > diaViejo {
+                        fechaActualizacion = fechaMatch.matched
+                        break
+                    } else {
+                        break
+                    }
+                }
+            }
+            
             return fila.cells.first?.stringValue(sharedStrings) == EncabezadoXLSX.item.rawValue
         }
         
@@ -320,6 +388,14 @@ class XLSXHorarioParser: ArchivoHorarioParser {
                     if let worksheetName = name, carreras.contieneCarrera(carrera: worksheetName) {
                         print("Se cargó la hoja: \(worksheetName)")
                         hojas[CarreraSigla(rawValue: worksheetName)!] = try archivoXLSX.parseWorksheet(at: path)
+                    }
+                    
+                    if name == hojaCodigosNombre {
+                        do {
+                            hojaCodigos = try archivoXLSX.parseWorksheet(at: path)
+                        } catch {
+                            print("No se pudo encontrar la hojas de códigos")
+                        }
                     }
                 }
             }
