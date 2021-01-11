@@ -61,6 +61,7 @@ struct MenuModificarHorarioView: View {
     /// Importa el archivo dado el resultado de una selección de archivo
     /// - Parameter resultado: Resultado que contiene la URL de un archivo o un error
     func importarArchivo(resultado: Result<URL, Error>) {
+        // TODO: Pasar lógica a un view model
         switch resultado {
         case .success(let archivoURL):
             var parser: ArchivoHorarioParser

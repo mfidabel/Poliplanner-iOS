@@ -18,6 +18,8 @@ target 'Poliplanner' do
   pod 'Parchment', '~> 3.0'
   # Calendario usamos este commit porque soluciona el autolayout
   pod 'CVCalendar', :git => 'https://github.com/CVCalendar/CVCalendar.git', :commit => 'aa2b366' , :inhibit_warnings => true
+  # Expresiones regulares
+  pod 'CrossroadRegex', :inhibit_warnings => true
 
   target 'PoliplannerTests' do
     inherit! :search_paths

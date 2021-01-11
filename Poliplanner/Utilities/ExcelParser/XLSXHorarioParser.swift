@@ -255,7 +255,7 @@ class XLSXHorarioParser: ArchivoHorarioParser {
             }
         }
         
-        //Generar revisiones
+        // Generar revisiones
         EncabezadoXLSX.revisiones.forEach { revision in
             // Buscamos el examen que le corresponde a esta revisión
             let examen: Examen! = examenes.first { examen in
@@ -293,17 +293,11 @@ class XLSXHorarioParser: ArchivoHorarioParser {
         // Generar clases
         EncabezadoXLSX.diasClases.forEach { dia in
             if let valor = valores[dia] {
-                let claseDraft: Clase = Clase()
-                
-                // Seleccionamos el día
-                claseDraft.diaEnum = dia.claseDia()
-                claseDraft.aula = valores[dia.claseAula()] ?? ""
-                
-                // Seleccionamos la hora de inicio y fin
-                claseDraft.setHora(valor)
+                let clasesGeneradas: [Clase] = ExcelHelper
+                    .obtenerClases(para: valor, elDia: dia.claseDia(), enAula: valores[dia.claseAula()])
                 
                 // Agregamos la clase a la lista
-                clases.append(claseDraft)
+                clases.append(contentsOf: clasesGeneradas)
             }
         }
         
@@ -315,7 +309,7 @@ class XLSXHorarioParser: ArchivoHorarioParser {
     // swiftlint:enable function_body_length cyclomatic_complexity
     private func recopilarHojas(paraCarreras carreras: [CarreraSigla]) throws {
         do {
-            //archivoXLSX = try XLSXFile(data: Data(contentsOf: archivoURL)) Tarda 0,5 segundos más
+            // archivoXLSX = try XLSXFile(data: Data(contentsOf: archivoURL)) Tarda 0,5 segundos más
             archivoXLSX = XLSXFile(
                 filepath: archivoURL.absoluteString.removingPercentEncoding!
                     .replacingOccurrences(of: "file://", with: "")

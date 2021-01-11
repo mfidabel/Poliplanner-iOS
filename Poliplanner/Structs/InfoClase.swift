@@ -25,7 +25,7 @@ struct InfoClase: Hashable, Comparable {
     
     /// Hora de la clase que se mostrará en la lista de clases.
     var hora: String {
-        return clase.horaInicio
+        return "\(clase.horaInicio) - \(clase.horaFin)"
     }
     
     /// Aula de la clase que se mostrará en la lista de clases

@@ -100,13 +100,20 @@ class SeleccionarMateriasViewModel: ObservableObject {
             seccion.elegido = true
         }
         
-        // Marcamos el horario como activo TODO: Desmarcar otros horarios como activos
+        // Marcamos el horario como activo
         horarioClase.estado = EstadoHorario.ACTIVO.rawValue
         
         // Escribimos los cambios
         let realm = RealmProvider.realm()
         
+        let horariosActivos = realm.objects(HorarioClase.self)
+            .filter("estado == '\(EstadoHorario.ACTIVO.rawValue)'")
+        
         try? realm.write {
+            // Desactivamos los otros horarios
+            horariosActivos.setValue(EstadoHorario.INACTIVO.rawValue, forKey: "estado")
+            
+            // Guardamos el nuevo
             realm.add(horarioClase)
         }
     }
