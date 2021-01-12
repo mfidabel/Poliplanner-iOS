@@ -40,21 +40,30 @@ struct ArmarSeleccionarMaterias: View {
                 Section(header: Text(materia.key)) {
                     // Por cada sección
                     ForEach(materia.value, id: \.id) { seccion in
+                        
+                        // Verifica si esta seleccionado
                         let seleccionado = viewModel.seccionSeleccionada(seccion)
-                        HStack {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(seleccionado ? .blue : .gray)
-                            Text("\(seccion.codigo)")
-                            Image(systemName: "arrow.right")
-                            Text(seccion.docente)
-                        }
-                        .onTapGesture {
+                        
+                        Button {
+                            // Que hacer cuando el usuario apreta sobre la sección
                             if seleccionado {
                                 viewModel.quitarSeccion(seccion)
                             } else {
                                 viewModel.agregarSeccion(seccion)
                             }
                         }
+                        label: {
+                            // Que mostrar como botón
+                            HStack {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .foregroundColor(seleccionado ? .blue : .gray)
+                                Text("\(seccion.codigo)")
+                                Image(systemName: "arrow.right")
+                                Text(seccion.docente)
+                            }
+                            .foregroundColor(Color(.label))
+                        }
+                        
                     }
                 }
             }
