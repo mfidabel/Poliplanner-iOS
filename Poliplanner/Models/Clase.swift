@@ -10,7 +10,7 @@ import RealmSwift
 
 /// Modelo que representa una clase de una sección en la semana
 class Clase: Object, Identifiable {
-    // MARK: - Propiedades
+    // MARK: Propiedades
     
     /// Identificador de la clase
     @objc dynamic var id = UUID().uuidString
@@ -38,17 +38,11 @@ class Clase: Object, Identifiable {
         }
     }
 
-    // MARK: - Métodos
+    // MARK: Métodos
     
     /// Función auxiliar que permite a `Realm` identificar las clases por su id en la base de datos.
     override static func primaryKey() -> String? {
         return "id"
     }
     
-    /// Setea la hora de la clase
-    func setHora(_ hora: String) {
-        // TODO: Parsear correctamente la hora
-        self.horaInicio = hora
-        self.horaFin = hora
-    }
 }

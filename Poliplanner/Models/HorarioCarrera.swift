@@ -10,8 +10,8 @@ import RealmSwift
 
 /// Modelo que representa el horario de una carrera.
 /// Equivale a una página en el Excel
-class HorarioCarrera: Object, Identifiable {
-    // MARK: - Propiedades
+class HorarioCarrera: Object, Identifiable, CascadingDeletable {
+    // MARK: Propiedades
     
     /// Identificador del Horario de Carrera
     @objc dynamic var id = UUID().uuidString
@@ -30,8 +30,13 @@ class HorarioCarrera: Object, Identifiable {
     public var carrera: CarreraSigla {
         CarreraSigla(rawValue: self.nombreCarrera) ?? .invalido
     }
-
-    // MARK: - Métodos
+    
+    // MARK: Protocolo CascadingDeletable
+    
+    /// Propiedades que se eliminarán si se elimina este objeto
+    static var propertiesToCascadeDelete: [String] = ["secciones"]
+    
+    // MARK: Métodos
     
     /// Función auxiliar que permite a `Realm` identificar los horarios de carrera por su id en la base de datos.
     override static func primaryKey() -> String? {

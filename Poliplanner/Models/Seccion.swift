@@ -10,8 +10,8 @@ import RealmSwift
 
 /// Modelo que representa una sección de una materia.
 /// Equivale a una fila del horario en el Excel
-class Seccion: Object, Identifiable {
-    // MARK: - Propiedades
+class Seccion: Object, Identifiable, CascadingDeletable {
+    // MARK: Propiedades
     
     /// Identificador de la sección
     @objc dynamic var id = UUID().uuidString
@@ -44,8 +44,13 @@ class Seccion: Object, Identifiable {
     var turno: TurnoSeccion {
         .obtenerTurno(para: codigo)
     }
+    
+    // MARK: Protocolo CascadingDeletable
+    
+    /// Propiedades que se eliminarán si se elimina este objeto
+    static var propertiesToCascadeDelete: [String] = ["asignatura", "carrera", "examenes", "clases"]
 
-    // MARK: - Métodos
+    // MARK: Métodos
     
     /// Función auxiliar que permite a `Realm` identificar las secciones por su id en la base de datos.
     override static func primaryKey() -> String? {

@@ -9,8 +9,8 @@ import Foundation
 import RealmSwift
 
 /// Modelo que representa un examen de alguna sección
-class Examen: Object, Identifiable, Calendarizable {
-    // MARK: - Propiedades
+class Examen: Object, Identifiable, Calendarizable, CascadingDeletable {
+    // MARK: Propiedades
     
     /// Identificador del examen
     @objc dynamic var id = UUID().uuidString
@@ -48,7 +48,7 @@ class Examen: Object, Identifiable, Calendarizable {
         }
     }
 
-    // MARK: - Protocolo Calendarizable
+    // MARK: Protocolo Calendarizable
     
     /// Evento que se mostrará en el calendario
     var eventoCalendario: InfoEventoCalendario {
@@ -58,7 +58,12 @@ class Examen: Object, Identifiable, Calendarizable {
                              aula: aula)
     }
     
-    // MARK: - Métodos
+    // MARK: Protocolo CascadingDeletable
+    
+    /// Propiedades que se eliminarán si se elimina este objeto
+    static var propertiesToCascadeDelete: [String] = ["revision"]
+    
+    // MARK: Métodos
     
     /// Función auxiliar que permite a `Realm` identificar los examenes por su id en la base de datos.
     override static func primaryKey() -> String? {

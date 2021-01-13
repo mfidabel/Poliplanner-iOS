@@ -37,7 +37,7 @@ class PoliplannerStore: ObservableObject {
     }
     
     /// Instancia de `Realm` para acceder a la base de datos
-    private var realm: Realm
+    private(set) var realm: Realm
     
     // MARK: Resultados
     

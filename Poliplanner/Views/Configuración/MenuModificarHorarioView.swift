@@ -33,8 +33,22 @@ struct MenuModificarHorarioView: View {
                 Section(header: Text("Crear horario")) {
                     botonImportarArchivo
                 }
+                
+                // MARK: Horarios Cargados
+                Section(header: Text("Horarios de clases")) {
+                    if PPStore.hayHorario {
+                        ForEach(PPStore.horariosClase) { horario in
+                            NavigationLink(
+                                destination: InformacionHorarioView(horario)) {
+                                Text(horario.nombre)
+                            }
+                        }
+                    } else {
+                        Text("No tienes horarios 😢")
+                    }
+                }
             }
-            .navigationBarTitle("Modificar horario")
+            .navigationBarTitle("Modificar horarios de clases")
             .navigationBarTitleDisplayMode(.automatic)
             // MARK: Importación del Archivo
             .fileImporter(isPresented: $estaImportando,

@@ -17,7 +17,7 @@ struct ConfiguracionView: View {
         Form {
             Section {
                 NavigationLink(destination: MenuModificarHorarioView()) {
-                    Text("Modificar horario")
+                    Text("Modificar horarios de clases")
                 }
             }
         }.navigationTitle("Configuración")
