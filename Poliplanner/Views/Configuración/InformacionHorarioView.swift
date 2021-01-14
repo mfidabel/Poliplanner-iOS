@@ -11,16 +11,25 @@ import SwiftUI
 
 /// View principal que muestra la información de un horario de clases cargado
 struct InformacionHorarioView: View {
+    /// :nodoc:
+    @Environment(\.presentationMode) var presentationMode
+    
     // MARK: Propiedades
     
     /// Horario de clases que se esta mostrando
     let horarioClase: HorarioClase
     
-    /// :nodoc:
-    @Environment(\.presentationMode) var presentationMode
-    
     /// Indica si el horario de clases esta activo o no
     @State var estaActivo: Bool
+    
+    /// Nombre del horario
+    @State var nombreHorario: String
+    
+    /// Periodo académico del horario
+    @State var periodoAcademico: String
+    
+    /// Fecha de actualización
+    @State var fechaActualizacion: String
     
     // MARK: Constructor
     
@@ -28,6 +37,9 @@ struct InformacionHorarioView: View {
     init(_ horarioClase: HorarioClase) {
         self.horarioClase = horarioClase
         self._estaActivo = State(initialValue: horarioClase.activo)
+        self._nombreHorario = State(initialValue: horarioClase.nombre)
+        self._periodoAcademico = State(initialValue: horarioClase.periodoAcademico)
+        self._fechaActualizacion = State(initialValue: horarioClase.fechaActualizacion)
     }
     
     // MARK: Body
@@ -35,15 +47,21 @@ struct InformacionHorarioView: View {
     var body: some View {
         Form {
             Section(header: Text("Nombre")) {
-                Text(horarioClase.nombre)
+                TextField("Nombre del horario", text: $nombreHorario, onCommit: {
+                    PoliplannerStore.shared.cambiarNombreHorario(horarioClase, a: nombreHorario)
+                })
             }
             
-            Section(header: Text("Periodo Academico")) {
-                Text(horarioClase.periodoAcademico)
+            Section(header: Text("Periodo Académico")) {
+                TextField("Periodo Académico", text: $periodoAcademico, onCommit: {
+                    PoliplannerStore.shared.cambiarPeriodoHorario(horarioClase, a: periodoAcademico)
+                })
             }
             
             Section(header: Text("Fecha de actualización")) {
-                Text(horarioClase.fechaActualizacion)
+                TextField("Fecha", text: $fechaActualizacion, onCommit: {
+                    PoliplannerStore.shared.cambiarFechaActualizacionHorario(horarioClase, a: fechaActualizacion)
+                })
             }
             
             Section(header: Text("Acciones")) {

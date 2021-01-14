@@ -58,4 +58,79 @@ extension PoliplannerStore {
             print(error.localizedDescription)
         }
     }
+    
+    /// Cambia el nombre de un horario de clases
+    /// - Parameters:
+    ///   - horarioClase: Horario de clases que se esta intentando modificar
+    ///   - nombre: Nombre que se desea que tenga el horario de clases luego de la modificación
+    func cambiarNombreHorario(_ horarioClase: HorarioClase, a nombre: String) {
+        // Obtenemos el horario de clases manejado por Realm
+        guard let horario = horarioClase.isFrozen
+            ? realm.object(ofType: HorarioClase.self, forPrimaryKey: horarioClase.id)
+            : horarioClase
+        else {
+            print("Se trató de editar un horario que no esta manejado por Realm")
+            return
+        }
+        
+        // Tratamos de editar
+        do {
+            try realm.write {
+                // Eliminamos el horario y todo lo que le sigue en cascada
+                horario.nombre = nombre
+            }
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    /// Cambia el periodo académico de un horario de clases
+    /// - Parameters:
+    ///   - horarioClase: Horario de clases que se esta intentando modificar
+    ///   - periodo: Periodo académico que se desea que tenga el horario de clases luego de la modificación
+    func cambiarPeriodoHorario(_ horarioClase: HorarioClase, a periodo: String) {
+        // Obtenemos el horario de clases manejado por Realm
+        guard let horario = horarioClase.isFrozen
+            ? realm.object(ofType: HorarioClase.self, forPrimaryKey: horarioClase.id)
+            : horarioClase
+        else {
+            print("Se trató de editar un horario que no esta manejado por Realm")
+            return
+        }
+        
+        // Tratamos de editar
+        do {
+            try realm.write {
+                // Eliminamos el horario y todo lo que le sigue en cascada
+                horario.periodoAcademico = periodo
+            }
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    /// Cambia la fecha de actualización del horario de clases
+    /// - Parameters:
+    ///   - horarioClase: Horario de clases que se esta intentando modificar
+    ///   - fecha: Fecha de actualización que se desea que tenga el horario de clases luego de la modificación
+    func cambiarFechaActualizacionHorario(_ horarioClase: HorarioClase, a fecha: String) {
+        // Obtenemos el horario de clases manejado por Realm
+        guard let horario = horarioClase.isFrozen
+            ? realm.object(ofType: HorarioClase.self, forPrimaryKey: horarioClase.id)
+            : horarioClase
+        else {
+            print("Se trató de editar un horario que no esta manejado por Realm")
+            return
+        }
+        
+        // Tratamos de editar
+        do {
+            try realm.write {
+                // Eliminamos el horario y todo lo que le sigue en cascada
+                horario.fechaActualizacion = fecha
+            }
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
