@@ -17,10 +17,10 @@ struct ConfiguracionView: View {
         Form {
             Section {
                 NavigationLink(destination: MenuModificarHorarioView()) {
-                    Text("Modificar horarios de clases")
+                    Text("Horarios de clases")
                 }
             }
-        }.navigationTitle("Configuración")
+        }.navigationBarTitle("Configuración")
     }
 }
 

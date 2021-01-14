@@ -8,8 +8,9 @@
 import SwiftUI
 import UniformTypeIdentifiers
 import RealmSwift
+import TTProgressHUD
 
-// MARK: - Menu de Modificar Horarios
+// MARK: Menu de Modificar Horarios
 
 /// Interfaz del menu para modificar horarios.
 /// Permite al usuario importar horarios.
@@ -24,10 +25,17 @@ struct MenuModificarHorarioView: View {
     
     /// Indica si es que esta en armando un horario de clases
     @State private var estaArmando: Bool = false
+    
+    /// Indica si se esta procesando
+    @State private var estaProcesando: Bool = false
+    
+    /// Configuración del HUD
+    @State var hudConfig = TTProgressHUDConfig()
 
     // MARK: Body
     
     var body: some View {
+        ZStack {
             Form {
                 // MARK: Crear horario
                 Section(header: Text("Crear horario")) {
@@ -48,8 +56,6 @@ struct MenuModificarHorarioView: View {
                     }
                 }
             }
-            .navigationBarTitle("Modificar horarios de clases")
-            .navigationBarTitleDisplayMode(.automatic)
             // MARK: Importación del Archivo
             .fileImporter(isPresented: $estaImportando,
                           allowedContentTypes: [.xlsx, .xls], onCompletion: importarArchivo)
@@ -58,6 +64,11 @@ struct MenuModificarHorarioView: View {
                     ArmarSeleccionarCarrera(estaPresentando: $estaArmando)
                 }
             }
+            if estaProcesando {
+                TTProgressHUD($estaProcesando, config: hudConfig)
+            }
+        }
+        .navigationBarTitle("Horarios de clases")
     }
     
     /// View de la opción para importar un archivo
@@ -78,20 +89,20 @@ struct MenuModificarHorarioView: View {
         // TODO: Pasar lógica a un view model
         switch resultado {
         case .success(let archivoURL):
+            let nombreArchivo = archivoURL.lastPathComponent
             var parser: ArchivoHorarioParser
+            
+            estaProcesando = true
             
             switch UTType(filenameExtension: archivoURL.pathExtension) {
             case .some(.xlsx):
                 parser = XLSXHorarioParser(archivoURL: archivoURL)
-                print("Es un archivo nuevo")
+                hudConfig = .importandoHorario(nombreHorario: nombreArchivo)
             case .some(.xls):
-                print("Es un archivo feo")
-                return
-            case .none:
-                print("No se pudo obtener la extensión")
+                hudConfig = .advertencia("Los archivos XLS no estan soportados actualmente.")
                 return
             default:
-                print("Se desconoce el archivo")
+                hudConfig = .errorImportar
                 return
             }
             
@@ -111,6 +122,7 @@ struct MenuModificarHorarioView: View {
                         // provocando una actualización en la interfaz gráfica
                         // Como no esta manejado por realm todavía, es seguro pasar entre hilos el objeto
                         PPStore.horarioClaseDraft = horarioGenerado!
+                        hudConfig = .horarioImportado(nombreHorario: nombreArchivo)
                         estaArmando = true
                     }
                 }
@@ -119,6 +131,7 @@ struct MenuModificarHorarioView: View {
             
         case .failure(let error):
             print("Hubo un error al importar. Error: \(error.localizedDescription)")
+            hudConfig = .errorImportar
         }
     }
 }

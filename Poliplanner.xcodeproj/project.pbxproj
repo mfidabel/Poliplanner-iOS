@@ -33,6 +33,8 @@
 		565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */; };
 		56638CDA257AAD8700FCC9A8 /* DiaClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56638CD9257AAD8700FCC9A8 /* DiaClase.swift */; };
 		566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F1D14257810F40057B2B3 /* ConfiguracionView.swift */; };
+		56791EC325AFD81C0049257E /* TTProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 56791EC225AFD81C0049257E /* TTProgressHUD */; };
+		56791EC825AFDBAC0049257E /* TTProgressHUD+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56791EC725AFDBAC0049257E /* TTProgressHUD+Config.swift */; };
 		567D7E532576E79100D84902 /* HorarioClaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7E522576E79100D84902 /* HorarioClaseViewModel.swift */; };
 		567D7E632576EAE300D84902 /* MenuModificarHorarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7E622576EAE300D84902 /* MenuModificarHorarioView.swift */; };
 		568CE7C5258BF942001B654D /* EventoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568CE7C4258BF942001B654D /* EventoView.swift */; };
@@ -126,6 +128,7 @@
 		565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseView.swift; sourceTree = "<group>"; };
 		56638CD9257AAD8700FCC9A8 /* DiaClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaClase.swift; sourceTree = "<group>"; };
 		566F1D14257810F40057B2B3 /* ConfiguracionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionView.swift; sourceTree = "<group>"; };
+		56791EC725AFDBAC0049257E /* TTProgressHUD+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TTProgressHUD+Config.swift"; sourceTree = "<group>"; };
 		567D7E522576E79100D84902 /* HorarioClaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseViewModel.swift; sourceTree = "<group>"; };
 		567D7E622576EAE300D84902 /* MenuModificarHorarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModificarHorarioView.swift; sourceTree = "<group>"; };
 		568CE7C4258BF942001B654D /* EventoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoView.swift; sourceTree = "<group>"; };
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C97E57CA8C004DFDB2472D14 /* Pods_Poliplanner.framework in Frameworks */,
+				56791EC325AFD81C0049257E /* TTProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +407,7 @@
 				56C1BD4B2587C458000C4D1E /* DateComponents+Referencia.swift */,
 				56C01FF0258AF3B60021739D /* CVCalendar+Redraw.swift */,
 				560AD0C525AE7790008B2AC8 /* Realm+CascadeDeleting.swift */,
+				56791EC725AFDBAC0049257E /* TTProgressHUD+Config.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -544,6 +549,7 @@
 			);
 			name = Poliplanner;
 			packageProductDependencies = (
+				56791EC225AFD81C0049257E /* TTProgressHUD */,
 			);
 			productName = Poliplanner;
 			productReference = 56D4ABA7256EE84D005C971D /* Poliplanner.app */;
@@ -620,6 +626,7 @@
 			);
 			mainGroup = 56D4AB9E256EE84D005C971D;
 			packageReferences = (
+				56791EC125AFD81C0049257E /* XCRemoteSwiftPackageReference "TTProgressHUD" */,
 			);
 			productRefGroup = 56D4ABA8256EE84D005C971D /* Products */;
 			projectDirPath = "";
@@ -865,6 +872,7 @@
 				560D6A30257BF8EC007DD904 /* EstadoHorario.swift in Sources */,
 				56638CDA257AAD8700FCC9A8 /* DiaClase.swift in Sources */,
 				561A4B98257B1E8F00BE9EE3 /* ArmarSeleccionarCarrera.swift in Sources */,
+				56791EC825AFDBAC0049257E /* TTProgressHUD+Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1202,6 +1210,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		56791EC125AFD81C0049257E /* XCRemoteSwiftPackageReference "TTProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/honkmaster/TTProgressHUD";
+			requirement = {
+				kind = revision;
+				revision = d86f54997e4722c83e5c3e8e133cfbaae122772d;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		56791EC225AFD81C0049257E /* TTProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56791EC125AFD81C0049257E /* XCRemoteSwiftPackageReference "TTProgressHUD" */;
+			productName = TTProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56D4AB9F256EE84D005C971D /* Project object */;
 }

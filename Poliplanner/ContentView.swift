@@ -37,7 +37,7 @@ struct ContentView: View {
             // Calendario de examenes
             NavigationView {
                 CalendarioView()
-            }
+            }.navigationViewStyle(StackNavigationViewStyle())
                 .tabItem {
                     Label("Calendario", systemImage: "calendar")
                 }
@@ -45,7 +45,7 @@ struct ContentView: View {
             // Secciones
             NavigationView {
                 SeccionesView()
-            }
+            }.navigationViewStyle(StackNavigationViewStyle())
                 .tabItem {
                     Label("Secciones", systemImage: "rectangle.grid.1x2")
                 }
@@ -53,7 +53,7 @@ struct ContentView: View {
             // Configuración
             NavigationView {
                 ConfiguracionView()
-            }
+            }.navigationViewStyle(StackNavigationViewStyle())
                 .tabItem {
                     Label("Configuración", systemImage: "gear")
                 }.tag(ViewSeleccionada.configuracion)

@@ -19,26 +19,30 @@ final class ExcelHelper {
         "([0-1][0-9]|2[0-3]):([0-5][0-9])-([0-1][0-9]|2[0-3]):([0-5][0-9])(?=(.?))",
         groupNames: ["horaInicio", "minutoInicio", "horaFin", "minutoFin", "verificador"])
     
+    static let regexFecha = Regex(
+        "(0?[1-9]|[12][0-9]|3[01])[-/](0?[1-9]|1[012])[-/]([0-9]{4}|[0-9]{2})",
+        groupNames: ["dia", "mes", "año"]
+    )
+    
     // MARK: Métodos
     
     /// Dado una cadena con una posible fecha, trata de parsear y convertirlo en componentes de fecha
     /// - Parameter valor: Cadena que contiene la fecha sin parsear
     /// - Returns: Componentes de la fecha.
     static func obtenerFechaComponentes(para valor: String) -> DateComponents? {
-        guard let indiceEspacio = valor.firstIndex(of: " ") else {
+        guard let fechaMatch = regexFecha.findFirst(in: valor) else {
             return nil
         }
-        // TODO: Agregar regex a la fecha
-        // Convertir fecha a date
-        let fechaString = String(valor[valor.index(after: indiceEspacio)..<valor.endIndex])
-            .split(separator: "/")
         
         var fechaComponentes: DateComponents = .componentesReferencia
         
+        var anho = Int(fechaMatch.group(named: "año")!)
+        anho = anho != nil && anho! < 2000 ? anho! + 2000 : anho
+        
         // Agarramos la fecha sin la hora
-        fechaComponentes.day = Int(fechaString[0])
-        fechaComponentes.month = Int(fechaString[1])
-        fechaComponentes.year = Int(fechaString[2]) != nil ? Int(fechaString[2])! + 2000 : nil
+        fechaComponentes.day = Int(fechaMatch.group(named: "dia")!)
+        fechaComponentes.month = Int(fechaMatch.group(named: "mes")!)
+        fechaComponentes.year = anho
         
         return fechaComponentes
     }

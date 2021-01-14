@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftUIVisualEffects",
+        "repositoryURL": "https://github.com/lucasbrown/swiftui-visual-effects.git",
+        "state": {
+          "branch": "master",
+          "revision": "b26f8cebd55ff60ed8953768aa818dfb005b5838",
+          "version": null
+        }
+      },
+      {
+        "package": "TTProgressHUD",
+        "repositoryURL": "https://github.com/honkmaster/TTProgressHUD",
+        "state": {
+          "branch": null,
+          "revision": "d86f54997e4722c83e5c3e8e133cfbaae122772d",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
