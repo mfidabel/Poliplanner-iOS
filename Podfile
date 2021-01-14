@@ -20,6 +20,8 @@ target 'Poliplanner' do
   pod 'CVCalendar', :git => 'https://github.com/CVCalendar/CVCalendar.git', :commit => 'aa2b366' , :inhibit_warnings => true
   # Expresiones regulares
   pod 'CrossroadRegex', :inhibit_warnings => true
+  # Gestión de licencias
+  pod 'LicensePlist'
 
   target 'PoliplannerTests' do
     inherit! :search_paths
@@ -33,8 +35,8 @@ target 'Poliplanner' do
   end
 
   post_install do | installer |
-    require 'fileutils'
-    FileUtils.cp_r('Pods/Target Support Files/Pods-Poliplanner/Pods-Poliplanner-acknowledgements.plist', 'Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+  #  require 'fileutils'
+  #  FileUtils.cp_r('Pods/Target Support Files/Pods-Poliplanner/Pods-Poliplanner-acknowledgements.plist', 'Settings.bundle/Acknowledgements.plist', :remove_destination => true)
     fix_deployment_target(installer)
   end
   

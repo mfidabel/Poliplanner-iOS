@@ -10,9 +10,9 @@
             <key>Type</key>
             <string>PSChildPaneSpecifier</string>
             <key>Title</key>
-            <string>Agradecimientos</string>
+            <string>Licencias de Tercero</string>
             <key>File</key>
-            <string>Acknowledgements</string>
+            <string>com.mono0926.LicensePlist</string>
         </dict>
 	</array>
 </dict>

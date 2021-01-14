@@ -536,6 +536,7 @@
 			buildConfigurationList = 56D4ABCC256EE84E005C971D /* Build configuration list for PBXNativeTarget "Poliplanner" */;
 			buildPhases = (
 				FE102031393DCE117C0018E9 /* [CP] Check Pods Manifest.lock */,
+				5697D3A725B076ED002FD82D /* Cargar licencias con License Plist */,
 				56BE7EE2256F249500C65151 /* R.swift */,
 				56D4ABA3256EE84D005C971D /* Sources */,
 				566A0379256F1FD600CA34DA /* SwiftLint */,
@@ -727,6 +728,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		5697D3A725B076ED002FD82D /* Cargar licencias con License Plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Cargar licencias con License Plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/LicensePlist/license-plist\" --output-path \"$PROJECT_DIR/Settings.bundle\" --add-version-numbers\n";
 		};
 		56BE7EE2256F249500C65151 /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -1,6 +1,8 @@
 R.generated.swift
 Pods
-Settings.bundle/Acknowledgements.plist
+Settings.bundle/com.mono0926.LicensePlist/*
+Settings.bundle/com.mono0926.LicensePlist.latest_result.txt
+Settings.bundle/com.mono0926.LicensePlist.plist
 docs
 # OS X Finder
 .DS_Store
