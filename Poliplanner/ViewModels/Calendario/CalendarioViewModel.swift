@@ -49,6 +49,10 @@ class CalendarioViewModel: ObservableObject {
     /// Token que se obtiene al subscribir a los resultados de los exámenes `CalendarioViewModel.examenesResult`
     private var examenesToken: NotificationToken?
     
+    // MARK: Delegates
+    
+    weak var calendarioDelegate: CVCalendarView?
+    
     // MARK: Métodos
     
     /// Genera los eventos que se cargarán al calendario a partir de los exámenes y sus revisiones correspondientes.
@@ -58,6 +62,16 @@ class CalendarioViewModel: ObservableObject {
                 ? [examen.eventoCalendario]
                 : [examen.eventoCalendario, examen.revision!.eventoCalendario]
         }
+    }
+    
+    /// Pasa al siguiente mes
+    func cargarMesSiguiente() {
+        calendarioDelegate?.loadNextView()
+    }
+    
+    /// Pasa al mes anterior
+    func cargarMesAnterior() {
+        calendarioDelegate?.loadPreviousView()
     }
     
     // MARK: Constructor

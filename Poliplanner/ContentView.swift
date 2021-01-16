@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StatefulTabView
 
 /// Content view principal
 struct ContentView: View {
@@ -28,35 +29,28 @@ struct ContentView: View {
     
     /// Vista desde celulares
     var tabViewPhone: some View {
-        TabView {
-            // Horario de clases
-            HorarioClaseView()
-                .tabItem {
-                    Label("Clases", systemImage: "list.bullet")
-                }.tag(ViewSeleccionada.horario)
-            // Calendario de examenes
-            NavigationView {
-                CalendarioView()
-            }.navigationViewStyle(StackNavigationViewStyle())
-                .tabItem {
-                    Label("Calendario", systemImage: "calendar")
-                }
-                .tag(ViewSeleccionada.calendario)
-            // Secciones
-            NavigationView {
-                SeccionesView()
-            }.navigationViewStyle(StackNavigationViewStyle())
-                .tabItem {
-                    Label("Secciones", systemImage: "rectangle.grid.1x2")
-                }
-            .tag(ViewSeleccionada.secciones)
-            // Configuración
-            NavigationView {
-                ConfiguracionView()
-            }.navigationViewStyle(StackNavigationViewStyle())
-                .tabItem {
-                    Label("Configuración", systemImage: "gear")
-                }.tag(ViewSeleccionada.configuracion)
+        StatefulTabView {
+            Tab(title: "Clases", systemImageName: "list.bullet") {
+                HorarioClaseView()
+            }
+            
+            Tab(title: "Calendario", systemImageName: "calendar") {
+                NavigationView {
+                    CalendarioView()
+                }.navigationViewStyle(StackNavigationViewStyle())
+            }
+            
+            Tab(title: "Secciones", systemImageName: "rectangle.grid.1x2") {
+                NavigationView {
+                    SeccionesView()
+                }.navigationViewStyle(StackNavigationViewStyle())
+            }
+            
+            Tab(title: "Configuración", systemImageName: "gear") {
+                NavigationView {
+                    ConfiguracionView()
+                }.navigationViewStyle(StackNavigationViewStyle())
+            }
         }
     }
     
@@ -94,7 +88,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationBarTitle(Text("Poliplanner"))
+            .navigationBarTitle("PoliPlanner")
         }
     }
 }

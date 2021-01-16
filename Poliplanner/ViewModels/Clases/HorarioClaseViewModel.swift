@@ -60,8 +60,8 @@ class HorarioClaseViewModel: ObservableObject {
     init() {
         // Seleccionamos las secciones elegidas por el usuario
         seccionesElegidasResults = realm.objects(Seccion.self)
-            .filter("elegido = true")
-        seccionesElegidasActivas = seccionesElegidasResults.seccionesActivas()
+            .filter("elegido == true AND ANY horariosCarrera.horarioClase.estado == '\(EstadoHorario.ACTIVO.rawValue)'")
+        seccionesElegidasActivas = self.seccionesElegidasResults.freeze().toArray()
         inicializarTokens()
     }
     
@@ -72,7 +72,7 @@ class HorarioClaseViewModel: ObservableObject {
         // Observamos cambios sobre los resultados
         seccionesElegidasToken = seccionesElegidasResults.observe { _ in
             // Cargar todas las secciones elegidas
-            self.seccionesElegidasActivas = self.seccionesElegidasResults.seccionesActivas()
+            self.seccionesElegidasActivas = self.seccionesElegidasResults.freeze().toArray()
         }
     }
     

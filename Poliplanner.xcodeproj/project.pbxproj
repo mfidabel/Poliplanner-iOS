@@ -23,6 +23,7 @@
 		561A4B98257B1E8F00BE9EE3 /* ArmarSeleccionarCarrera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A4B97257B1E8F00BE9EE3 /* ArmarSeleccionarCarrera.swift */; };
 		561EB81025869FEE00507D67 /* TipoExamen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561EB80F25869FEE00507D67 /* TipoExamen.swift */; };
 		5620D1EC257BE34D0073F555 /* ArmarSeleccionarMaterias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5620D1EB257BE34D0073F555 /* ArmarSeleccionarMaterias.swift */; };
+		562375F625B32569002B7B3E /* Results+toArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562375F525B32569002B7B3E /* Results+toArray.swift */; };
 		562B5FF9258012D800F345F5 /* CalendarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B5FF8258012D800F345F5 /* CalendarioView.swift */; };
 		562B5FFF258017B200F345F5 /* SeccionesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B5FFE258017B200F345F5 /* SeccionesView.swift */; };
 		56361E802580916A001E11F7 /* InfoClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56361E7F2580916A001E11F7 /* InfoClase.swift */; };
@@ -30,6 +31,7 @@
 		565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152A925712DC30073C3CA /* HorarioCarrera.swift */; };
 		565152AF25712E790073C3CA /* HorarioClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565152AE25712E790073C3CA /* HorarioClase.swift */; };
 		56542E2D2599010D009CD07A /* TurnoSeccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56542E2C2599010D009CD07A /* TurnoSeccion.swift */; };
+		5658EB5D25B0BA0D00F40A56 /* StatefulTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 5658EB5C25B0BA0D00F40A56 /* StatefulTabView */; };
 		565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */; };
 		56638CDA257AAD8700FCC9A8 /* DiaClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56638CD9257AAD8700FCC9A8 /* DiaClase.swift */; };
 		566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F1D14257810F40057B2B3 /* ConfiguracionView.swift */; };
@@ -47,6 +49,7 @@
 		56A6184F25707E8000346419 /* Revision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6184E25707E8000346419 /* Revision.swift */; };
 		56A618542570806600346419 /* Clase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A618532570806600346419 /* Clase.swift */; };
 		56A61859257081D700346419 /* Seccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A61858257081D700346419 /* Seccion.swift */; };
+		56A878C125B08D4600F65A10 /* R.swift+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A878C025B08D4600F65A10 /* R.swift+SwiftUI.swift */; };
 		56B23C6F2587F91200C4E506 /* InfoEventoCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B23C6E2587F91200C4E506 /* InfoEventoCalendario.swift */; };
 		56B23C742587FB7A00C4E506 /* Calendarizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B23C732587FB7A00C4E506 /* Calendarizable.swift */; };
 		56B23C7A2587FE3E00C4E506 /* CalendarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B23C792587FE3E00C4E506 /* CalendarioViewModel.swift */; };
@@ -72,7 +75,6 @@
 		56DFF59C25A3B9B800DD762C /* ExcelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DFF59B25A3B9B800DD762C /* ExcelHelper.swift */; };
 		56E2CE04257DC4BA0094333C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56E2CE03257DC4BA0094333C /* Settings.bundle */; };
 		56EB465F2583F98D0024DFB0 /* SeccionesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EB465E2583F98D0024DFB0 /* SeccionesViewModel.swift */; };
-		56EB46732583FB1B0024DFB0 /* Results+SeccionesActivas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EB46722583FB1B0024DFB0 /* Results+SeccionesActivas.swift */; };
 		56EF205C258EEC80000050FA /* HeaderEventoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF205B258EEC80000050FA /* HeaderEventoView.swift */; };
 		56EF6DC425814BC1005EA4FC /* InfoPaginaDia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF6DC325814BC1005EA4FC /* InfoPaginaDia.swift */; };
 		56F5F2D325783FB20066CE24 /* UTType+Excel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5F2D225783FB20066CE24 /* UTType+Excel.swift */; };
@@ -118,6 +120,7 @@
 		561EB80F25869FEE00507D67 /* TipoExamen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoExamen.swift; sourceTree = "<group>"; };
 		5620D1EB257BE34D0073F555 /* ArmarSeleccionarMaterias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmarSeleccionarMaterias.swift; sourceTree = "<group>"; };
 		562271CA256EED60001AB5C2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/iOSSupport/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
+		562375F525B32569002B7B3E /* Results+toArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+toArray.swift"; sourceTree = "<group>"; };
 		562B5FF8258012D800F345F5 /* CalendarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioView.swift; sourceTree = "<group>"; };
 		562B5FFE258017B200F345F5 /* SeccionesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeccionesView.swift; sourceTree = "<group>"; };
 		56361E7F2580916A001E11F7 /* InfoClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoClase.swift; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 		56A6184E25707E8000346419 /* Revision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Revision.swift; sourceTree = "<group>"; };
 		56A618532570806600346419 /* Clase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clase.swift; sourceTree = "<group>"; };
 		56A61858257081D700346419 /* Seccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seccion.swift; sourceTree = "<group>"; };
+		56A878C025B08D4600F65A10 /* R.swift+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "R.swift+SwiftUI.swift"; sourceTree = "<group>"; };
 		56B23C6E2587F91200C4E506 /* InfoEventoCalendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEventoCalendario.swift; sourceTree = "<group>"; };
 		56B23C732587FB7A00C4E506 /* Calendarizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendarizable.swift; sourceTree = "<group>"; };
 		56B23C792587FE3E00C4E506 /* CalendarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioViewModel.swift; sourceTree = "<group>"; };
@@ -169,7 +173,6 @@
 		56DFF59B25A3B9B800DD762C /* ExcelHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcelHelper.swift; sourceTree = "<group>"; };
 		56E2CE03257DC4BA0094333C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		56EB465E2583F98D0024DFB0 /* SeccionesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeccionesViewModel.swift; sourceTree = "<group>"; };
-		56EB46722583FB1B0024DFB0 /* Results+SeccionesActivas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+SeccionesActivas.swift"; sourceTree = "<group>"; };
 		56EF205B258EEC80000050FA /* HeaderEventoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderEventoView.swift; sourceTree = "<group>"; };
 		56EF6DC325814BC1005EA4FC /* InfoPaginaDia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPaginaDia.swift; sourceTree = "<group>"; };
 		56F5F2D225783FB20066CE24 /* UTType+Excel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UTType+Excel.swift"; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C97E57CA8C004DFDB2472D14 /* Pods_Poliplanner.framework in Frameworks */,
+				5658EB5D25B0BA0D00F40A56 /* StatefulTabView in Frameworks */,
 				56791EC325AFD81C0049257E /* TTProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,12 +406,13 @@
 				56F5F2D225783FB20066CE24 /* UTType+Excel.swift */,
 				5600BC4B25789B160042580F /* Array+CarreraSigla.swift */,
 				569E1F6C2581CE6700D64898 /* PagingOptions+HorarioClase.swift */,
-				56EB46722583FB1B0024DFB0 /* Results+SeccionesActivas.swift */,
 				56C1BD462587AAD1000C4D1E /* NSRegularExpression+Regex.swift */,
 				56C1BD4B2587C458000C4D1E /* DateComponents+Referencia.swift */,
 				56C01FF0258AF3B60021739D /* CVCalendar+Redraw.swift */,
 				560AD0C525AE7790008B2AC8 /* Realm+CascadeDeleting.swift */,
 				56791EC725AFDBAC0049257E /* TTProgressHUD+Config.swift */,
+				56A878C025B08D4600F65A10 /* R.swift+SwiftUI.swift */,
+				562375F525B32569002B7B3E /* Results+toArray.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -551,6 +556,7 @@
 			name = Poliplanner;
 			packageProductDependencies = (
 				56791EC225AFD81C0049257E /* TTProgressHUD */,
+				5658EB5C25B0BA0D00F40A56 /* StatefulTabView */,
 			);
 			productName = Poliplanner;
 			productReference = 56D4ABA7256EE84D005C971D /* Poliplanner.app */;
@@ -628,6 +634,7 @@
 			mainGroup = 56D4AB9E256EE84D005C971D;
 			packageReferences = (
 				56791EC125AFD81C0049257E /* XCRemoteSwiftPackageReference "TTProgressHUD" */,
+				5658EB5B25B0BA0D00F40A56 /* XCRemoteSwiftPackageReference "StatefulTabView" */,
 			);
 			productRefGroup = 56D4ABA8256EE84D005C971D /* Products */;
 			projectDirPath = "";
@@ -863,6 +870,7 @@
 				56C01FF1258AF3B60021739D /* CVCalendar+Redraw.swift in Sources */,
 				56B23C6F2587F91200C4E506 /* InfoEventoCalendario.swift in Sources */,
 				56EF205C258EEC80000050FA /* HeaderEventoView.swift in Sources */,
+				562375F625B32569002B7B3E /* Results+toArray.swift in Sources */,
 				565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */,
 				565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */,
 				56542E2D2599010D009CD07A /* TurnoSeccion.swift in Sources */,
@@ -878,7 +886,6 @@
 				566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */,
 				5600BC4C25789B160042580F /* Array+CarreraSigla.swift in Sources */,
 				56B90A27258181800051872A /* PaginaClase.swift in Sources */,
-				56EB46732583FB1B0024DFB0 /* Results+SeccionesActivas.swift in Sources */,
 				56A618542570806600346419 /* Clase.swift in Sources */,
 				56EF6DC425814BC1005EA4FC /* InfoPaginaDia.swift in Sources */,
 				560AD0CC25AE7FF0008B2AC8 /* PoliplannerStore+HorarioClase.swift in Sources */,
@@ -888,6 +895,7 @@
 				562B5FF9258012D800F345F5 /* CalendarioView.swift in Sources */,
 				561127C825785DB200F9AA03 /* XLSXHorarioParser.swift in Sources */,
 				56A6184525707CFB00346419 /* Carrera.swift in Sources */,
+				56A878C125B08D4600F65A10 /* R.swift+SwiftUI.swift in Sources */,
 				560D6A30257BF8EC007DD904 /* EstadoHorario.swift in Sources */,
 				56638CDA257AAD8700FCC9A8 /* DiaClase.swift in Sources */,
 				561A4B98257B1E8F00BE9EE3 /* ArmarSeleccionarCarrera.swift in Sources */,
@@ -1231,6 +1239,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5658EB5B25B0BA0D00F40A56 /* XCRemoteSwiftPackageReference "StatefulTabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NicholasBellucci/StatefulTabView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.7;
+			};
+		};
 		56791EC125AFD81C0049257E /* XCRemoteSwiftPackageReference "TTProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/honkmaster/TTProgressHUD";
@@ -1242,6 +1258,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5658EB5C25B0BA0D00F40A56 /* StatefulTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5658EB5B25B0BA0D00F40A56 /* XCRemoteSwiftPackageReference "StatefulTabView" */;
+			productName = StatefulTabView;
+		};
 		56791EC225AFD81C0049257E /* TTProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 56791EC125AFD81C0049257E /* XCRemoteSwiftPackageReference "TTProgressHUD" */;

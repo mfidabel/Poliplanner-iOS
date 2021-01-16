@@ -15,18 +15,19 @@ extension PagingOptions {
     static let horarioClase: PagingOptions = {
         var horarioClase = PagingOptions()
         // No seleccionados
-        horarioClase.font = UIFont.systemFont(ofSize: 34, weight: .bold)
-        horarioClase.textColor = .gray
+        horarioClase.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
+        horarioClase.textColor = R.color.colorDiaSemanaNoSeleccionado()!
         horarioClase.backgroundColor = .clear
         
         // Seleccionados
         horarioClase.selectedFont = horarioClase.font
-        horarioClase.selectedTextColor = .label
+        horarioClase.selectedTextColor = R.color.colorDiaSemana()!
         horarioClase.selectedBackgroundColor = horarioClase.backgroundColor
+        horarioClase.indicatorColor = R.color.indicadorDia()!
         
         // Varios
-        horarioClase.menuItemSize = .selfSizing(estimatedWidth: 80, height: 50)
-        horarioClase.menuItemSpacing = 5
+        horarioClase.menuItemSize = .selfSizing(estimatedWidth: 70, height: 50)
+        horarioClase.menuItemSpacing = 0
         horarioClase.menuBackgroundColor = horarioClase.backgroundColor
         horarioClase.borderOptions = .hidden
         horarioClase.indicatorOptions = .hidden

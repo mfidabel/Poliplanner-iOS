@@ -92,7 +92,7 @@ struct PaginacionMateriaView: View {
         
         /// Item de Página para cada índice
         func pagingViewController(_: PagingViewController, pagingItemAt index: Int) -> PagingItem {
-            return PagingIndexItem(index: index, title: parent.paginas[index].dia.rawValue)
+            return PagingIndexItem(index: index, title: parent.paginas[index].dia.nombre)
         }
     }
 }

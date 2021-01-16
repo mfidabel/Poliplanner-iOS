@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Rswift
 
 // MARK: - Página de clases
 
@@ -19,9 +20,24 @@ struct PaginaClase: View {
     // MARK: Body
     
     var body: some View {
-        List {
-            ForEach(pagina.clases, id: \.self) { clase in
-                ClaseCelda(clase: clase)
+        ZStack {
+            // Color de fondo
+            R.color.backgroundClaseLista.color
+            
+            // Contenido
+            if pagina.clases.isEmpty {
+                Text("No tienes materias este día")
+            } else {
+                ScrollView {
+                    Spacer()
+                        .frame(height: 12.0)
+                    ForEach(pagina.clases, id: \.self) { clase in
+                        ClaseCelda(clase: clase)
+                            .padding(.trailing, 10.0)
+                        Divider()
+                    }
+                    .padding(.leading, 20.0)
+                }
             }
         }
     }
@@ -42,12 +58,15 @@ struct ClaseCelda: View {
         VStack(alignment: .leading) {
             Text(clase.asignatura)
                 .font(.title3)
+                .fontWeight(.medium)
+                .foregroundColor(R.color.nombreAsignaturaClase.color)
             HStack {
                 Text(clase.hora)
                 Spacer()
                 Text(clase.aula)
             }.padding(.top, 1.0)
-        }.padding(.vertical, 5)
+        }
+        .listRowBackground(Color.clear)
     }
 }
 
@@ -60,8 +79,9 @@ struct ClaseCeldaPreviews: PreviewProvider {
         let clase = Clase()
         clase.aula = "A01"
         clase.dia = DiaClase.LUNES.rawValue
-        clase.horaInicio = "18:00 - 19:00"
-        return InfoClase(asignatura: "Investigación de Operaciones",
+        clase.horaInicio = "18:00"
+        clase.horaFin = "19:00"
+        return InfoClase(asignatura: "Optativa 3 - Metodología de la investigación",
                          clase: clase)
     }()
        

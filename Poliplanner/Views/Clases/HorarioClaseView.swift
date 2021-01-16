@@ -15,11 +15,33 @@ struct HorarioClaseView: View {
     
     /// View Model que controla este View
     @ObservedObject private var HCViewModel = HorarioClaseViewModel()
+    
+    /// Identifica si es un celular o una tableta
+    let esCelular: Bool = UIDevice.current.userInterfaceIdiom == .phone
 
     // MARK: Body
     
     var body: some View {
-        PaginacionMateriaView(paginas: HCViewModel.clasesPorDia)
-            .navigationBarTitle("Horario de clases", displayMode: .automatic)
+        ZStack {
+            // Color fondo
+            R.color.backgroundClaseMenu.color
+                .edgesIgnoringSafeArea(.top)
+            
+            // Contenido
+            VStack(alignment: .leading) {
+                if esCelular {
+                    Text("PoliPlanner")
+                        .font(.system(size: 34.0))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(.leading, 20.0)
+                    
+                    Spacer()
+                        .frame(height: 5.0)
+                }
+                // Paginas de materias
+                PaginacionMateriaView(paginas: HCViewModel.clasesPorDia)
+            }
+        }.navigationBarTitle("", displayMode: .inline)
     }
 }

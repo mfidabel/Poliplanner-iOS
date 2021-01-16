@@ -43,7 +43,7 @@ struct SeccionCeldaView: View {
         Section {
             VStack(alignment: .leading) {
                 Text(seccion.asignatura!.nombre)
-                    .font(.title3)
+                    .font(.headline)
                 HStack {
                     Text(seccion.docente)
                         .font(.footnote)

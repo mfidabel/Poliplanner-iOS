@@ -26,7 +26,32 @@ struct CalendarioView: View {
                 Divider()
                 generarLista(proxy)
             }
-        }.navigationBarTitle(viewModel.tituloMes)
+        }.navigationBarTitle(viewModel.tituloMes, displayMode: .inline)
+        .navigationBarItems(leading: botonAtras, trailing: botonDelante)
+    }
+    
+    /// Botón izquierdo que manda el mes para atrás
+    var botonAtras: some View {
+        Button(action: {
+            viewModel.cargarMesAnterior()
+        }, label: {
+            HStack {
+                Image(systemName: "chevron.backward")
+                Text("Anterior")
+            }
+        })
+    }
+    
+    /// Botón derecho que manda el mes para adelante
+    var botonDelante: some View {
+        Button(action: {
+            viewModel.cargarMesSiguiente()
+        }, label: {
+            HStack {
+                Text("Siguiente")
+                Image(systemName: "chevron.forward")
+            }
+        })
     }
     
     // MARK: Métodos

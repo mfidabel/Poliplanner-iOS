@@ -16,30 +16,12 @@
       "appearances" : [
         {
           "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
-      "color" : {
-        "color-space" : "srgb",
-        "components" : {
-          "alpha" : "1.000",
-          "blue" : "0x9F",
-          "green" : "0x3F",
-          "red" : "0x30"
-        }
-      },
-      "idiom" : "universal"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
           "value" : "dark"
         }
       ],
       "color" : {
         "platform" : "ios",
-        "reference" : "systemGray6Color"
+        "reference" : "labelColor"
       },
       "idiom" : "universal"
     }

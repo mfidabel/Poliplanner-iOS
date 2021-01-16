@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "StatefulTabView",
+        "repositoryURL": "https://github.com/NicholasBellucci/StatefulTabView",
+        "state": {
+          "branch": null,
+          "revision": "81114f7b0d3f89fb62510da33e4c21e2a7a078d5",
+          "version": "0.1.7"
+        }
+      },
+      {
         "package": "SwiftUIVisualEffects",
         "repositoryURL": "https://github.com/lucasbrown/swiftui-visual-effects.git",
         "state": {

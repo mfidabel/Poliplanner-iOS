@@ -40,7 +40,7 @@ struct CalendarioMesView: View {
         return VStack {
             CalendarioMenuView(frame: frameMenu)
                 .frame(width: frameMenu.width, height: frameMenu.height)
-            CalendarioMes(viewModel: viewModel, frame: frameMes)
+            CalendarioMes(viewModel: viewModel, frame: frameMes, fecha: viewModel.fecha)
                 .frame(width: frameMes.width, height: frameMes.height)
         }
     }

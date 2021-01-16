@@ -49,6 +49,24 @@ enum DiaClase: String, Comparable, CaseIterable {
         }
     }
     
+    /// Representación localizada
+    var nombre: String {
+        switch self {
+        case .LUNES:
+            return "Lunes"
+        case .MARTES:
+            return "Martes"
+        case .MIERCOLES:
+            return "Miércoles"
+        case .JUEVES:
+            return "Jueves"
+        case .VIERNES:
+            return "Viernes"
+        case .SABADO:
+            return "Sábado"
+        }
+    }
+    
     // MARK: - Protocolo Comparable
     
     /// Permite comparar dos `DiaClase`. Se define como menor el que tenga el menor número
