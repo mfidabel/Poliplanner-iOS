@@ -26,7 +26,7 @@ struct PaginaClase: View {
             
             // Contenido
             if pagina.clases.isEmpty {
-                Text("No tienes materias este día")
+                Text("No tienes clases este día")
             } else {
                 ScrollView {
                     Spacer()

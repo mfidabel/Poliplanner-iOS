@@ -29,6 +29,9 @@ class CalendarioViewModel: ObservableObject {
         eventos.filter { evento in
             return Calendar.current.isDate(fecha, equalTo: evento.fecha, toGranularity: .month)
         }
+        .sorted { (lhs, rhs) -> Bool in
+            lhs.fecha < rhs.fecha
+        }
     }
     
     /// Título del mes que se mostrará al usuario
@@ -82,6 +85,7 @@ class CalendarioViewModel: ObservableObject {
         // Inicializamos las variables
         examenesResult = realm.objects(Examen.self)
             .filter("ANY secciones.elegido == true")
+            .filter("ANY secciones.horariosCarrera.horarioClase.estado == '\(EstadoHorario.ACTIVO.rawValue)'")
         generarEventos()
         // Empezamos a escuchar cambios
         examenesToken = examenesResult.observe { _ in

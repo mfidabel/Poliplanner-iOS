@@ -28,23 +28,32 @@ struct ListaEventosView: View {
     // MARK: Body
     
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(eventosAgrupados, id: \.key) { grupoEvento in
-                    let eventos = grupoEvento.value
-                    Section(header: HeaderEventoView(fecha: grupoEvento.key)) {
-                        VStack {
-                            ForEach(eventos, id: \.self) { evento in
-                                EventoView(evento: evento)
-                                    .padding(.vertical, 10)
+        if eventosAgrupados.isEmpty {
+            // Caso no haya ningún evento en el mes
+            Text("No tienes eventos este mes")
+        } else {
+            // Caso si haya eventos
+            ScrollView {
+                Spacer()
+                    .frame(height: 10.0)
+                VStack {
+                    // Por cada día
+                    ForEach(eventosAgrupados, id: \.key) { grupoEvento in
+                        let eventos = grupoEvento.value
+                        Section(header: HeaderEventoView(fecha: grupoEvento.key)) {
+                            VStack {
+                                // Por cada evento del día
+                                ForEach(eventos, id: \.self) { evento in
+                                    EventoView(evento: evento)
+                                        .padding(.vertical, 10)
+                                }
                             }
-                        }
-                    }.padding(.horizontal, 10)
+                        }.padding(.horizontal, 10)
+                    }
                 }
             }
+            .padding(.bottom, 20)
         }
-        .padding(.top, 10)
-        .padding(.bottom, 20)
     }
     
     // MARK: Métodos
