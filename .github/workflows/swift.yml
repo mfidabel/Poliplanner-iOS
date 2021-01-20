@@ -12,12 +12,22 @@ jobs:
       run: bundle install
     - name: Corre pod install
       run: bundle exec fastlane cocoapodLane
+    - name: Cachear fastlane
+      uses: actions/upload-artifact@v2
+      with:
+        name: fastlane
+        path: fastlane/FastlaneRunner
 
   swiftLint:
     needs: cocoapods
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Descargar fastlane runner
+      uses: actions/download-artifact@v2
+      with:
+        name: fastlane
+        path: fastlane/FastlaneRunner
     - name: Instalar Bundle
       run: bundle install
     - name: Corre pod install
@@ -30,6 +40,11 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Descargar fastlane runner
+      uses: actions/download-artifact@v2
+      with:
+        name: fastlane
+        path: fastlane/FastlaneRunner
     - name: Instalar Bundle
       run: bundle install
     - name: Corre pod install
@@ -62,6 +77,11 @@ jobs:
       with:
         name: build
         path: derivedData/Build/Products/Debug-iphonesimulator/Poliplanner.app
+    - name: Descargar fastlane runner
+      uses: actions/download-artifact@v2
+      with:
+        name: fastlane
+        path: fastlane/FastlaneRunner
     - name: Instalar Bundle
       run: bundle install
     - name: Correr test unitarios
