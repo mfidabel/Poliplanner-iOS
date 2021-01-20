@@ -1,6 +1,9 @@
 excluded:
   - Pods
   - R.generated.swift
+  - fastlane
+  - derivedData
+
 disabled_rules:
   - trailing_whitespace
   - todo

@@ -1,0 +1,64 @@
+name: Swift
+
+on: [push, pull_request]
+
+jobs:
+  
+  cocoapods:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2 
+    - name: Instalar Bundle
+      run: bundle install
+    - name: Corre pod install
+      run: bundle exec fastlane cocoapodLane
+
+  swiftLint:
+    needs: cocoapods
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Instalar Bundle
+      run: bundle install
+    - name: Correr swiftlint
+      run: bundle exec fastlane swiftLintLane
+
+  build:
+    needs: swiftLint
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Instalar Bundle
+      run: bundle install
+    - name: Compilar
+      run: bundle exec fastlane buildLane
+    - name: Subir build
+      uses: actions/upload-artifact@v2
+      with:
+        name: build
+        path: derivedData/Build/Products/Debug-iphonesimulator/Poliplanner.app     
+    - name: Subir Runner de UI Tests
+      uses: actions/upload-artifact@v2
+      with:
+        name: runner
+        path: derivedData/Build/Products/Debug-iphonesimulator/PoliplannerUITests-Runner.app
+    - name: Subir Tests UI
+      uses: actions/upload-artifact@v2
+      with:
+        name: uiTests
+        path: derivedData/Build/Products/Debug-iphonesimulator/PoliplannerUITests.xctest
+
+  unitTests:
+    needs: build
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Descargar build
+      uses: actions/download-artifact@v2
+      with:
+        name: build
+        path: derivedData/Build/Products/Debug-iphonesimulator/Poliplanner.app
+    - name: Instalar Bundle
+      run: bundle install
+    - name: Correr test unitarios
+      run: bundle exec fastlane unitTestLane

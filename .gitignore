@@ -4,6 +4,11 @@ Settings.bundle/com.mono0926.LicensePlist/*
 Settings.bundle/com.mono0926.LicensePlist.latest_result.txt
 Settings.bundle/com.mono0926.LicensePlist.plist
 docs
+derivedData
+test_output
+fastlane/FastlaneRunner
+fastlane/report.xml
+
 # OS X Finder
 .DS_Store
 
