@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   
   cocoapods:
-    runs-on: macos-latest
+    runs-on: macos-11.0
     steps:
     - uses: actions/checkout@v2 
     - name: Instalar Bundle
@@ -15,7 +15,7 @@ jobs:
 
   swiftLint:
     needs: cocoapods
-    runs-on: macos-latest
+    runs-on: macos-11.0
     steps:
     - uses: actions/checkout@v2
     - name: Instalar Bundle
@@ -25,7 +25,7 @@ jobs:
 
   build:
     needs: swiftLint
-    runs-on: macos-latest
+    runs-on: macos-11.0
     steps:
     - uses: actions/checkout@v2
     - name: Instalar Bundle
@@ -50,7 +50,7 @@ jobs:
 
   unitTests:
     needs: build
-    runs-on: macos-latest
+    runs-on: macos-11.0
     steps:
     - uses: actions/checkout@v2
     - name: Descargar build
