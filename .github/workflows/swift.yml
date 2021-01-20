@@ -15,21 +15,25 @@ jobs:
 
   swiftLint:
     needs: cocoapods
-    runs-on: macos-11.0
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: Instalar Bundle
       run: bundle install
+    - name: Corre pod install
+      run: bundle exec fastlane cocoapodLane
     - name: Correr swiftlint
       run: bundle exec fastlane swiftLintLane
 
   build:
     needs: swiftLint
-    runs-on: macos-11.0
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: Instalar Bundle
       run: bundle install
+    - name: Corre pod install
+      run: bundle exec fastlane cocoapodLane
     - name: Compilar
       run: bundle exec fastlane buildLane
     - name: Subir build
@@ -50,7 +54,7 @@ jobs:
 
   unitTests:
     needs: build
-    runs-on: macos-11.0
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: Descargar build
