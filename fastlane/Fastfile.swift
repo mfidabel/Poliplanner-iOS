@@ -19,6 +19,7 @@ class Fastfile: LaneFile {
         desc("Correr SwiftLint")
         swiftlint(configFile: ".swiftlint.yml",
                   ignoreExitStatus: false,
+                  raiseIfSwiftlintError: true,
                   executable: "Pods/SwiftLint/swiftlint")
     }
     
