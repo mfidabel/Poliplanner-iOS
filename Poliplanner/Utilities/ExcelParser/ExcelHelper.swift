@@ -24,6 +24,10 @@ final class ExcelHelper {
         groupNames: ["dia", "mes", "año"]
     )
     
+    static let regexHora = Regex("([0-1][0-9]|2[0-3]|[1-9]):([0-5][0-9])",
+                                 groupNames: ["hora", "minuto"]
+    )
+    
     // MARK: Métodos
     
     /// Dado una cadena con una posible fecha, trata de parsear y convertirlo en componentes de fecha
@@ -51,21 +55,21 @@ final class ExcelHelper {
     /// - Parameter valor: Cadena que contiene la hora sin parsear
     /// - Returns: La hora y el minuto que se obtuvo
     static func obtenerHora(para valor: String) -> (hora: Int, minuto: Int)? {
-        if NSRegularExpression.horaComun.matches(valor) {
+        let valorLimpio = valor.replacingOccurrences(of: " ", with: "")
+        
+        if let match = regexHora.findFirst(in: valorLimpio) {
             // Tiene formato HH:mm
-            let valores = valor.split(separator: ":")
-            
-            guard let hora = Int(valores.first!),
-                  let minuto = Int(valores.last!) else {
+            guard let hora = Int(match.group(named: "hora")!),
+                  let minuto = Int(match.group(named: "minuto")!) else {
                 return nil
             }
             
             return (hora: hora, minuto: minuto)
-        } else if let horaDouble = Double(valor), horaDouble < 1, horaDouble > 0 {
+        } else if let horaFloat = Float(valorLimpio), horaFloat < 1.0, horaFloat >= 0.0 {
             // Tiene formato OLE
-            let tiempoDouble = horaDouble * 24.0
-            let hora = Int(tiempoDouble)
-            let minuto = Int( (tiempoDouble - Double(hora) ) * 60 )
+            let tiempoFloat = horaFloat * 24.0
+            let hora = Int(tiempoFloat)
+            let minuto = Int( (tiempoFloat - Float(hora) ) * 60 )
             
             return (hora: hora, minuto: minuto)
         } else {
