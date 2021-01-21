@@ -19,12 +19,18 @@ struct SeccionesView: View {
     // MARK: Body
     
     var body: some View {
-        Form {
-            ForEach(viewModel.seccionesActivas) { seccion in
-                SeccionCeldaView(seccion: seccion)
+        Group {
+            if viewModel.seccionesActivas.isEmpty {
+                Text("No tienes secciones")
+            } else {
+                Form {
+                    ForEach(viewModel.seccionesActivas) { seccion in
+                        SeccionCeldaView(seccion: seccion)
+                    }
+                }
             }
         }
-        .navigationBarTitle(Text("Secciones"))
+        .navigationBarTitle("Secciones")
     }
 }
 
