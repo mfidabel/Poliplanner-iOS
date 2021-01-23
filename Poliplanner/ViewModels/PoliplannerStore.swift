@@ -19,13 +19,24 @@ class PoliplannerStore: ObservableObject {
     /// instancia
     static let shared = PoliplannerStore(realm: RealmProvider.realm())
     
+    // MARK: Safe
+    
+    /// Genera una instancia segura para cualquier hilo que lo llame. Como `Realm` no soporta instancias entre hilos,
+    /// cada instancia segura debe usarse solamente en el hilo que lo llamó.
+    static var safe: PoliplannerStore {
+        PoliplannerStore(realm: RealmProvider.realm())
+    }
+    
     // MARK: Propiedades
     
-    /// Son las secciones elegidas por el usuario que han sido cargado a la base de datos
-    @Published private(set) var seccionesElegidas: RealmSwift.Results<Seccion>
+    /// Son las secciones elegidasy activas  congeladas por el usuario que han sido cargado a la base de datos
+    @Published private(set) var seccionesElegidasActivas: RealmSwift.Results<Seccion>
     
     /// Son los horarios de clases que estan en la base de datos
     @Published private(set) var horariosClase: RealmSwift.Results<HorarioClase>
+    
+    /// Son los exámenes de las secciones activas en la base de datos
+    @Published private(set) var examenesActivos: RealmSwift.Results<Examen>
     
     /// Almacena un borrador de horario de clase y es utilizado solamente para pasar borradores
     /// de distintas partes de la aplicación a otras
@@ -41,11 +52,17 @@ class PoliplannerStore: ObservableObject {
     
     // MARK: Resultados
     
-    /// Resultado de las secciones elegidas por el usuario
-    private var seccionesElegidasResults: RealmSwift.Results<Seccion>
+    /// Resultados de las secciones elegidas por el usuario
+    private(set) var seccionesElegidasResults: RealmSwift.Results<Seccion>
     
-    /// Resultado de los horarios de clase del usuario
-    private var horariosClaseResults: RealmSwift.Results<HorarioClase>
+    /// Resultados de los horarios de clase del usuario
+    private(set) var horariosClaseResults: RealmSwift.Results<HorarioClase>
+    
+    /// Resultados de los horarios de clase del usuarios que estan activos
+    private(set) var horariosClaseActivosResults: RealmSwift.Results<HorarioClase>
+    
+    /// Resultados de los exámenes de secciones elegidas por el usuario que pertenecen a un horario activo
+    private(set) var examenesActivosResults: RealmSwift.Results<Examen>
 
     // MARK: Tokens
     
@@ -54,6 +71,9 @@ class PoliplannerStore: ObservableObject {
     
     /// Token obtenido al subscribirse a `PoliplannerStore.horariosClaseResults`
     private var horariosClaseToken: NotificationToken?
+    
+    /// Token obtenido al subscribirse a `PoliplannerStore.examenesActivosResults`
+    private var examenesActivosToken: NotificationToken?
 
     // MARK: Constructor
     
@@ -67,37 +87,50 @@ class PoliplannerStore: ObservableObject {
 
         // Seleccionamos las secciones elegidas por el usuario
         seccionesElegidasResults = realm.objects(Seccion.self)
-            .filter("elegido = true")
-        seccionesElegidas = seccionesElegidasResults.freeze()
-
+            .filter("elegido == true AND ANY horariosCarrera.horarioClase.estado == '\(EstadoHorario.ACTIVO.rawValue)'")
+        
         // Seleccionamos los horarios disponibles
         horariosClaseResults = realm.objects(HorarioClase.self)
+        
+        // Seleccionamos los horarios activos
+        horariosClaseActivosResults = horariosClaseResults
+            .filter("estado == '\(EstadoHorario.ACTIVO.rawValue)'")
+        
+        // Seleccionamos los examenes activos
+        examenesActivosResults = realm.objects(Examen.self)
+            .filter("ANY secciones.elegido == true")
+            .filter("ANY secciones.horariosCarrera.horarioClase.estado == '\(EstadoHorario.ACTIVO.rawValue)'")
+        
+        // MARK: Inicializar Resultados congelados
+        
+        seccionesElegidasActivas = seccionesElegidasResults.freeze()
+        
         horariosClase = horariosClaseResults.freeze()
-
-        // Inicializamos los tokens
-        inicializarTokens()
-    }
-
-    // MARK: Métodos
-    
-    /// Se subscribe a los resultados e inicializa los tokens
-    private func inicializarTokens() {
-        // Observamos cambios sobre los resultados
+        
+        examenesActivos = examenesActivosResults.freeze()
+        
+        // MARK: Inicializar Tokens de notificación
+        
         seccionesElegidasToken = seccionesElegidasResults.observe { _ in
-            self.seccionesElegidas = self.seccionesElegidasResults.freeze()
+            self.seccionesElegidasActivas = self.seccionesElegidasResults.freeze()
         }
-
-        // Observamos cambios sobre los horarios
+        
         horariosClaseToken = horariosClaseResults.observe { _ in
             self.horariosClase = self.horariosClaseResults.freeze()
         }
+        
+        examenesActivosToken = examenesActivosResults.observe { _ in
+            self.examenesActivos = self.examenesActivosResults.freeze()
+        }
+        
     }
-
+    
     // MARK: Deconstructor
     
-    /// Se encarga de invalidar los tokens de notificación
+    /// Limpieza
     deinit {
         seccionesElegidasToken?.invalidate()
         horariosClaseToken?.invalidate()
+        examenesActivosToken?.invalidate()
     }
 }

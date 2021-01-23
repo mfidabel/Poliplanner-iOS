@@ -7,7 +7,6 @@
 
 import Foundation
 import RealmSwift
-import SwiftUI
 import CVCalendar
 
 // MARK: - View Model del Calendario
@@ -39,19 +38,6 @@ class CalendarioViewModel: ObservableObject {
         "\(fecha.mesNombre) \(fecha.añoNombre)"
     }
     
-    /// Instancia de `Realm` para acceder a la base de datos
-    private var realm: Realm = RealmProvider.realm()
-    
-    // MARK: Resultados
-    
-    /// Resultados con los exámenes de las materias elegidas
-    private var examenesResult: RealmSwift.Results<Examen>
-    
-    // MARK: Tokens
-    
-    /// Token que se obtiene al subscribir a los resultados de los exámenes `CalendarioViewModel.examenesResult`
-    private var examenesToken: NotificationToken?
-    
     // MARK: Delegates
     
     weak var calendarioDelegate: CVCalendarView?
@@ -59,8 +45,8 @@ class CalendarioViewModel: ObservableObject {
     // MARK: Métodos
     
     /// Genera los eventos que se cargarán al calendario a partir de los exámenes y sus revisiones correspondientes.
-    private func generarEventos() {
-        eventos = examenesResult.flatMap { examen in
+    private func generarEventos(para examenes: RealmSwift.Results<Examen>) -> [InfoEventoCalendario] {
+        return examenes.flatMap { examen in
             return examen.revision == nil
                 ? [examen.eventoCalendario]
                 : [examen.eventoCalendario, examen.revision!.eventoCalendario]
@@ -82,23 +68,11 @@ class CalendarioViewModel: ObservableObject {
     /// Constructor del View Model
     /// Se encarga de inicializar los resultados y generar los eventos iniciales.
     init() {
-        // Inicializamos las variables
-        examenesResult = realm.objects(Examen.self)
-            .filter("ANY secciones.elegido == true")
-            .filter("ANY secciones.horariosCarrera.horarioClase.estado == '\(EstadoHorario.ACTIVO.rawValue)'")
-        generarEventos()
-        // Empezamos a escuchar cambios
-        examenesToken = examenesResult.observe { _ in
-            self.generarEventos()
-        }
-    }
-    
-    // MARK: Deconstructor
-    
-    /// Limpieza de los tokens de notificación
-    deinit {
-        // Invalidamos el token
-        examenesToken?.invalidate()
+        // Inicializamos los eventos y hacemos que cada vez que cambien los exámenes activos
+        // se generen los nuevos eventos
+        PoliplannerStore.shared.$examenesActivos
+            .map(generarEventos(para:))
+            .assign(to: &$eventos)
     }
 }
 
