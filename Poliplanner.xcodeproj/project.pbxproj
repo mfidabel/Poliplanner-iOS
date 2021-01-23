@@ -51,6 +51,7 @@
 		56A618542570806600346419 /* Clase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A618532570806600346419 /* Clase.swift */; };
 		56A61859257081D700346419 /* Seccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A61858257081D700346419 /* Seccion.swift */; };
 		56A878C125B08D4600F65A10 /* R.swift+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A878C025B08D4600F65A10 /* R.swift+SwiftUI.swift */; };
+		56B0058C25BBE097009D600D /* MenuHorarioClasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B0058B25BBE097009D600D /* MenuHorarioClasesViewModel.swift */; };
 		56B23C6F2587F91200C4E506 /* InfoEventoCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B23C6E2587F91200C4E506 /* InfoEventoCalendario.swift */; };
 		56B23C742587FB7A00C4E506 /* Calendarizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B23C732587FB7A00C4E506 /* Calendarizable.swift */; };
 		56B23C7A2587FE3E00C4E506 /* CalendarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B23C792587FE3E00C4E506 /* CalendarioViewModel.swift */; };
@@ -148,6 +149,7 @@
 		56A618532570806600346419 /* Clase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clase.swift; sourceTree = "<group>"; };
 		56A61858257081D700346419 /* Seccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seccion.swift; sourceTree = "<group>"; };
 		56A878C025B08D4600F65A10 /* R.swift+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "R.swift+SwiftUI.swift"; sourceTree = "<group>"; };
+		56B0058B25BBE097009D600D /* MenuHorarioClasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHorarioClasesViewModel.swift; sourceTree = "<group>"; };
 		56B23C6E2587F91200C4E506 /* InfoEventoCalendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEventoCalendario.swift; sourceTree = "<group>"; };
 		56B23C732587FB7A00C4E506 /* Calendarizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendarizable.swift; sourceTree = "<group>"; };
 		56B23C792587FE3E00C4E506 /* CalendarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioViewModel.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 		561F15812570340F005C1E5F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				56B0058A25BBDFF7009D600D /* Configuracion */,
 				560AD0CA25AE7FCE008B2AC8 /* PPStore API */,
 				56B23C782587FE2C00C4E506 /* Calendario */,
 				56EB465D2583F9740024DFB0 /* Secciones */,
@@ -438,6 +441,14 @@
 				56C01FE3258ACCDC0021739D /* CalendarioMenuView.swift */,
 			);
 			path = CalendarioVistaMes;
+			sourceTree = "<group>";
+		};
+		56B0058A25BBDFF7009D600D /* Configuracion */ = {
+			isa = PBXGroup;
+			children = (
+				56B0058B25BBE097009D600D /* MenuHorarioClasesViewModel.swift */,
+			);
+			path = Configuracion;
 			sourceTree = "<group>";
 		};
 		56B23C782587FE2C00C4E506 /* Calendario */ = {
@@ -878,6 +889,7 @@
 				562375F625B32569002B7B3E /* Results+toArray.swift in Sources */,
 				565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */,
 				565152AA25712DC30073C3CA /* HorarioCarrera.swift in Sources */,
+				56B0058C25BBE097009D600D /* MenuHorarioClasesViewModel.swift in Sources */,
 				56542E2D2599010D009CD07A /* TurnoSeccion.swift in Sources */,
 				569E1F6D2581CE6700D64898 /* PagingOptions+HorarioClase.swift in Sources */,
 				56B23C7A2587FE3E00C4E506 /* CalendarioViewModel.swift in Sources */,

@@ -29,10 +29,10 @@ class PoliplannerStore: ObservableObject {
     
     // MARK: Propiedades
     
-    /// Son las secciones elegidasy activas  congeladas por el usuario que han sido cargado a la base de datos
+    /// Son las secciones elegidas y activas congeladas por el usuario que han sido cargado a la base de datos
     @Published private(set) var seccionesElegidasActivas: RealmSwift.Results<Seccion>
     
-    /// Son los horarios de clases que estan en la base de datos
+    /// Son los horarios de clases congelados que estan en la base de datos
     @Published private(set) var horariosClase: RealmSwift.Results<HorarioClase>
     
     /// Son los exámenes de las secciones activas en la base de datos

@@ -133,4 +133,20 @@ extension PoliplannerStore {
             print(error.localizedDescription)
         }
     }
+    
+    /// Agrega un nuevo horario de clases sin manejar a la base de datos
+    /// - Parameters:
+    ///   - horarioClase: Horario de clases que se esta agregando a la base de datos
+    ///   - desactivandoViejos: Si se desea desactivar los horarios de clase viejos
+    func agregarHorarioClase(_ horarioClase: HorarioClase, desactivandoViejos: Bool = false) {
+        try? realm.write {
+            // Desactivamos los horarios viejos si fuese necesario
+            if desactivandoViejos {
+                horariosClaseActivosResults.setValue(EstadoHorario.INACTIVO.rawValue, forKey: "estado")
+            }
+            
+            // Guardamos el horarioClase
+            realm.create(HorarioClase.self, value: horarioClase, update: .all)
+        }
+    }
 }

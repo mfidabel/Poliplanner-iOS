@@ -101,20 +101,8 @@ class SeleccionarMateriasViewModel: ObservableObject {
         }
         
         // Marcamos el horario como activo
-        horarioClase.estado = EstadoHorario.ACTIVO.rawValue
+        horarioClase.estadoEnum = .ACTIVO
         
-        // Escribimos los cambios
-        let realm = RealmProvider.realm()
-        
-        let horariosActivos = realm.objects(HorarioClase.self)
-            .filter("estado == '\(EstadoHorario.ACTIVO.rawValue)'")
-        
-        try? realm.write {
-            // Desactivamos los otros horarios
-            horariosActivos.setValue(EstadoHorario.INACTIVO.rawValue, forKey: "estado")
-            
-            // Guardamos el nuevo
-            realm.add(horarioClase)
-        }
+        PoliplannerStore.shared.agregarHorarioClase(horarioClase, desactivandoViejos: true)
     }
 }
