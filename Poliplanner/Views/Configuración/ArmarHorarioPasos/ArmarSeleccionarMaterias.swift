@@ -13,72 +13,71 @@ import SwiftUI
 struct ArmarSeleccionarMaterias: View {
     // MARK: Propiedades
     
-    /// Indica si la interfaz se esta mostrando o no
-    @Binding var estaPresentado: Bool
-    
     /// VIew Model que controla este View
     @ObservedObject var viewModel: SeleccionarMateriasViewModel
     
+    /// ViewModel de los pasos del armado del horario
+    @EnvironmentObject private var viewModelPasos: ArmarHorarioPasosViewModel
+    
     // MARK: Constructor
     
-    /// Constructor del View. Utiliza el horario de clases y la carrera pasada para generar el view model
+    /// Constructor del View. Utiliza la carrera pasada para generar el view model
     /// - Parameters:
-    ///   - horarioClase: Horario de clases sobre la cual se cargaran las secciones
     ///   - carrera: La carrera que se desea usar para elegir las secciones
-    ///   - estaPresentado: Una propiedad que indica si esta interfaz se estra mostrando o no
-    init(horarioClase: HorarioClase, carrera: CarreraSigla, estaPresentado: Binding<Bool>) {
-        self._estaPresentado = estaPresentado
-        self.viewModel = SeleccionarMateriasViewModel(horarioClase: horarioClase, paraCarrera: carrera)
+    init(carrera: CarreraSigla, selecciones: Set<InfoAsignatura>?) {
+        // Generamos el view model
+        self.viewModel = SeleccionarMateriasViewModel(paraCarrera: carrera)
+        
+        // Tratamos de recuperar las selecciones previas
+        if selecciones != nil {
+            self.viewModel.cargarSelecciones(selecciones!)
+        }
     }
     
     // MARK: Body
     
     var body: some View {
-        List {
-            // Por cada materia
-            ForEach(viewModel.materias, id: \.key) { materia in
-                Section(header: Text(materia.key)) {
-                    // Por cada sección
-                    ForEach(materia.value, id: \.id) { seccion in
-                        
-                        // Verifica si esta seleccionado
-                        let seleccionado = viewModel.seccionSeleccionada(seccion)
-                        
-                        Button {
-                            // Que hacer cuando el usuario apreta sobre la sección
-                            if seleccionado {
-                                viewModel.quitarSeccion(seccion)
-                            } else {
-                                viewModel.agregarSeccion(seccion)
-                            }
+        Form {
+            Section(header: Text(viewModel.carrera.nombreLargo)) {
+                ForEach(viewModel.materiasDisponibles, id: \.self) { materia in
+                    let seleccionado = viewModel.materiasSeleccionadas.contains(materia)
+                    
+                    Button {
+                        if seleccionado {
+                            viewModel.quitarMateria(materia)
+                        } else {
+                            viewModel.agregarMateria(materia)
                         }
-                        label: {
-                            // Que mostrar como botón
-                            HStack {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .foregroundColor(seleccionado ? .blue : .gray)
-                                Text("\(seccion.codigo)")
-                                Image(systemName: "arrow.right")
-                                Text(seccion.docente)
-                            }
-                            .foregroundColor(Color(.label))
+                    } label: {
+                        // Vista
+                        HStack {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundColor(seleccionado ? .blue : .gray)
+                            Text(materia.nombre)
                         }
-                        
+                        .foregroundColor(Color(.label))
                     }
                 }
             }
         }
-        .listStyle(InsetGroupedListStyle())
-        .navigationBarTitle(Text("Seleccione las materias"))
-        .navigationBarItems(trailing: botonConstruir)
+        .navigationBarTitle("Seleccione materias", displayMode: .inline)
+        .navigationBarItems(leading: botonAtras, trailing: botonSiguiente)
     }
     
-    /// View del Botón que hará que se cargue el horario de clases a la base de datos
-    var botonConstruir: some View {
-        Button("Terminar") {
-            self.viewModel.cargarSecciones()
-            self.estaPresentado = false
+    /// View del botón que pasa a la anterior selección de materias
+    var botonAtras: some View {
+        Button("Atrás") {
+            viewModelPasos
+                .mostrarAnteriorSeleccionMaterias(materiasSeleccionadas: viewModel.materiasSeleccionadas)
         }
+    }
+    
+    /// View del botón que pasa a la siguiente selección de materias
+    var botonSiguiente: some View {
+        Button("Siguiente") {
+            viewModelPasos
+                .mostrarSiguienteSeleccionMaterias(materiasSeleccionadas: viewModel.materiasSeleccionadas)
+        }.disabled(viewModel.materiasSeleccionadas.isEmpty)
     }
     
 }

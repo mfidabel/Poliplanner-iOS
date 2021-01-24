@@ -25,6 +25,9 @@
 		561EB81025869FEE00507D67 /* TipoExamen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561EB80F25869FEE00507D67 /* TipoExamen.swift */; };
 		5620D1EC257BE34D0073F555 /* ArmarSeleccionarMaterias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5620D1EB257BE34D0073F555 /* ArmarSeleccionarMaterias.swift */; };
 		562375F625B32569002B7B3E /* Results+toArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562375F525B32569002B7B3E /* Results+toArray.swift */; };
+		56298E9F25BC98CB00320E68 /* SeleccionarCarrerasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E9E25BC98CB00320E68 /* SeleccionarCarrerasViewModel.swift */; };
+		56298EA425BCAA9500320E68 /* ArmarHorarioPasosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298EA325BCAA9500320E68 /* ArmarHorarioPasosView.swift */; };
+		56298EA925BCAAC200320E68 /* ArmarHorarioPasosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298EA825BCAAC200320E68 /* ArmarHorarioPasosViewModel.swift */; };
 		562B5FF9258012D800F345F5 /* CalendarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B5FF8258012D800F345F5 /* CalendarioView.swift */; };
 		562B5FFF258017B200F345F5 /* SeccionesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B5FFE258017B200F345F5 /* SeccionesView.swift */; };
 		56361E802580916A001E11F7 /* InfoClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56361E7F2580916A001E11F7 /* InfoClase.swift */; };
@@ -67,6 +70,13 @@
 		56C01FF1258AF3B60021739D /* CVCalendar+Redraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C01FF0258AF3B60021739D /* CVCalendar+Redraw.swift */; };
 		56C1BD472587AAD1000C4D1E /* NSRegularExpression+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BD462587AAD1000C4D1E /* NSRegularExpression+Regex.swift */; };
 		56C1BD4C2587C458000C4D1E /* DateComponents+Referencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BD4B2587C458000C4D1E /* DateComponents+Referencia.swift */; };
+		56D0A0C425BCB8CE00990532 /* ArmarSeleccionarSecciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0A0C325BCB8CE00990532 /* ArmarSeleccionarSecciones.swift */; };
+		56D0A0C925BCB90C00990532 /* SeleccionarSeccionesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0A0C825BCB90C00990532 /* SeleccionarSeccionesViewModel.swift */; };
+		56D0A0CE25BCC22800990532 /* InfoAsignatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0A0CD25BCC22800990532 /* InfoAsignatura.swift */; };
+		56D0A0D325BCD6BE00990532 /* InfoGrupoSecciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0A0D225BCD6BE00990532 /* InfoGrupoSecciones.swift */; };
+		56D0A0E825BCFCC000990532 /* ArmarConfirmarClases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0A0E725BCFCC000990532 /* ArmarConfirmarClases.swift */; };
+		56D0A0ED25BD093A00990532 /* ArmarConfirmarExamenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0A0EC25BD093A00990532 /* ArmarConfirmarExamenes.swift */; };
+		56D0A0F225BD095800990532 /* ArmarConfirmarHorario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0A0F125BD095800990532 /* ArmarConfirmarHorario.swift */; };
 		56D4ABAB256EE84D005C971D /* PoliplannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABAA256EE84D005C971D /* PoliplannerApp.swift */; };
 		56D4ABAD256EE84D005C971D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4ABAC256EE84D005C971D /* ContentView.swift */; };
 		56D4ABAF256EE84E005C971D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D4ABAE256EE84E005C971D /* Assets.xcassets */; };
@@ -124,6 +134,9 @@
 		5620D1EB257BE34D0073F555 /* ArmarSeleccionarMaterias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmarSeleccionarMaterias.swift; sourceTree = "<group>"; };
 		562271CA256EED60001AB5C2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/iOSSupport/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
 		562375F525B32569002B7B3E /* Results+toArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+toArray.swift"; sourceTree = "<group>"; };
+		56298E9E25BC98CB00320E68 /* SeleccionarCarrerasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionarCarrerasViewModel.swift; sourceTree = "<group>"; };
+		56298EA325BCAA9500320E68 /* ArmarHorarioPasosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmarHorarioPasosView.swift; sourceTree = "<group>"; };
+		56298EA825BCAAC200320E68 /* ArmarHorarioPasosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmarHorarioPasosViewModel.swift; sourceTree = "<group>"; };
 		562B5FF8258012D800F345F5 /* CalendarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioView.swift; sourceTree = "<group>"; };
 		562B5FFE258017B200F345F5 /* SeccionesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeccionesView.swift; sourceTree = "<group>"; };
 		56361E7F2580916A001E11F7 /* InfoClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoClase.swift; sourceTree = "<group>"; };
@@ -161,6 +174,13 @@
 		56C01FF0258AF3B60021739D /* CVCalendar+Redraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVCalendar+Redraw.swift"; sourceTree = "<group>"; };
 		56C1BD462587AAD1000C4D1E /* NSRegularExpression+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Regex.swift"; sourceTree = "<group>"; };
 		56C1BD4B2587C458000C4D1E /* DateComponents+Referencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponents+Referencia.swift"; sourceTree = "<group>"; };
+		56D0A0C325BCB8CE00990532 /* ArmarSeleccionarSecciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmarSeleccionarSecciones.swift; sourceTree = "<group>"; };
+		56D0A0C825BCB90C00990532 /* SeleccionarSeccionesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionarSeccionesViewModel.swift; sourceTree = "<group>"; };
+		56D0A0CD25BCC22800990532 /* InfoAsignatura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAsignatura.swift; sourceTree = "<group>"; };
+		56D0A0D225BCD6BE00990532 /* InfoGrupoSecciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoGrupoSecciones.swift; sourceTree = "<group>"; };
+		56D0A0E725BCFCC000990532 /* ArmarConfirmarClases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmarConfirmarClases.swift; sourceTree = "<group>"; };
+		56D0A0EC25BD093A00990532 /* ArmarConfirmarExamenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmarConfirmarExamenes.swift; sourceTree = "<group>"; };
+		56D0A0F125BD095800990532 /* ArmarConfirmarHorario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmarConfirmarHorario.swift; sourceTree = "<group>"; };
 		56D4ABA7256EE84D005C971D /* Poliplanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poliplanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D4ABAA256EE84D005C971D /* PoliplannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliplannerApp.swift; sourceTree = "<group>"; };
 		56D4ABAC256EE84D005C971D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -243,6 +263,9 @@
 			isa = PBXGroup;
 			children = (
 				560D6A35257BFA49007DD904 /* SeleccionarMateriasViewModel.swift */,
+				56298E9E25BC98CB00320E68 /* SeleccionarCarrerasViewModel.swift */,
+				56298EA825BCAAC200320E68 /* ArmarHorarioPasosViewModel.swift */,
+				56D0A0C825BCB90C00990532 /* SeleccionarSeccionesViewModel.swift */,
 			);
 			path = ArmarHorarioPasos;
 			sourceTree = "<group>";
@@ -284,6 +307,11 @@
 			children = (
 				561A4B97257B1E8F00BE9EE3 /* ArmarSeleccionarCarrera.swift */,
 				5620D1EB257BE34D0073F555 /* ArmarSeleccionarMaterias.swift */,
+				56298EA325BCAA9500320E68 /* ArmarHorarioPasosView.swift */,
+				56D0A0C325BCB8CE00990532 /* ArmarSeleccionarSecciones.swift */,
+				56D0A0E725BCFCC000990532 /* ArmarConfirmarClases.swift */,
+				56D0A0EC25BD093A00990532 /* ArmarConfirmarExamenes.swift */,
+				56D0A0F125BD095800990532 /* ArmarConfirmarHorario.swift */,
 			);
 			path = ArmarHorarioPasos;
 			sourceTree = "<group>";
@@ -363,6 +391,8 @@
 				56361E7F2580916A001E11F7 /* InfoClase.swift */,
 				56EF6DC325814BC1005EA4FC /* InfoPaginaDia.swift */,
 				56B23C6E2587F91200C4E506 /* InfoEventoCalendario.swift */,
+				56D0A0CD25BCC22800990532 /* InfoAsignatura.swift */,
+				56D0A0D225BCD6BE00990532 /* InfoGrupoSecciones.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -859,9 +889,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D4ABAD256EE84D005C971D /* ContentView.swift in Sources */,
+				56D0A0ED25BD093A00990532 /* ArmarConfirmarExamenes.swift in Sources */,
 				561EB81025869FEE00507D67 /* TipoExamen.swift in Sources */,
 				561127C12578458800F9AA03 /* CarreraSigla.swift in Sources */,
 				568CE7C5258BF942001B654D /* EventoView.swift in Sources */,
+				56D0A0D325BCD6BE00990532 /* InfoGrupoSecciones.swift in Sources */,
+				56D0A0F225BD095800990532 /* ArmarConfirmarHorario.swift in Sources */,
 				565152AF25712E790073C3CA /* HorarioClase.swift in Sources */,
 				56DFF59C25A3B9B800DD762C /* ExcelHelper.swift in Sources */,
 				562B5FFF258017B200F345F5 /* SeccionesView.swift in Sources */,
@@ -870,6 +903,7 @@
 				568E7CDC25759E7E008979C6 /* PoliplannerStore.swift in Sources */,
 				56A61859257081D700346419 /* Seccion.swift in Sources */,
 				56B23C742587FB7A00C4E506 /* Calendarizable.swift in Sources */,
+				56298EA925BCAAC200320E68 /* ArmarHorarioPasosViewModel.swift in Sources */,
 				567D7E532576E79100D84902 /* HorarioClaseViewModel.swift in Sources */,
 				56C01FE4258ACCDC0021739D /* CalendarioMenuView.swift in Sources */,
 				56EB465F2583F98D0024DFB0 /* SeccionesViewModel.swift in Sources */,
@@ -879,6 +913,7 @@
 				56361E802580916A001E11F7 /* InfoClase.swift in Sources */,
 				560950B0258967B700A155E7 /* CalendarioMesView.swift in Sources */,
 				5620D1EC257BE34D0073F555 /* ArmarSeleccionarMaterias.swift in Sources */,
+				56D0A0C425BCB8CE00990532 /* ArmarSeleccionarSecciones.swift in Sources */,
 				561127D125785DEB00F9AA03 /* ArchivoHorarioParser.swift in Sources */,
 				568DC7762575D3C100CF4106 /* RealmProvider.swift in Sources */,
 				560AD0C625AE7790008B2AC8 /* Realm+CascadeDeleting.swift in Sources */,
@@ -902,6 +937,7 @@
 				56BE7EE7256F25DB00C65151 /* R.generated.swift in Sources */,
 				566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */,
 				5600BC4C25789B160042580F /* Array+CarreraSigla.swift in Sources */,
+				56298E9F25BC98CB00320E68 /* SeleccionarCarrerasViewModel.swift in Sources */,
 				56B90A27258181800051872A /* PaginaClase.swift in Sources */,
 				56A618542570806600346419 /* Clase.swift in Sources */,
 				56EF6DC425814BC1005EA4FC /* InfoPaginaDia.swift in Sources */,
@@ -914,8 +950,12 @@
 				56A6184525707CFB00346419 /* Carrera.swift in Sources */,
 				56A878C125B08D4600F65A10 /* R.swift+SwiftUI.swift in Sources */,
 				560D6A30257BF8EC007DD904 /* EstadoHorario.swift in Sources */,
+				56D0A0E825BCFCC000990532 /* ArmarConfirmarClases.swift in Sources */,
+				56298EA425BCAA9500320E68 /* ArmarHorarioPasosView.swift in Sources */,
 				56638CDA257AAD8700FCC9A8 /* DiaClase.swift in Sources */,
+				56D0A0CE25BCC22800990532 /* InfoAsignatura.swift in Sources */,
 				561A4B98257B1E8F00BE9EE3 /* ArmarSeleccionarCarrera.swift in Sources */,
+				56D0A0C925BCB90C00990532 /* SeleccionarSeccionesViewModel.swift in Sources */,
 				56791EC825AFDBAC0049257E /* TTProgressHUD+Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

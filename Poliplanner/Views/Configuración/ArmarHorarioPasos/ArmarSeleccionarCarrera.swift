@@ -13,37 +13,58 @@ import SwiftUI
 struct ArmarSeleccionarCarrera: View {
     // MARK: Propiedades
     
-    /// Store de Poliplanner, es utilizado para obtener el borrador del horario de clases
-    @ObservedObject var PPStore: PoliplannerStore = PoliplannerStore.shared
+    /// ViewModel de esta view
+    @ObservedObject private var viewModel = SeleccionarCarrerasViewModel()
     
-    /// Indica si esta interfaz se está mostrando o no
-    @Binding var estaPresentando: Bool
+    /// ViewModel de los pasos del armado del horario
+    @EnvironmentObject private var viewModelPasos: ArmarHorarioPasosViewModel
     
     // MARK: Body
     
     var body: some View {
         Group {
             Form {
-                ForEach(PPStore.horarioClaseDraft.horariosCarrera) { horarioCarrera in
-                    let destino = ArmarSeleccionarMaterias(horarioClase: PPStore.horarioClaseDraft,
-                                                           carrera: horarioCarrera.carrera,
-                                                           estaPresentado: $estaPresentando)
-                    NavigationLink(destination: destino) {
-                        Text("\(horarioCarrera.carrera.sigla) - \(horarioCarrera.carrera.nombreLargo)")
+                ForEach(viewModel.carrerasDisponibles, id: \.self) { carrera in
+                    // Propiedades de la celda
+                    let seleccionado = viewModel.carrerasSeleccionadas.contains(carrera)
+                    
+                    // Botón
+                    Button {
+                        // Seleccionar/Deseleccionar
+                        if seleccionado {
+                            viewModel.eliminarCarrera(carrera)
+                        } else {
+                            viewModel.agregarCarrera(carrera)
+                        }
+                    } label: {
+                        // Vista
+                        HStack {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundColor(seleccionado ? .blue : .gray)
+                            Text("\(carrera.sigla) - \(carrera.nombreLargo)")
+                        }
+                        .foregroundColor(Color(.label))
                     }
                 }
             }
             Spacer()
-            
-        }.navigationTitle(Text("Seleccione su carrera"))
-        .navigationBarItems(leading: botonCancelar)
+        }
+        .navigationBarTitle("Seleccione las carreras", displayMode: .inline)
+        .navigationBarItems(leading: botonCancelar, trailing: botonSiguiente)
+        
     }
     
     /// View de un botón para cancelar la selección
     var botonCancelar: some View {
         Button("Cancelar") {
-            estaPresentando = false
+            viewModelPasos.cancelar()
         }
+    }
+    
+    var botonSiguiente: some View {
+        Button("Siguiente") {
+            viewModelPasos.confirmarCarreras(carreras: Array(viewModel.carrerasSeleccionadas))
+        }.disabled(viewModel.carrerasSeleccionadas.isEmpty)
     }
 }
 
@@ -52,7 +73,8 @@ struct ArmarSeleccionarCarrera: View {
 /// :nodoc:
 struct ArmarSeleccionarCarrera_Previews: PreviewProvider {
     static var previews: some View {
-        ArmarSeleccionarCarrera(estaPresentando: .constant(true))
+        ArmarSeleccionarCarrera()
+            .environmentObject(ArmarHorarioPasosViewModel(estaPresentando: .constant(true)))
     }
 }
 #endif

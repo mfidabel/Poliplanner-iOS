@@ -50,7 +50,7 @@ struct MenuModificarHorarioView: View {
             // MARK: Presentar paso para seleccionar carreras
             .sheet(isPresented: $viewModel.estaArmando) {
                 NavigationView {
-                    ArmarSeleccionarCarrera(estaPresentando: $viewModel.estaArmando)
+                    ArmarHorarioPasosView(estaPresentando: $viewModel.estaArmando)
                 }
             }
             // MARK: Progress View

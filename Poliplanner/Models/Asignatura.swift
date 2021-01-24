@@ -34,6 +34,14 @@ class Asignatura: Object, Identifiable {
         NSRegularExpression.DEF.matches(nombre)
     }
     
+    /// Representación de la asignatura en `InfoAsignatura`
+    var infoAsignatura: InfoAsignatura {
+        InfoAsignatura(departamento: departamento,
+                       nombre: nombre,
+                       nivel: nivel,
+                       semGrupo: semGrupo)
+    }
+    
     // MARK: - Métodos
     
     /// Función auxiliar que permite a `Realm` identificar las asignaturas por su id en la base de datos.
