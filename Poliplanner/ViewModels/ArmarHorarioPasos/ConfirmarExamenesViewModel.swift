@@ -1,19 +1,15 @@
 //
-//  CalendarioViewModel.swift
+//  ConfirmarExamenesViewModel.swift
 //  Poliplanner
 //
-//  Created by Mateo Fidabel on 2020-12-14.
+//  Created by Mateo Fidabel on 2021-01-26.
 //
 
 import Foundation
-import RealmSwift
 import CVCalendar
 
-// MARK: - View Model del Calendario
-
-/// View Model de la sección de Calendario.
-/// Se encarga de administrar que eventos se muestran y manipular el mes seleccionado.
-class CalendarioViewModel: ObservableObject, CVCalendarioViewModel {
+// MARK: - Confirmar Examenes View Model
+class ConfirmarExamenesViewModel: ObservableObject, CVCalendarioViewModel {
     // MARK: Propiedades
     
     /// Eventos que se mostraran en el calendario
@@ -22,41 +18,32 @@ class CalendarioViewModel: ObservableObject, CVCalendarioViewModel {
     /// Fecha actual del calendario, es igual a una fecha con el mes que se esta visualizando actualmente
     @Published private(set) var fecha: Date = Date()
     
-    /// Título del mes que se mostrará al usuario
-    var tituloMes: String {
-        "\(fecha.mesNombre) \(fecha.añoNombre)"
-    }
-    
     // MARK: Delegates
     
+    /// Delegate del calendario
     weak var calendarioDelegate: CVCalendarView?
-    
-    // MARK: Métodos
-    
-    /// Genera los eventos que se cargarán al calendario a partir de los exámenes y sus revisiones correspondientes.
-    private func generarEventos(para examenes: RealmSwift.Results<Examen>) -> [InfoEventoCalendario] {
-        return examenes.flatMap { examen in
-            return examen.revision == nil
-                ? [examen.eventoCalendario]
-                : [examen.eventoCalendario, examen.revision!.eventoCalendario]
-        }
-    }
     
     // MARK: Constructor
     
-    /// Constructor del View Model
-    /// Se encarga de inicializar los resultados y generar los eventos iniciales.
-    init() {
-        // Inicializamos los eventos y hacemos que cada vez que cambien los exámenes activos
-        // se generen los nuevos eventos
-        PoliplannerStore.shared.$examenesActivos
-            .map(generarEventos(para:))
-            .assign(to: &$eventos)
+    init(secciones: [Seccion]) {
+        self.eventos = secciones.flatMap { seccion -> [InfoEventoCalendario] in
+            let eventos: [InfoEventoCalendario] = seccion.examenes.flatMap { examen in
+                examen.revision == nil
+                    ? [examen.eventoCalendario]
+                    : [examen.eventoCalendario, examen.revision!.eventoCalendario]
+            }
+                
+            return eventos.map { original in
+                var nuevo = original
+                nuevo.descripcion = seccion.asignatura!.nombre
+                return nuevo
+            }
+        }
     }
 }
 
 // MARK: - CVCalendarViewDelegate
-extension CalendarioViewModel: CVCalendarViewDelegate {
+extension ConfirmarExamenesViewModel: CVCalendarViewDelegate {
     // MARK: Configuraciones del calendario
     
     /// Modo de presentación del calendario

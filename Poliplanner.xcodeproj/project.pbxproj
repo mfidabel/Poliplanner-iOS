@@ -38,6 +38,9 @@
 		5658EB5D25B0BA0D00F40A56 /* StatefulTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 5658EB5C25B0BA0D00F40A56 /* StatefulTabView */; };
 		565BDE212576DDCC00BE3ABD /* HorarioClaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */; };
 		56638CDA257AAD8700FCC9A8 /* DiaClase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56638CD9257AAD8700FCC9A8 /* DiaClase.swift */; };
+		566B55C425C0B86800BC41A2 /* ConfirmarClasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B55C325C0B86800BC41A2 /* ConfirmarClasesViewModel.swift */; };
+		566B55C925C0BB9F00BC41A2 /* ConfirmarExamenesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B55C825C0BB9F00BC41A2 /* ConfirmarExamenesViewModel.swift */; };
+		566B55CE25C0BC7300BC41A2 /* CVCalendarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B55CD25C0BC7300BC41A2 /* CVCalendarioViewModel.swift */; };
 		566F1D15257810F40057B2B3 /* ConfiguracionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F1D14257810F40057B2B3 /* ConfiguracionView.swift */; };
 		56791EC325AFD81C0049257E /* TTProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 56791EC225AFD81C0049257E /* TTProgressHUD */; };
 		56791EC825AFDBAC0049257E /* TTProgressHUD+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56791EC725AFDBAC0049257E /* TTProgressHUD+Config.swift */; };
@@ -147,6 +150,9 @@
 		56542E2C2599010D009CD07A /* TurnoSeccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnoSeccion.swift; sourceTree = "<group>"; };
 		565BDE202576DDCC00BE3ABD /* HorarioClaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseView.swift; sourceTree = "<group>"; };
 		56638CD9257AAD8700FCC9A8 /* DiaClase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaClase.swift; sourceTree = "<group>"; };
+		566B55C325C0B86800BC41A2 /* ConfirmarClasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmarClasesViewModel.swift; sourceTree = "<group>"; };
+		566B55C825C0BB9F00BC41A2 /* ConfirmarExamenesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmarExamenesViewModel.swift; sourceTree = "<group>"; };
+		566B55CD25C0BC7300BC41A2 /* CVCalendarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCalendarioViewModel.swift; sourceTree = "<group>"; };
 		566F1D14257810F40057B2B3 /* ConfiguracionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionView.swift; sourceTree = "<group>"; };
 		56791EC725AFDBAC0049257E /* TTProgressHUD+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TTProgressHUD+Config.swift"; sourceTree = "<group>"; };
 		567D7E522576E79100D84902 /* HorarioClaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioClaseViewModel.swift; sourceTree = "<group>"; };
@@ -266,6 +272,8 @@
 				56298E9E25BC98CB00320E68 /* SeleccionarCarrerasViewModel.swift */,
 				56298EA825BCAAC200320E68 /* ArmarHorarioPasosViewModel.swift */,
 				56D0A0C825BCB90C00990532 /* SeleccionarSeccionesViewModel.swift */,
+				566B55C325C0B86800BC41A2 /* ConfirmarClasesViewModel.swift */,
+				566B55C825C0BB9F00BC41A2 /* ConfirmarExamenesViewModel.swift */,
 			);
 			path = ArmarHorarioPasos;
 			sourceTree = "<group>";
@@ -298,6 +306,7 @@
 			children = (
 				561127D025785DEB00F9AA03 /* ArchivoHorarioParser.swift */,
 				56B23C732587FB7A00C4E506 /* Calendarizable.swift */,
+				566B55CD25C0BC7300BC41A2 /* CVCalendarioViewModel.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -906,6 +915,7 @@
 				56298EA925BCAAC200320E68 /* ArmarHorarioPasosViewModel.swift in Sources */,
 				567D7E532576E79100D84902 /* HorarioClaseViewModel.swift in Sources */,
 				56C01FE4258ACCDC0021739D /* CalendarioMenuView.swift in Sources */,
+				566B55C925C0BB9F00BC41A2 /* ConfirmarExamenesViewModel.swift in Sources */,
 				56EB465F2583F98D0024DFB0 /* SeccionesViewModel.swift in Sources */,
 				56D4ABAB256EE84D005C971D /* PoliplannerApp.swift in Sources */,
 				564F77CF258BF2C6002A03CB /* ListaEventosView.swift in Sources */,
@@ -940,6 +950,7 @@
 				56298E9F25BC98CB00320E68 /* SeleccionarCarrerasViewModel.swift in Sources */,
 				56B90A27258181800051872A /* PaginaClase.swift in Sources */,
 				56A618542570806600346419 /* Clase.swift in Sources */,
+				566B55CE25C0BC7300BC41A2 /* CVCalendarioViewModel.swift in Sources */,
 				56EF6DC425814BC1005EA4FC /* InfoPaginaDia.swift in Sources */,
 				560AD0CC25AE7FF0008B2AC8 /* PoliplannerStore+HorarioClase.swift in Sources */,
 				56F829FE25ADFA7B005510FE /* InformacionHorarioView.swift in Sources */,
@@ -955,6 +966,7 @@
 				56638CDA257AAD8700FCC9A8 /* DiaClase.swift in Sources */,
 				56D0A0CE25BCC22800990532 /* InfoAsignatura.swift in Sources */,
 				561A4B98257B1E8F00BE9EE3 /* ArmarSeleccionarCarrera.swift in Sources */,
+				566B55C425C0B86800BC41A2 /* ConfirmarClasesViewModel.swift in Sources */,
 				56D0A0C925BCB90C00990532 /* SeleccionarSeccionesViewModel.swift in Sources */,
 				56791EC825AFDBAC0049257E /* TTProgressHUD+Config.swift in Sources */,
 			);

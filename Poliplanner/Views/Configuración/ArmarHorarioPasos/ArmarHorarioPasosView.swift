@@ -29,9 +29,9 @@ struct ArmarHorarioPasosView: View {
             case .seleccionSecciones:
                 ArmarSeleccionarSecciones(materiasSeleccionadas: viewModel.materiasSeleccionadas)
             case .confirmacionClases:
-                ArmarConfirmarClases()
+                ArmarConfirmarClases(secciones: Array(viewModel.seccionesSeleccionadas))
             case .confirmacionExamenes:
-                ArmarConfirmarExamenes()
+                ArmarConfirmarExamenes(secciones: Array(viewModel.seccionesSeleccionadas))
             case .fin:
                 ArmarConfirmarHorario()
             }

@@ -34,8 +34,8 @@ class Examen: Object, Identifiable, Calendarizable, CascadingDeletable {
     let secciones = LinkingObjects(fromType: Seccion.self, property: "examenes")
     
     /// Sección a la cual pertenece este examen
-    var seccion: Seccion {
-        secciones.first!
+    var seccion: Seccion? {
+        secciones.first
     }
     
     /// Puente entre enumerador de tipo de examen a atributo `Examen.tipo`.
@@ -54,7 +54,7 @@ class Examen: Object, Identifiable, Calendarizable, CascadingDeletable {
     var eventoCalendario: InfoEventoCalendario {
         InfoEventoCalendario(fecha: fecha,
                              titulo: tipoEnum.nombreLindo(),
-                             descripcion: seccion.asignatura!.nombre,
+                             descripcion: seccion?.asignatura!.nombre ?? "",
                              aula: aula)
     }
     

@@ -14,7 +14,7 @@ struct CalendarioMesView: View {
     // MARK: Propiedades
     
     /// View Model que controlará este view
-    @ObservedObject var viewModel: CalendarioViewModel
+    var viewModel: CVCalendarioViewModel
     
     // MARK: Body
     

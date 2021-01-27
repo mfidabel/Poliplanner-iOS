@@ -46,7 +46,7 @@ extension Revision: Calendarizable {
     var eventoCalendario: InfoEventoCalendario {
         InfoEventoCalendario(fecha: fecha,
                              titulo: examen.tipoEnum.nombreRevision(),
-                             descripcion: examen.seccion.asignatura!.nombre,
+                             descripcion: examen.seccion?.asignatura!.nombre ?? "",
                              aula: aula)
     }
 }

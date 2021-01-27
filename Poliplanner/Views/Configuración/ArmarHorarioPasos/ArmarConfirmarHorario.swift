@@ -13,12 +13,35 @@ struct ArmarConfirmarHorario: View {
     /// ViewModel de los pasos del armado del horario
     @EnvironmentObject private var viewModelPasos: ArmarHorarioPasosViewModel
     
+    /// Horario de clases
+    let horarioClases = PoliplannerStore.shared.horarioClaseDraft
+    
     // MARK: Body
     
     var body: some View {
-        Text("Hello, World!")
+        Form {
+            
+            Section(header: Text("Nombre")) {
+                Text(horarioClases.nombre)
+            }
+            
+            Section(header: Text("Periodo Académico")) {
+                Text(horarioClases.periodoAcademico)
+            }
+            
+            Section(header: Text("Fecha de actualización")) {
+                Text(horarioClases.fechaActualizacion)
+            }
+            
+            Section {
+                Button("Confirmar horario") {
+                    viewModelPasos.avanzar()
+                }
+            }
+            
+        }
             .navigationBarTitle("Confirmar horario", displayMode: .inline)
-            .navigationBarItems(leading: botonAtras, trailing: botonSiguiente)
+            .navigationBarItems(leading: botonAtras)
     }
     
     /// View del botón para volver atrás
@@ -27,17 +50,15 @@ struct ArmarConfirmarHorario: View {
             viewModelPasos.retroceder()
         }
     }
-    
-    /// View del botón para ir al siguiente paso
-    var botonSiguiente: some View {
-        Button("Siguiente") {
-            viewModelPasos.avanzar()
-        }
-    }
 }
 
-struct ArmarConfirmarHorario_Previews: PreviewProvider {
+// MARK: - Preview
+
+#if DEBUG
+/// :nodoc:
+struct ArmarConfirmarHorario_Previews: PreviewProvider {    
     static var previews: some View {
         ArmarConfirmarHorario()
     }
 }
+#endif

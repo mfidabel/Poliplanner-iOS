@@ -16,7 +16,7 @@ struct CalendarioMes: UIViewRepresentable {
     // MARK: Propiedades
     
     /// View Model que controla el calendario, se utilizará como delegate del `CVCalendarView`
-    let viewModel: CalendarioViewModel
+    let viewModel: CVCalendarioViewModel
     
     /// Frame que utilizará el calendario. Es necesario para calcular las dimensiones del calendario
     let frame: CGRect
@@ -52,12 +52,12 @@ struct CalendarioMes: UIViewRepresentable {
     }
     
     /// Crea el coordinador, que seria el view model que se pasó
-    func makeCoordinator() -> CalendarioViewModel {
+    func makeCoordinator() -> CVCalendarioViewModel {
         viewModel
     }
     
     /// Limpia el view y deshace el delegate del view model
-    static func dismantleUIView(_ uiView: CVCalendarView, coordinator: CalendarioViewModel) {
+    static func dismantleUIView(_ uiView: CVCalendarView, coordinator: CVCalendarioViewModel) {
         coordinator.calendarioDelegate = nil
     }
 }
