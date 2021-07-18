@@ -19,11 +19,15 @@ final class ExcelHelper {
         "([0-1][0-9]|2[0-3]):([0-5][0-9])-([0-1][0-9]|2[0-3]):([0-5][0-9])(?=(.?))",
         groupNames: ["horaInicio", "minutoInicio", "horaFin", "minutoFin", "verificador"])
     
+    /// Regex que representa una fecha de examen en una cadena aplanada
+    /// Ejemplos: "08/09/21", "13/04/2021"
     static let regexFecha = Regex(
         "(0?[1-9]|[12][0-9]|3[01])[-/](0?[1-9]|1[012])[-/]([0-9]{4}|[0-9]{2})",
         groupNames: ["dia", "mes", "año"]
     )
     
+    /// Regex que representa una hora de examen en una cadena aplanada
+    /// Ejemplos: "08:00", "21:30"
     static let regexHora = Regex("([0-1][0-9]|2[0-3]|[1-9]):([0-5][0-9])",
                                  groupNames: ["hora", "minuto"]
     )

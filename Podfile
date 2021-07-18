@@ -13,7 +13,7 @@ target 'Poliplanner' do
   # Base de datos
   pod 'RealmSwift'
   # Lector de XLSX
-  pod 'CoreXLSX', '~> 0.13.0'
+  pod 'CoreXLSX', '~> 0.14.1'
   # Paging de las clases
   pod 'Parchment', '~> 3.0'
   # Calendario usamos este commit porque soluciona el autolayout

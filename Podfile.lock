@@ -1,5 +1,5 @@
 PODS:
-  - CoreXLSX (0.13.0):
+  - CoreXLSX (0.14.1):
     - XMLCoder (~> 0.11.1)
     - ZIPFoundation (~> 0.9.11)
   - CrossroadRegex (1.1.0)
@@ -16,10 +16,10 @@ PODS:
     - Realm (= 10.5.0)
   - SwiftLint (0.42.0)
   - XMLCoder (0.11.1)
-  - ZIPFoundation (0.9.11)
+  - ZIPFoundation (0.9.12)
 
 DEPENDENCIES:
-  - CoreXLSX (~> 0.13.0)
+  - CoreXLSX (~> 0.14.1)
   - CrossroadRegex
   - CVCalendar (from `https://github.com/CVCalendar/CVCalendar.git`, commit `aa2b366`)
   - LicensePlist
@@ -53,7 +53,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/CVCalendar/CVCalendar.git
 
 SPEC CHECKSUMS:
-  CoreXLSX: 18e81bf259aa945dceaa0328a788e50140859907
+  CoreXLSX: f9a7a70b509150ceb675b05877b7ac041a587030
   CrossroadRegex: 5eaadb3f7b4014728f1cbd1014756b126c1dbd9a
   CVCalendar: 1174c1b43c1a258970e14c1e8b19ef4106c5900b
   LicensePlist: 11c638fa9dc22ddb5771cdf910242ae1ba2684da
@@ -64,8 +64,8 @@ SPEC CHECKSUMS:
   RealmSwift: 6fc078d9d3fd7e58c71bfdbb694e252462f112a5
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
   XMLCoder: c4638336674de7ba279cd23f2005817d69f538e0
-  ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
+  ZIPFoundation: e27423c004a5a1410c15933407747374e7c6cb6e
 
-PODFILE CHECKSUM: d1743890b29dd076e50d59786292dd3a15ba379d
+PODFILE CHECKSUM: 50b4b8dc553bccd37be0c16a93e4340f7ce8e9eb
 
 COCOAPODS: 1.10.1

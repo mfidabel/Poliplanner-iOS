@@ -8,6 +8,7 @@
 import Foundation
 import CVCalendar
 
+/// Representa un ViewModel que puede manejar un Calendario de CVCalendar para mostrar exámenes
 protocol CVCalendarioViewModel: CVCalendarViewDelegate {
     
     /// Eventos que se mostraran en el calendario

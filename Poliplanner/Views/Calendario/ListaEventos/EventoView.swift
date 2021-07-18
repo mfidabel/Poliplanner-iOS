@@ -19,7 +19,7 @@ struct EventoView: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            Text(evento.fecha.horaNombre)
+            Text(evento.hora)
                 .font(fuenteHora)
             VStack(alignment: .leading) {
                 HStack {

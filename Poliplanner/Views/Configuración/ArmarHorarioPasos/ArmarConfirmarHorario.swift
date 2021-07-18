@@ -33,21 +33,22 @@ struct ArmarConfirmarHorario: View {
                 Text(horarioClases.fechaActualizacion)
             }
             
-            Section {
-                Button("Confirmar horario") {
-                    viewModelPasos.avanzar()
-                }
-            }
-            
         }
-            .navigationBarTitle("Confirmar horario", displayMode: .inline)
-            .navigationBarItems(leading: botonAtras)
+        .navigationBarTitle("Confirmar horario", displayMode: .inline)
+        .navigationBarItems(leading: botonAtras, trailing: botonSiguiente)
     }
     
     /// View del botón para volver atrás
     var botonAtras: some View {
         Button("Atrás") {
             viewModelPasos.retroceder()
+        }
+    }
+    
+    /// View del botón para finalizar
+    var botonSiguiente: some View {
+        Button("Confirmar") {
+            viewModelPasos.avanzar()
         }
     }
 }

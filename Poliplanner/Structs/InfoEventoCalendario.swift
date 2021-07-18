@@ -9,7 +9,7 @@ import Foundation
 
 /// Estructura que representa una entrada en el calendario de la sección Calendario
 struct InfoEventoCalendario: Hashable {
-    // MARK: - Propiedades
+    // MARK: Propiedades
     
     /// Fecha del evento
     var fecha: Date
@@ -22,10 +22,24 @@ struct InfoEventoCalendario: Hashable {
     
     /// En que aula se desarrollará el evento
     var aula: String = ""
+    
+    /// Hora del evento que se mostrará en los views
+    /// Muestra la hora del evento en hh:MM pero si el evento es a media noche se considera todo el día
+    var hora: String {
+        esTodoElDia
+            ? ""
+            : fecha.horaNombre
+    }
+    
+    /// Indica si el evento es todo el día
+    var esTodoElDia: Bool {
+        fecha.horaNombre == "00:00"
+    }
 }
 
+// MARK: - API
+
 extension InfoEventoCalendario {
-    // MARK: - API
     
     /// Verifica si este evento se da en la fecha actual
     /// - Returns: Verdadero si es que coincide con la fecha actual, falso caso contrario
