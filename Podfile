@@ -15,7 +15,7 @@ target 'Poliplanner' do
   # Lector de XLSX
   pod 'CoreXLSX', '~> 0.14.1'
   # Paging de las clases
-  pod 'Parchment', '~> 3.0'
+  pod 'Parchment', '~> 3.0.1'
   # Calendario usamos este commit porque soluciona el autolayout
   pod 'CVCalendar', :git => 'https://github.com/CVCalendar/CVCalendar.git', :commit => 'aa2b366' , :inhibit_warnings => true
   # Expresiones regulares

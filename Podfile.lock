@@ -23,7 +23,7 @@ DEPENDENCIES:
   - CrossroadRegex
   - CVCalendar (from `https://github.com/CVCalendar/CVCalendar.git`, commit `aa2b366`)
   - LicensePlist
-  - Parchment (~> 3.0)
+  - Parchment (~> 3.0.1)
   - R.swift
   - RealmSwift
   - SwiftLint
@@ -66,6 +66,6 @@ SPEC CHECKSUMS:
   XMLCoder: c4638336674de7ba279cd23f2005817d69f538e0
   ZIPFoundation: e27423c004a5a1410c15933407747374e7c6cb6e
 
-PODFILE CHECKSUM: 50b4b8dc553bccd37be0c16a93e4340f7ce8e9eb
+PODFILE CHECKSUM: 8d336f46ba0fcd25cb79c2db273d7434c87280b2
 
 COCOAPODS: 1.10.1
