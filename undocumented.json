@@ -1,0 +1,866 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 10,
+      "symbol": "EncabezadoXLSX",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 11,
+      "symbol": "EncabezadoXLSX.item",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 12,
+      "symbol": "EncabezadoXLSX.departamento",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 13,
+      "symbol": "EncabezadoXLSX.asignatura",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 14,
+      "symbol": "EncabezadoXLSX.nivel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 15,
+      "symbol": "EncabezadoXLSX.semGrupo",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 16,
+      "symbol": "EncabezadoXLSX.siglaCarrera",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 17,
+      "symbol": "EncabezadoXLSX.enfasis",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 18,
+      "symbol": "EncabezadoXLSX.plan",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 19,
+      "symbol": "EncabezadoXLSX.turno",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 20,
+      "symbol": "EncabezadoXLSX.seccion",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 21,
+      "symbol": "EncabezadoXLSX.titulo",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 22,
+      "symbol": "EncabezadoXLSX.apellido",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 23,
+      "symbol": "EncabezadoXLSX.nombre",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 24,
+      "symbol": "EncabezadoXLSX.correoInstitucional",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 25,
+      "symbol": "EncabezadoXLSX.primeraParcial",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 26,
+      "symbol": "EncabezadoXLSX.segundaParcial",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 27,
+      "symbol": "EncabezadoXLSX.primeraFinal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 28,
+      "symbol": "EncabezadoXLSX.segundaFinal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 29,
+      "symbol": "EncabezadoXLSX.revision",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 30,
+      "symbol": "EncabezadoXLSX.lunes",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 31,
+      "symbol": "EncabezadoXLSX.martes",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 32,
+      "symbol": "EncabezadoXLSX.miercoles",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 33,
+      "symbol": "EncabezadoXLSX.jueves",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 34,
+      "symbol": "EncabezadoXLSX.viernes",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 35,
+      "symbol": "EncabezadoXLSX.sabado",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 36,
+      "symbol": "EncabezadoXLSX.sabadoTurnoNoche",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 37,
+      "symbol": "EncabezadoXLSX.aula",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 38,
+      "symbol": "EncabezadoXLSX.hora",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 39,
+      "symbol": "EncabezadoXLSX.lunesAula",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 40,
+      "symbol": "EncabezadoXLSX.martesAula",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 41,
+      "symbol": "EncabezadoXLSX.miercolesAula",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 42,
+      "symbol": "EncabezadoXLSX.juevesAula",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 43,
+      "symbol": "EncabezadoXLSX.viernesAula",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 44,
+      "symbol": "EncabezadoXLSX.sabadoAula",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 45,
+      "symbol": "EncabezadoXLSX.primeraParcialHora",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 46,
+      "symbol": "EncabezadoXLSX.segundaParcialHora",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 47,
+      "symbol": "EncabezadoXLSX.primeraFinalHora",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 48,
+      "symbol": "EncabezadoXLSX.segundaFinalHora",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 49,
+      "symbol": "EncabezadoXLSX.primeraParcialAula",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 50,
+      "symbol": "EncabezadoXLSX.segundaParcialAula",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 51,
+      "symbol": "EncabezadoXLSX.primerFinalAula",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 52,
+      "symbol": "EncabezadoXLSX.segundoFinalAula",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 53,
+      "symbol": "EncabezadoXLSX.revisionPrimerFinal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 54,
+      "symbol": "EncabezadoXLSX.revisionSegundoFinal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 55,
+      "symbol": "EncabezadoXLSX.revisionPrimerFinalHora",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 56,
+      "symbol": "EncabezadoXLSX.revisionSegundoFinalHora",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 58,
+      "symbol": "EncabezadoXLSX.diasClases",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 59,
+      "symbol": "EncabezadoXLSX.examenes",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 60,
+      "symbol": "EncabezadoXLSX.revisiones",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 62,
+      "symbol": "EncabezadoXLSX.esDiaClase()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 66,
+      "symbol": "EncabezadoXLSX.esExamen()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 70,
+      "symbol": "EncabezadoXLSX.esHora()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 82,
+      "symbol": "EncabezadoXLSX.examenHora()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 97,
+      "symbol": "EncabezadoXLSX.claseAula()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 116,
+      "symbol": "EncabezadoXLSX.claseDia()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 135,
+      "symbol": "EncabezadoXLSX.examenTipo()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 150,
+      "symbol": "EncabezadoXLSX.examenAula()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 165,
+      "symbol": "EncabezadoXLSX.examenRevision()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 176,
+      "symbol": "EncabezadoXLSX.revisionHora()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/EncabezadoXLSX.swift",
+      "line": 187,
+      "symbol": "EncabezadoXLSX.revisionExamen()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 13,
+      "symbol": "XLSXHorarioParser",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 14,
+      "symbol": "XLSXHorarioParser.archivoURL",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 15,
+      "symbol": "XLSXHorarioParser.archivoXLSX",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 16,
+      "symbol": "XLSXHorarioParser.sharedStrings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 17,
+      "symbol": "XLSXHorarioParser.hojas",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 19,
+      "symbol": "XLSXHorarioParser.hojaCodigosNombre",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 20,
+      "symbol": "XLSXHorarioParser.filaPeriodoAcademico",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 21,
+      "symbol": "XLSXHorarioParser.columnaPeriodoAcademico",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 22,
+      "symbol": "XLSXHorarioParser.hojaCodigos",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 24,
+      "symbol": "XLSXHorarioParser.regexFechaActualizacion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 29,
+      "symbol": "XLSXHorarioParser.fechaActualizacion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 78,
+      "symbol": "XLSXHorarioParser.generarHorarioCarrera(paraCarrera:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 248,
+      "symbol": "XLSXHorarioParser.generarSeccion(paraValores:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 378,
+      "symbol": "XLSXHorarioParser.recopilarHojas(paraCarreras:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 409,
+      "symbol": "XLSXHorarioParser.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Utilities/ExcelParser/XLSXHorarioParser.swift",
+      "line": 415,
+      "symbol": "ColumnaXLSX",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 11,
+      "symbol": "ArmarHorarioPasosViewModel",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 52,
+      "symbol": "ArmarHorarioPasosViewModel.mostrarAnteriorSeleccionMaterias(materiasSeleccionadas:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 97,
+      "symbol": "ArmarHorarioPasosViewModel.retroceder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 115,
+      "symbol": "ArmarHorarioPasosViewModel.avanzar()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 131,
+      "symbol": "ArmarHorarioPasosViewModel.atrasSecciones()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 136,
+      "symbol": "ArmarHorarioPasosViewModel.confirmarSecciones(secciones:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 141,
+      "symbol": "ArmarHorarioPasosViewModel.confirmarClases()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 145,
+      "symbol": "ArmarHorarioPasosViewModel.confirmarExamenes()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 149,
+      "symbol": "ArmarHorarioPasosViewModel.confirmarHorario()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 171,
+      "symbol": "ArmarHorarioPasosViewModel.ArmarPasos",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 172,
+      "symbol": "ArmarHorarioPasosViewModel.ArmarPasos.seleccionCarreras",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 173,
+      "symbol": "ArmarHorarioPasosViewModel.ArmarPasos.seleccionMaterias(carrera:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 174,
+      "symbol": "ArmarHorarioPasosViewModel.ArmarPasos.seleccionSecciones",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 175,
+      "symbol": "ArmarHorarioPasosViewModel.ArmarPasos.confirmacionClases",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 176,
+      "symbol": "ArmarHorarioPasosViewModel.ArmarPasos.confirmacionExamenes",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ArmarHorarioPasosViewModel.swift",
+      "line": 177,
+      "symbol": "ArmarHorarioPasosViewModel.ArmarPasos.fin",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ConfirmarClasesViewModel.swift",
+      "line": 10,
+      "symbol": "ConfirmarClasesViewModel",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ConfirmarClasesViewModel.swift",
+      "line": 13,
+      "symbol": "ConfirmarClasesViewModel.paginas",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ConfirmarClasesViewModel.swift",
+      "line": 17,
+      "symbol": "ConfirmarClasesViewModel.init(secciones:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ConfirmarExamenesViewModel.swift",
+      "line": 12,
+      "symbol": "ConfirmarExamenesViewModel",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ConfirmarExamenesViewModel.swift",
+      "line": 28,
+      "symbol": "ConfirmarExamenesViewModel.init(secciones:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/ConfirmarExamenesViewModel.swift",
+      "line": 46,
+      "symbol": "ConfirmarExamenesViewModel",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/SeleccionarMateriasViewModel.swift",
+      "line": 67,
+      "symbol": "SeleccionarMateriasViewModel.agregarMateria(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/SeleccionarMateriasViewModel.swift",
+      "line": 71,
+      "symbol": "SeleccionarMateriasViewModel.quitarMateria(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/SeleccionarMateriasViewModel.swift",
+      "line": 75,
+      "symbol": "SeleccionarMateriasViewModel.cargarSelecciones(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/SeleccionarSeccionesViewModel.swift",
+      "line": 10,
+      "symbol": "SeleccionarSeccionesViewModel",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/SeleccionarSeccionesViewModel.swift",
+      "line": 13,
+      "symbol": "SeleccionarSeccionesViewModel.seccionesAgrupadas",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/SeleccionarSeccionesViewModel.swift",
+      "line": 15,
+      "symbol": "SeleccionarSeccionesViewModel.seccionesSeleccionadas",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/SeleccionarSeccionesViewModel.swift",
+      "line": 17,
+      "symbol": "SeleccionarSeccionesViewModel.init(materiasSeleccionadas:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/SeleccionarSeccionesViewModel.swift",
+      "line": 34,
+      "symbol": "SeleccionarSeccionesViewModel.agregarSeccion(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/ArmarHorarioPasos/SeleccionarSeccionesViewModel.swift",
+      "line": 46,
+      "symbol": "SeleccionarSeccionesViewModel.quitarSeccion(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/ViewModels/Clases/HorarioClaseViewModel.swift",
+      "line": 36,
+      "symbol": "HorarioClaseViewModel.cargarPaginas(para:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarConfirmarClases.swift",
+      "line": 22,
+      "symbol": "ArmarConfirmarClases.init(secciones:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarConfirmarExamenes.swift",
+      "line": 10,
+      "symbol": "ArmarConfirmarExamenes",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarConfirmarExamenes.swift",
+      "line": 16,
+      "symbol": "ArmarConfirmarExamenes.alturaBarra",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarConfirmarExamenes.swift",
+      "line": 28,
+      "symbol": "ArmarConfirmarExamenes.init(secciones:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarConfirmarExamenes.swift",
+      "line": 67,
+      "symbol": "ArmarConfirmarExamenes.generarBarraMes(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarConfirmarHorario.swift",
+      "line": 10,
+      "symbol": "ArmarConfirmarHorario",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarHorarioPasosView.swift",
+      "line": 10,
+      "symbol": "ArmarHorarioPasosView",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarHorarioPasosView.swift",
+      "line": 13,
+      "symbol": "ArmarHorarioPasosView.viewModel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarHorarioPasosView.swift",
+      "line": 15,
+      "symbol": "ArmarHorarioPasosView.init(estaPresentando:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarSeleccionarCarrera.swift",
+      "line": 64,
+      "symbol": "ArmarSeleccionarCarrera.botonSiguiente",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarSeleccionarSecciones.swift",
+      "line": 10,
+      "symbol": "ArmarSeleccionarSecciones",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarSeleccionarSecciones.swift",
+      "line": 19,
+      "symbol": "ArmarSeleccionarSecciones.init(materiasSeleccionadas:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/ArmarHorarioPasos/ArmarSeleccionarSecciones.swift",
+      "line": 62,
+      "symbol": "ArmarSeleccionarSecciones.botonAtras",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS/Poliplanner/Views/Configuración/MenuModificarHorarioView.swift",
+      "line": 20,
+      "symbol": "MenuModificarHorarioView.viewModel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/Poliplanner-iOS/Poliplanner-iOS"
+}
